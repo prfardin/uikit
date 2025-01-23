@@ -56,7 +56,7 @@
 
 .uk-slider-container-offset {
     margin: @slider-container-margin-top @slider-container-margin-right @slider-container-margin-bottom @slider-container-margin-left;
-    padding: (@slider-container-margin-top * -1) (@slider-container-margin-right * -1) (@slider-container-margin-bottom * -1) (@slider-container-margin-left * -1);
+    padding: calc(@slider-container-margin-top * -1) calc(@slider-container-margin-right * -1) calc(@slider-container-margin-bottom * -1) calc(@slider-container-margin-left * -1); // instead of: (@slider-container-margin-top * -1) (@slider-container-margin-right * -1) (@slider-container-margin-bottom * -1) (@slider-container-margin-left * -1);
 }
 
 /* Items
