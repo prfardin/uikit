@@ -32,6 +32,8 @@
 @icon-button-active-background:                 hsl(from @icon-button-background h s calc(l - 10));     // instead of: darken(@icon-button-background, 10%)
 @icon-button-active-color:                      @global-color;
 
+@icon-primary-color:                            currentColor;
+
 
 /* ========================================================================
    Component: Icon
@@ -71,7 +73,7 @@
     /* 8 */
     display: inline-block;
     /* 9 */
-    fill: currentcolor;
+    fill: @icon-primary-color;                 // instead of: currentColor
     /* 10 */
     line-height: 0;
 }
@@ -92,8 +94,8 @@ button.uk-icon:not(:disabled) { cursor: pointer; }
  * Set the fill and stroke color of all SVG elements to the current text color
  */
 
-.uk-icon:not(.uk-preserve) [fill*="#"]:not(.uk-preserve) { fill: currentcolor; }
-.uk-icon:not(.uk-preserve) [stroke*="#"]:not(.uk-preserve) { stroke: currentcolor; }
+.uk-icon:not(.uk-preserve) [fill*="#"]:not(.uk-preserve) { fill: @icon-primary-color; }                // instead of: currentColor
+.uk-icon:not(.uk-preserve) [stroke*="#"]:not(.uk-preserve) { stroke: @icon-primary-color; }            // instead of: currentColor
 
 /*
  * Fix Firefox blurry SVG rendering: https://bugzilla.mozilla.org/show_bug.cgi?id=1046835
