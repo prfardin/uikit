@@ -8267,6 +8267,9 @@
         dimensions = viewBox.split(" ").slice(2);
       }
       if (this.strokeRatio) {
+        if (el.matches("[stroke-width]")) {
+          attr(el, "stroke-width", toFloat(attr(el, "stroke-width")) * this.strokeRatio);
+        }
         el.querySelectorAll("[stroke-width]").forEach(
           (node) => attr(node, "stroke-width", toFloat(attr(node, "stroke-width")) * this.strokeRatio)
         );
