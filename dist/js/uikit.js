@@ -8207,11 +8207,11 @@
         width: Number,
         height: Number,
         ratio: Number,
-        strokeWidth: Number
+        strokeRatio: Number
       },
       data: {
         ratio: 1,
-        strokeWidth: false
+        strokeRatio: false
       },
       connected() {
         this.svg = this.getSvg().then((el) => {
@@ -8266,9 +8266,9 @@
       if (viewBox && !dimensions.some((val) => val)) {
         dimensions = viewBox.split(" ").slice(2);
       }
-      if (this.strokeWidth) {
+      if (this.strokeRatio) {
         queryAll("[stroke-width]", el).forEach((node) => {
-          attr(node, "stroke-width", this.strokeWidth);
+          attr(node, "stroke-width", toFloat(attr(node, "stroke-width")) * this.strokeRatio);
         });
       }
       dimensions.forEach((val, i) => attr(el, props[i], toFloat(val) * this.ratio || null));
