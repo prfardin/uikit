@@ -22,12 +22,12 @@ export default {
         width: Number,
         height: Number,
         ratio: Number,
-        strokeWidth: Number,
+        strokeRatio: Number,
     },
 
     data: {
         ratio: 1,
-        strokeWidth: false,
+        strokeRatio: false
     },
 
     connected() {
@@ -99,9 +99,9 @@ function applyWidthAndHeight(el, ref) {
         dimensions = viewBox.split(' ').slice(2);
     }
 
-    if (this.strokeWidth) {
+    if (this.strokeRatio) {
         queryAll('[stroke-width]', el).forEach((node) => {
-            attr(node, 'stroke-width', this.strokeWidth);
+            attr(node, 'stroke-width', toFloat(attr(node, 'stroke-width')) * this.strokeRatio);
         });
     }
 
