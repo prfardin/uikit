@@ -3744,7 +3744,7 @@
           }
         }
       }
-      return data;
+      return normalized;
     }
 
     function App(options) {
