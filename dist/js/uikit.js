@@ -1,4 +1,4 @@
-/*! UIkit 3.25.24 | https://www.getuikit.com | (c) 2014 - 2026 YOOtheme | MIT License */
+/*! UIkit 3.25.26 | https://www.getuikit.com | (c) 2014 - 2026 YOOtheme | MIT License */
 
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
@@ -2127,15 +2127,14 @@
       return sorted;
     }
     function getOffset(element, offset = false) {
-      let { offsetTop, offsetLeft, offsetHeight, offsetWidth } = element;
+      let { offsetTop, offsetLeft, offsetHeight } = element;
       if (offset) {
         [offsetTop, offsetLeft] = offsetPosition(element);
       }
       return {
         top: offsetTop,
         left: offsetLeft,
-        bottom: offsetTop + offsetHeight,
-        right: offsetLeft + offsetWidth
+        bottom: offsetTop + offsetHeight
       };
     }
 
@@ -2354,6 +2353,19 @@
       RIGHT: 39,
       DOWN: 40
     };
+    function getNavigationIndex(keyCode, previousKey = keyMap.LEFT, nextKey = keyMap.RIGHT) {
+      switch (keyCode) {
+        case keyMap.HOME:
+          return 0;
+        case keyMap.END:
+          return "last";
+        case previousKey:
+          return "previous";
+        case nextKey:
+          return "next";
+      }
+      return -1;
+    }
 
     function maybeDefaultPreventClick(e) {
       if (e.target.closest('a[href="#"],a[href=""]')) {
@@ -3058,7 +3070,7 @@
           pendingReject.set(el, reject);
           _toggle(el, show);
           Promise.all(
-            ((_c = (_b = transitionElement.getAnimations) == null ? void 0 : _b.call(transitionElement)) != null ? _c : []).map(({ finished }) => finished)
+            ((_c = (_b = transitionElement == null ? void 0 : transitionElement.getAnimations) == null ? void 0 : _b.call(transitionElement)) != null ? _c : []).map(({ finished }) => finished)
           ).then(resolve, reject);
         })
       ).then(() => {
@@ -3293,6 +3305,7 @@
         },
         {
           // iOS workaround for slider stopping if swiping fast
+          // https://bugs.webkit.org/show_bug.cgi?id=184251
           name: pointerMove,
           el: ({ list }) => list,
           handler: noop,
@@ -3342,7 +3355,7 @@
           const edge = prevIndex === nextIndex;
           let itemShown;
           for (const i of [this.index, this.prevIndex]) {
-            if (!includes([nextIndex, prevIndex], i)) {
+            if (i !== nextIndex && i !== prevIndex) {
               trigger(slides[i], "itemhidden", [this]);
               if (edge) {
                 itemShown = true;
@@ -3405,7 +3418,7 @@
       return Math.atan2(Math.abs(pos2.y - pos1.y), Math.abs(pos2.x - pos1.x)) * 180 / Math.PI;
     }
 
-    var VERSION = '3.25.24';
+    var VERSION = '3.25.26';
 
     function initWatches(instance) {
       instance._watches = [];
@@ -4014,7 +4027,7 @@
             if (!isNumeric(cmd)) {
               return;
             }
-            let i = keyCode === keyMap.HOME ? 0 : keyCode === keyMap.END ? "last" : keyCode === keyMap.LEFT ? "previous" : keyCode === keyMap.RIGHT ? "next" : -1;
+            const i = getNavigationIndex(keyCode);
             if (~i) {
               e.preventDefault();
               this.show(i);
@@ -4174,9 +4187,9 @@
           await this._show(prev, next, force);
           prev && trigger(prev, "itemhidden", [this]);
           trigger(next, "itemshown", [this]);
-          stack.shift();
           this._transitioner = null;
           await awaitFrame();
+          stack.shift();
           if (stack.length) {
             this.show(stack.shift(), true);
           }
@@ -4499,16 +4512,7 @@
             if (!this.isToggled() || !this.draggable) {
               return;
             }
-            let i = -1;
-            if (keyCode === keyMap.LEFT) {
-              i = "previous";
-            } else if (keyCode === keyMap.RIGHT) {
-              i = "next";
-            } else if (keyCode === keyMap.HOME) {
-              i = 0;
-            } else if (keyCode === keyMap.END) {
-              i = "last";
-            }
+            const i = getNavigationIndex(keyCode);
             if (~i) {
               this.show(i);
             }
@@ -5921,6 +5925,7 @@
       }
     };
 
+    const pointerEnd = [pointerUp$1, pointerCancel];
     var sortable = {
       mixins: [Class, Animate],
       props: {
@@ -6043,7 +6048,7 @@
           this.placeholder = placeholder;
           this.origin = { target, index: index(placeholder), ...this.pos };
           on(document, pointerMove$1, this.move);
-          on(document, pointerUp$1, this.end);
+          on(document, pointerEnd, this.end);
           if (!this.threshold) {
             this.start(e);
           }
@@ -6069,7 +6074,7 @@
         }),
         end() {
           off(document, pointerMove$1, this.move);
-          off(document, pointerUp$1, this.end);
+          off(document, pointerEnd, this.end);
           if (!this.drag) {
             return;
           }
@@ -7607,18 +7612,7 @@
               return;
             }
             const active2 = this.getActive();
-            let next = -1;
-            if (keyCode === keyMap.HOME) {
-              next = 0;
-            } else if (keyCode === keyMap.END) {
-              next = "last";
-            } else if (keyCode === keyMap.UP) {
-              next = "previous";
-            } else if (keyCode === keyMap.DOWN) {
-              next = "next";
-            } else if (keyCode === keyMap.ESC) {
-              (_a = active2.targetEl) == null ? void 0 : _a.focus();
-            }
+            const next = getNavigationIndex(keyCode, keyMap.UP, keyMap.DOWN);
             if (~next) {
               e.preventDefault();
               const elements = $$(selFocusable, current);
@@ -7628,6 +7622,9 @@
                 findIndex(elements, (el) => matches(el, ":focus"))
               )].focus();
               return;
+            }
+            if (keyCode === keyMap.ESC) {
+              (_a = active2.targetEl) == null ? void 0 : _a.focus();
             }
             handleNavItemNavigation(e, this.items, active2);
           }
@@ -7768,23 +7765,14 @@
     function handleNavItemNavigation(e, toggles, active2) {
       var _a, _b, _c;
       const { current, keyCode } = e;
-      let next = -1;
-      if (keyCode === keyMap.HOME) {
-        next = 0;
-      } else if (keyCode === keyMap.END) {
-        next = "last";
-      } else if (keyCode === keyMap.LEFT) {
-        next = "previous";
-      } else if (keyCode === keyMap.RIGHT) {
-        next = "next";
-      } else if (keyCode === keyMap.TAB) {
-        (_a = active2.targetEl) == null ? void 0 : _a.focus();
-        (_b = active2.hide) == null ? void 0 : _b.call(active2, false);
-      }
+      const next = getNavigationIndex(keyCode);
       if (~next) {
         e.preventDefault();
-        (_c = active2.hide) == null ? void 0 : _c.call(active2, false);
+        (_a = active2.hide) == null ? void 0 : _a.call(active2, false);
         toggles[getIndex(next, toggles, toggles.indexOf(active2.targetEl || current))].focus();
+      } else if (keyCode === keyMap.TAB) {
+        (_b = active2.targetEl) == null ? void 0 : _b.focus();
+        (_c = active2.hide) == null ? void 0 : _c.call(active2, false);
       }
     }
     function preventInitialPointerEnter(el) {
@@ -9860,7 +9848,11 @@
           handler(e) {
             const { current, keyCode } = e;
             const isVertical = matches(this.$el, this.selVertical);
-            let i = keyCode === keyMap.HOME ? 0 : keyCode === keyMap.END ? "last" : keyCode === keyMap.LEFT && !isVertical || keyCode === keyMap.UP && isVertical ? "previous" : keyCode === keyMap.RIGHT && !isVertical || keyCode === keyMap.DOWN && isVertical ? "next" : -1;
+            const i = getNavigationIndex(
+              keyCode,
+              isVertical ? keyMap.UP : keyMap.LEFT,
+              isVertical ? keyMap.DOWN : keyMap.RIGHT
+            );
             if (~i) {
               e.preventDefault();
               const next = this.toggles[this.next(i, this.toggles.indexOf(current))];
