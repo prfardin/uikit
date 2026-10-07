@@ -3726,11 +3726,22 @@
           return data2;
         }, {});
       }
+      let normalized = data;
       for (const key in data) {
-        if (isUndefined(data[key])) {
-          delete data[key];
+        const value = data[key];
+        if (isUndefined(value)) {
+          if (normalized === data) {
+            normalized = { ...data };
+          }
+          delete normalized[key];
         } else if (props[key]) {
-          data[key] = coerce$1(props[key], data[key]);
+          const coerced = coerce$1(props[key], value);
+          if (coerced !== value) {
+            if (normalized === data) {
+              normalized = { ...data };
+            }
+            normalized[key] = coerced;
+          }
         }
       }
       return data;
