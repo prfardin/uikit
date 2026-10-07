@@ -74,5 +74,5 @@ function normalizeData({ data = {} }, { args = [], props = {} }) {
         }
     }
 
-    return data;
+    return normalized;
 }
