@@ -122,9 +122,14 @@
     left: 0;
     width: @list-padding-left;
     height: @global-line-height * 1em;
-    .svg-fill(@internal-list-bullet-image, "#000", @list-bullet-icon-color);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
+    -webkit-mask-image: url(@internal-list-bullet-image);
+    mask-image: url(@internal-list-bullet-image);
+    -webkit-background-color: @list-bullet-icon-color;
+    background-color: @list-bullet-icon-color;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: 50% 50%;
+    mask-position: 50% 50%;
 }
 
 
@@ -225,7 +230,7 @@
     .uk-list-secondary > ::marker { color: @inverse-list-secondary-color !important; }
 
     .uk-list-bullet > ::before {
-        .svg-fill(@internal-list-bullet-image, "#000", @inverse-list-bullet-icon-color);
+        background-color: @inverse-list-bullet-icon-color;
     }
 
     .uk-list-divider > :nth-child(n+2) {
