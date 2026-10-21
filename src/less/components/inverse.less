@@ -12,11 +12,6 @@
 
 @inverse-global-color-mode:                     light; // FIXME: need to change inverse process
 
-@inverse-global-color:                          rgb(from @global-inverse-color r g b / 0.7); // FIXME: need to change .svg-fill function
-@inverse-global-inverse-color:                  @global-color; // FIXME: need to change .svg-fill function
-
-@inverse-global-border:                         rgb(from @global-inverse-color r g b / 0.2); // FIXME: need to change .svg-fill function
-
 .hook-inverse-variables() {
     
     --inverse-global-color-mode:                     @inverse-global-color-mode;
@@ -29,7 +24,7 @@
     --inverse-global-primary-background:             var(--global-inverse-color);
     --inverse-global-muted-background:               rgb(from var(--global-inverse-color) r g b / 0.1);
 
-    --inverse-global-border:                         @inverse-global-border;
+    --inverse-global-border:                         rgb(from var(--global-inverse-color) r g b / 0.2);
 
 }
 

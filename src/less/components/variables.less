@@ -30,21 +30,6 @@
 @breakpoint-medium-max:                        (@breakpoint-large - 1);
 @breakpoint-large-max:                         (@breakpoint-xlarge - 1);
 
-//
-// Colors
-//
-
-@global-color:                                 #666; // FIXME: need to change .svg-fill function
-@global-muted-color:                           #999; // FIXME: need to change .svg-fill function
-
-@global-inverse-color:                         #fff; // FIXME: need to change .svg-fill function
-
-//
-// Colors
-//
-
-@global-border:                                #e5e5e5; // FIXME: need to change .svg-fill function
-
 :root {
 
     /* Breakpoints
@@ -88,14 +73,14 @@
      * Colors
      */
 
-    --global-color:                                  @global-color;
+    --global-color:                                  var(--global-color);
     --global-emphasis-color:                         #333;
-    --global-muted-color:                            @global-muted-color;
+    --global-muted-color:                            var(--global-muted-color);
 
     --global-link-color:                             #1e87f0;
     --global-link-hover-color:                       #0f6ecd;
 
-    --global-inverse-color:                          @global-inverse-color;
+    --global-inverse-color:                          var(--global-inverse-color);
 
     /*
      * Backgrounds
@@ -116,7 +101,7 @@
      */
 
     --global-border-width:                           1px;
-    --global-border:                                 @global-border;
+    --global-border:                                 var(--global-border);
 
     /*
      * Box-Shadows

@@ -23,7 +23,7 @@
     --divider-icon-line-border-width:                var(--global-border-width);
     --divider-icon-line-border:                      var(--global-border);
 
-    --internal-divider-icon-image:                   "../../images/backgrounds/divider-icon.svg";
+    --internal-divider-icon-image:                   url("../../images/backgrounds/divider-icon.svg");
 
     --divider-small-width:                           100px;
     --divider-small-border-width:                    var(--global-border-width);
@@ -63,7 +63,7 @@
     position: relative;
     height: var(--divider-icon-height);
     // .svg-fill(@internal-divider-icon-image, "#000", @divider-icon-color);
-    background-image: url(var(--internal-divider-icon-image));
+    background-image: var(--internal-divider-icon-image);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     .hook-divider-icon();
@@ -156,7 +156,7 @@
 
     .uk-divider-icon {
         // .svg-fill(@internal-divider-icon-image, "#000", @inverse-divider-icon-color);
-        background-image: url(var(--internal-divider-icon-image));
+        background-image: var(--internal-divider-icon-image);
         .hook-inverse-divider-icon();
     }
 
