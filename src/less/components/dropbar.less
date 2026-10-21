@@ -8,6 +8,8 @@
 //                  `uk-dropbar-bottom`
 //                  `uk-dropbar-left`
 //                  `uk-dropbar-right`
+//                  `uk-dropbar-start`
+//                  `uk-dropbar-end`
 //
 // ========================================================================
 
@@ -70,8 +72,8 @@
 @media (min-width: @breakpoint-small) {
 
     .uk-dropbar {
-        padding-left: var(--dropbar-padding-horizontal-s);
-        padding-right: var(--dropbar-padding-horizontal-s);
+        padding-inline-start: var(--dropbar-padding-horizontal-s);
+        padding-inline-end: var(--dropbar-padding-horizontal-s);
     }
 
 }
@@ -80,8 +82,8 @@
 @media (min-width: @breakpoint-medium) {
 
     .uk-dropbar {
-        padding-left: var(--dropbar-padding-horizontal-m);
-        padding-right: var(--dropbar-padding-horizontal-m);
+        padding-inline-start: var(--dropbar-padding-horizontal-m);
+        padding-inline-end: var(--dropbar-padding-horizontal-m);
     }
 
 }
@@ -123,6 +125,14 @@
     .hook-dropbar-right();
 }
 
+.uk-dropbar-start {
+    .hook-dropbar-start();
+}
+
+.uk-dropbar-end {
+    .hook-dropbar-end();
+}
+
 
 // Hooks
 // ========================================================================
@@ -134,4 +144,6 @@
 .hook-dropbar-bottom() {}
 .hook-dropbar-left() {}
 .hook-dropbar-right() {}
+.hook-dropbar-start() {}
+.hook-dropbar-end() {}
 .hook-dropbar-misc() {}

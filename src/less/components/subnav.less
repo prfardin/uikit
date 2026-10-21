@@ -64,7 +64,7 @@
     /* 2 */
     align-items: center;
     /* 3 */
-    margin-left: calc(var(--subnav-margin-horizontal) * -1);
+    margin-inline-start: calc(var(--subnav-margin-horizontal) * -1);
     /* 4 */
     padding: 0;
     list-style: none;
@@ -81,7 +81,7 @@
     /* 1 */
     flex: none;
     /* 2 */
-    padding-left: var(--subnav-margin-horizontal);
+    padding-inline-start: var(--subnav-margin-horizontal);
     /* 3 */
     position: relative;
 }
@@ -130,7 +130,7 @@
  * Set gutter
  */
 
-.uk-subnav-divider { margin-left: calc(((var(--subnav-divider-margin-horizontal) * 2) + var(--subnav-divider-border-width)) * -1); }
+.uk-subnav-divider { margin-inline-start: calc(((var(--subnav-divider-margin-horizontal) * 2) + var(--subnav-divider-border-width)) * -1); }
 
 /*
  * Align items and divider vertically
@@ -149,14 +149,14 @@
 .uk-subnav-divider > ::before {
     content: "";
     height: var(--subnav-divider-border-height);
-    margin-left: calc(var(--subnav-divider-margin-horizontal) - var(--subnav-margin-horizontal));
-    margin-right: var(--subnav-divider-margin-horizontal);
-    border-left: var(--subnav-divider-border-width) solid transparent;
+    margin-inline-start: calc(var(--subnav-divider-margin-horizontal) - var(--subnav-margin-horizontal));
+    margin-inline-end: var(--subnav-divider-margin-horizontal);
+    border-inline-start: var(--subnav-divider-border-width) solid transparent;
 }
 
 /* 1 */
 .uk-subnav-divider > :nth-child(n+2):not(.uk-first-column)::before {
-    border-left-color: var(--subnav-divider-border);
+    border-inline-start-color: var(--subnav-divider-border);
     .hook-subnav-divider();
 }
 
@@ -168,8 +168,8 @@
  * Gutter
  */
 
-.uk-subnav-pill { margin-left: calc(var(--subnav-pill-margin-horizontal) - 1); }
-.uk-subnav-pill > * { padding-left: var(--subnav-pill-margin-horizontal); }
+.uk-subnav-pill { margin-inline-start: calc(var(--subnav-pill-margin-horizontal) - 1); }
+.uk-subnav-pill > * { padding-inline-start: var(--subnav-pill-margin-horizontal); }
 
 .uk-subnav-pill > * > :first-child {
     padding: var(--subnav-pill-item-padding-vertical) var(--subnav-pill-item-padding-horizontal);
@@ -269,7 +269,7 @@
     //
 
     .uk-subnav-divider > :nth-child(n+2):not(.uk-first-column)::before {
-        border-left-color: var(--inverse-subnav-divider-border);
+        border-inline-start-color: var(--inverse-subnav-divider-border);
         .hook-inverse-subnav-divider();
     }
 

@@ -77,6 +77,10 @@
 
 .hook-card-media-right() {}
 
+.hook-card-media-start() {}
+
+.hook-card-media-end() {}
+
 
 // Title
 // ========================================================================
@@ -153,8 +157,8 @@
      */
 
     .uk-card-body > .uk-nav-default {
-        margin-left: calc(var(--card-body-padding-horizontal) * -1);
-        margin-right: calc(var(--card-body-padding-horizontal) * -1);
+        margin-inline-start: calc(var(--card-body-padding-horizontal) * -1);
+        margin-inline-end: calc(var(--card-body-padding-horizontal) * -1);
     }
     .uk-card-body > .uk-nav-default:only-child {
         margin-top: calc((var(--card-body-padding-vertical) * -1) + 15px);
@@ -164,19 +168,19 @@
     .uk-card-body > .uk-nav-default > li > a,
     .uk-card-body > .uk-nav-default .uk-nav-header,
     .uk-card-body > .uk-nav-default .uk-nav-divider {
-        padding-left: var(--card-body-padding-horizontal);
-        padding-right: var(--card-body-padding-horizontal);
+        padding-inline-start: var(--card-body-padding-horizontal);
+        padding-inline-end: var(--card-body-padding-horizontal);
     }
 
-    .uk-card-body > .uk-nav-default .uk-nav-sub { padding-left: calc(var(--nav-sublist-deeper-padding-left) + var(--card-body-padding-horizontal)); }
+    .uk-card-body > .uk-nav-default .uk-nav-sub { padding-inline-start: calc(var(--nav-sublist-deeper-padding-inline-start) + var(--card-body-padding-horizontal)); }
 
 
     /* Desktop and bigger */
     @media (min-width: @breakpoint-large) {
 
         .uk-card-body > .uk-nav-default {
-            margin-left: calc(var(--card-body-padding-horizontal-l) * -1);
-            margin-right: calc(var(--card-body-padding-horizontal-l) * -1);
+            margin-inline-start: calc(var(--card-body-padding-horizontal-l) * -1);;
+            margin-inline-end: calc(var(--card-body-padding-horizontal-l) * -1);;
         }
         .uk-card-body > .uk-nav-default:only-child {
             margin-top: calc((var(--card-body-padding-vertical-l) * -1) + 15px);
@@ -186,11 +190,11 @@
         .uk-card-body > .uk-nav-default > li > a,
         .uk-card-body > .uk-nav-default .uk-nav-header,
         .uk-card-body > .uk-nav-default .uk-nav-divider {
-            padding-left: var(--card-body-padding-horizontal-l);
-            padding-right: var(--card-body-padding-horizontal-l);
+            padding-inline-start: var(--card-body-padding-horizontal-l);
+            padding-inline-end: var(--card-body-padding-horizontal-l);
         }
 
-        .uk-card-body > .uk-nav-default .uk-nav-sub { padding-left: calc(var(--nav-sublist-deeper-padding-left) + var(--card-body-padding-horizontal-l)); }
+        .uk-card-body > .uk-nav-default .uk-nav-sub { padding-inline-start: calc(var(--nav-sublist-deeper-padding-inline-start) + var(--card-body-padding-horizontal-l)); }
 
     }
 
@@ -199,8 +203,8 @@
      */
 
     .uk-card-small > .uk-nav-default {
-        margin-left: calc(var(--card-small-body-padding-horizontal) * -1);
-        margin-right: calc(var(--card-small-body-padding-horizontal) * -1);
+        margin-inline-start: calc(var(--card-small-body-padding-horizontal) * -1);
+        margin-inline-end: calc(var(--card-small-body-padding-horizontal) * -1);
     }
     .uk-card-small > .uk-nav-default:only-child {
         margin-top: calc((var(--card-small-body-padding-vertical) * -1) + 15px);
@@ -210,11 +214,11 @@
     .uk-card-small > .uk-nav-default > li > a,
     .uk-card-small > .uk-nav-default .uk-nav-header,
     .uk-card-small > .uk-nav-default .uk-nav-divider {
-        padding-left: var(--card-small-body-padding-horizontal);
-        padding-right: var(--card-small-body-padding-horizontal);
+        padding-inline-start: var(--card-small-body-padding-horizontal);
+        padding-inline-end: var(--card-small-body-padding-horizontal);
     }
 
-    .uk-card-small > .uk-nav-default .uk-nav-sub { padding-left: calc(var(--nav-sublist-deeper-padding-left) + var(--card-small-body-padding-horizontal)); }
+    .uk-card-small > .uk-nav-default .uk-nav-sub { padding-inline-start: calc(var(--nav-sublist-deeper-padding-inline-start) + var(--card-small-body-padding-horizontal)); }
 
     /*
      * Large
@@ -229,11 +233,11 @@
         .uk-card-large > .uk-nav-default > li > a,
         .uk-card-large > .uk-nav-default .uk-nav-header,
         .uk-card-large > .uk-nav-default .uk-nav-divider {
-            padding-left: 0;
-            padding-right: 0;
+            padding-inline-start: 0;
+            padding-inline-end: 0;
         }
 
-        .uk-card-large > .uk-nav-default .uk-nav-sub { padding-left: var(--nav-sublist-deeper-padding-left); }
+        .uk-card-large > .uk-nav-default .uk-nav-sub { padding-inline-start: var(--nav-sublist-deeper-padding-inline-start); }
 
     }
 

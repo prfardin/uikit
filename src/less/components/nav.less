@@ -35,11 +35,11 @@
     --nav-item-padding-horizontal:                   0;
 
     --nav-sublist-padding-vertical:                  5px;
-    --nav-sublist-padding-left:                      15px;
-    --nav-sublist-deeper-padding-left:               15px;
+    --nav-sublist-padding-inline-start:              15px;
+    --nav-sublist-deeper-padding-inline-start:       15px;
     --nav-sublist-item-padding-vertical:             2px;
 
-    --nav-parent-icon-margin-left:                   0.25em;
+    --nav-parent-icon-margin-inline-start:           0.25em;
 
     --nav-header-padding-vertical:                   var(--nav-item-padding-vertical);
     --nav-header-padding-horizontal:                 var(--nav-item-padding-horizontal);
@@ -168,7 +168,9 @@
  */
 
 ul.uk-nav-sub {
-    padding: var(--nav-sublist-padding-vertical) 0 var(--nav-sublist-padding-vertical) var(--nav-sublist-padding-left);
+    padding: var(--nav-sublist-padding-vertical);
+    padding-inline-start: var(--nav-sublist-padding-inline-start);
+    padding-inline-end: 0;
     .hook-nav-sub();
 }
 
@@ -176,7 +178,7 @@ ul.uk-nav-sub {
  * Level 3 and deeper
  */
 
-.uk-nav-sub ul { padding-left: var(--nav-sublist-deeper-padding-left); }
+.uk-nav-sub ul { padding-inline-start: var(--nav-sublist-deeper-padding-inline-start); }
 
 /*
  * Items
@@ -190,7 +192,7 @@ ul.uk-nav-sub {
 
 .uk-nav-parent-icon {
     flex: none;
-    margin-left: auto;
+    margin-inline-start: auto;
     transition: transform 0.3s ease-out;
 }
 
@@ -510,10 +512,10 @@ ul.uk-nav-sub {
 
 /* Sublists */
 .uk-nav-center .uk-nav-sub,
-.uk-nav-center .uk-nav-sub ul { padding-left: 0; }
+.uk-nav-center .uk-nav-sub ul { padding-inline-start: 0; }
 
 /* Parent icon  */
-.uk-nav-center .uk-nav-parent-icon { margin-left: var(--nav-parent-icon-margin-left); }
+.uk-nav-center .uk-nav-parent-icon { margin-inline-start: var(--nav-parent-icon-margin-inline-start); }
 
 
 /* Style modifier

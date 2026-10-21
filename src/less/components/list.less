@@ -32,7 +32,7 @@
 
     --list-margin-top:                               var(--global-small-margin);
 
-    --list-padding-left:                             30px;
+    --list-padding-inline-start:                     30px;
 
     --list-marker-height:                            calc(var(--global-line-height) * 1em);
 
@@ -97,7 +97,7 @@
 .uk-list-circle,
 .uk-list-square,
 .uk-list-decimal,
-.uk-list-hyphen { padding-left: var(--list-padding-left); }
+.uk-list-hyphen { padding-inline-start: var(--list-padding-inline-start); }
 
 .uk-list-disc { list-style-type: disc; }
 .uk-list-circle { list-style-type: circle; }
@@ -120,17 +120,17 @@
 
 .uk-list-bullet > * {
     position: relative;
-    padding-left: var(--list-padding-left);
+    padding-inline-start: var(--list-padding-inline-start);
 }
 
 .uk-list-bullet > ::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
-    width: var(--list-padding-left);
+    inset-inline-start: 0;
+    width: var(--list-padding-inline-start);
     height: calc(var(--global-line-height) * 1em);
-    .svg-fill(var(--internal-list-bullet-image), "#000", var(--list-bullet-icon-color));
+    .svg-fill(@internal-list-bullet-image, "#000", @list-bullet-icon-color);
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }

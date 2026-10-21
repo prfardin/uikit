@@ -12,7 +12,7 @@
 .hook-leader-variables() {
 
     --leader-fill-content:                           ~'.';
-    --leader-fill-margin-left:                       var(--global-small-gutter);
+    --leader-fill-margin-inline-start:               var(--global-small-gutter);
     
 }
 
@@ -33,7 +33,7 @@
 .uk-leader-fill::after {
     /* 1 */
     display: inline-block;
-    margin-left: var(--leader-fill-margin-left);
+    margin-inline-start: var(--leader-fill-margin-inline-start);
     /* 2 */
     width: 0;
     /* 3 */

@@ -20,12 +20,12 @@
 
     --alert-margin-vertical:                         var(--global-margin);
     --alert-padding:                                 15px;
-    --alert-padding-right:                           calc(var(--alert-padding) + 14px);
+    --alert-padding-inline-end:                      calc(var(--alert-padding) + 14px);
     --alert-background:                              var(--global-muted-background);
     --alert-color:                                   var(--global-color);
 
     --alert-close-top:                               calc(var(--alert-padding) + 5px);
-    --alert-close-right:                             var(--alert-padding);
+    --alert-close-inline-end:                        var(--alert-padding);
 
     --alert-primary-background:                      hsl(from color-mix(in srgb, var(--global-primary-background), white 40%) h s ~'calc(l + 20)');
     --alert-primary-color:                           var(--global-primary-background);
@@ -49,7 +49,8 @@
 .uk-alert {
     position: relative;
     margin-bottom: var(--alert-margin-vertical);
-    padding: var(--alert-padding) var(--alert-padding-right) var(--alert-padding) var(--alert-padding);
+    padding: var(--alert-padding);
+    padding-inline-end: var(--alert-adding-inline-end);
     background: var(--alert-background);
     color: var(--alert-color);
     .hook-alert();
@@ -72,7 +73,7 @@
 .uk-alert-close {
     position: absolute;
     top: var(--alert-close-top);
-    right: var(--alert-close-right);
+    inset-inline-end: var(--alert-close-inline-end);
     .hook-alert-close();
 }
 

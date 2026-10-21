@@ -92,7 +92,7 @@
 
 .uk-table th {
     padding: var(--table-cell-padding-vertical) var(--table-cell-padding-horizontal);
-    text-align: left;
+    text-align: start;
     vertical-align: bottom;
     /* 1 */
     font-size: var(--table-header-cell-font-size);
@@ -132,7 +132,7 @@
 
 .uk-table caption {
     font-size: var(--table-caption-font-size);
-    text-align: left;
+    text-align: start;
     color: var(--table-caption-color);
     .hook-table-caption();
 }
@@ -209,10 +209,10 @@
  ========================================================================== */
 
 .uk-table-justify th:first-child,
-.uk-table-justify td:first-child { padding-left: 0; }
+.uk-table-justify td:first-child { padding-inline-start: 0; }
 
 .uk-table-justify th:last-child,
-.uk-table-justify td:last-child { padding-right: 0; }
+.uk-table-justify td:last-child { padding-inline-end: 0; }
 
 
 /* Cell size modifier
@@ -273,8 +273,8 @@
 
     .uk-table-justify.uk-table-responsive th,
     .uk-table-justify.uk-table-responsive td {
-        padding-left: 0;
-        padding-right: 0;
+        padding-inline-start: 0;
+        padding-inline-end: 0;
     }
 
 }

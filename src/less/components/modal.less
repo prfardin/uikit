@@ -92,9 +92,9 @@
     /* 2 */
     position: fixed;
     top: 0;
-    right: 0;
+    inset-inline-end: 0;
     bottom: 0;
-    left: 0;
+    inset-inline-start: 0;
     z-index: var(--modal-z-index);
     /* 3 */
     overflow-y: auto;
@@ -119,8 +119,8 @@
 @media (min-width: @breakpoint-medium) {
 
     .uk-modal {
-        padding-left: var(--modal-padding-horizontal-m);
-        padding-right: var(--modal-padding-horizontal-m);
+        padding-inline-start: var(--modal-padding-horizontal-m);
+        padding-inline-end: var(--modal-padding-horizontal-m);
     }
 
 }
@@ -273,7 +273,7 @@
     position: absolute;
     z-index: var(--modal-z-index);
     top: var(--modal-close-position);
-    right: var(--modal-close-position);
+    inset-inline-end: var(--modal-close-position);
     padding: var(--modal-close-padding);
     .hook-modal-close();
 }
@@ -312,8 +312,9 @@
 .uk-modal-close-outside {
     top: var(--modal-close-outside-position);
     /* 1 */
-    right: calc(var(--modal-close-padding) * -1);
+    inset-inline-end: calc(var(--modal-close-padding) * -1);
     transform: translate(0, calc(var(--modal-close-outside-translate) * -1));
+    color: var(--modal-close-outside-color);
     .hook-modal-close-outside();
 }
 
@@ -327,8 +328,8 @@
 
     /* 1 */
     .uk-modal-close-outside {
-        right: var(--modal-close-outside-position);
-        transform: translate(var(--modal-close-outside-translate), calc(var(--modal-close-outside-translate) * -1));
+        inset-inline-end: var(--modal-close-outside-position);
+        transform: translate(calc(var(--modal-close-outside-translate) * var(--dir-sign)), calc(var(--modal-close-outside-translate) * -1));
     }
 
 }

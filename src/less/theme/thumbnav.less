@@ -13,7 +13,7 @@
     // New
     //
 
-    --thumbnav-item-gradient:                        linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,0.4));
+    --thumbnav-item-gradient:                        linear-gradient(calc(180deg * var(--dir-sign)), rgba(255,255,255,0), rgba(255,255,255,0.4));
     --thumbnav-item-hover-opacity:                   0;
     --thumbnav-item-active-opacity:                  0;
 
@@ -34,8 +34,8 @@
         position: absolute;
         top: 0;
         bottom: 0;
-        left: 0;
-        right: 0;
+        inset-inline-start: 0;
+        inset-inline-end: 0;
         background-image: var(--thumbnav-item-gradient);
         transition: opacity 0.1s ease-in-out;
     }
@@ -61,7 +61,7 @@
 // ========================================================================
 
 .hook-thumbnav-variables() {
-    --inverse-thumbnav-item-gradient:                linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.4));
+    --inverse-thumbnav-item-gradient:                linear-gradient(calc(180deg * var(--dir-sign)), rgba(0,0,0,0), rgba(0,0,0,0.4));
 }
 
 .hook-inverse-thumbnav-item() {

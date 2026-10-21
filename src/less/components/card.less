@@ -55,7 +55,7 @@
     --card-title-line-height:                       1.4;
 
     --card-badge-top:                               15px;
-    --card-badge-right:                             15px;
+    --card-badge-inline-end:                        15px;
     --card-badge-height:                            22px;
     --card-badge-padding-horizontal:                10px;
     --card-badge-background:                        var(--global-primary-background);
@@ -171,7 +171,9 @@
 
 .uk-card-media-top,
 .uk-grid-stack > .uk-card-media-left,
-.uk-grid-stack > .uk-card-media-right {
+.uk-grid-stack > .uk-card-media-right,
+.uk-grid-stack > .uk-card-media-start,
+.uk-grid-stack > .uk-card-media-end {
     .hook-card-media-top();
 }
 
@@ -185,6 +187,14 @@
 
 :not(.uk-grid-stack) > .uk-card-media-right {
     .hook-card-media-right();
+}
+
+:not(.uk-grid-stack) > .uk-card-media-start {
+    .hook-card-media-start();
+}
+
+:not(.uk-grid-stack) > .uk-card-media-end {
+    .hook-card-media-end();
 }
 
 
@@ -212,7 +222,7 @@
     /* 1 */
     position: absolute;
     top: var(--card-badge-top);
-    right: var(--card-badge-right);
+    inset-inline-end: var(--card-badge-inline-end);
     z-index: 1;
     /* 2 */
     height: var(--card-badge-height);
@@ -411,6 +421,8 @@
 .hook-card-media-bottom() {}
 .hook-card-media-left() {}
 .hook-card-media-right() {}
+.hook-card-media-start() {}
+.hook-card-media-end() {}
 .hook-card-title() {}
 .hook-card-badge() {}
 .hook-card-hover() {}

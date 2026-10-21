@@ -12,6 +12,10 @@
 //                  `uk-notification-bottom-left`
 //                  `uk-notification-bottom-center`
 //                  `uk-notification-bottom-right`
+//                  `uk-notification-top-start`
+//                  `uk-notification-top-end`
+//                  `uk-notification-bottom-start`
+//                  `uk-notification-bottom-end`
 //                  `uk-notification-message-primary`
 //                  `uk-notification-message-success`
 //                  `uk-notification-message-warning`
@@ -37,7 +41,7 @@
     --notification-message-line-height:                    1.4;
 
     --notification-close-top:                              calc(var(--notification-message-padding) + 5px);
-    --notification-close-right:                            var(--notification-message-padding);
+    --notification-close-inline-end:                       var(--notification-message-padding);
 
     --notification-message-primary-color:                  var(--global-primary-background);
     --notification-message-success-color:                  var(--global-success-background);
@@ -60,7 +64,7 @@
     /* 1 */
     position: fixed;
     top: var(--notification-position);
-    left: var(--notification-position);
+    inset-inline-start: var(--notification-position);
     z-index: var(--notification-z-index);
     /* 2 */
     box-sizing: border-box;
@@ -72,20 +76,34 @@
 /* Position modifiers
 ========================================================================== */
 
+.uk-notification-top-left,
+.uk-notification-bottom-left {
+    inset-inline-start: auto;
+    left: var(--notification-position);
+}
+
 .uk-notification-top-right,
 .uk-notification-bottom-right {
-    left: auto;
+    inset-inline-start: auto;
     right: var(--notification-position);
+}
+
+.uk-notification-top-end,
+.uk-notification-bottom-end {
+    inset-inline-start: auto;
+    inset-inline-end: var(--notification-position);
 }
 
 .uk-notification-top-center,
 .uk-notification-bottom-center {
-    left: 50%;
-    margin-left: calc(var(--notification-width) / -2);
+    inset-inline-start: 50%;
+    margin-inline-start: calc(var(--notification-width) / -2);
 }
 
 .uk-notification-bottom-left,
 .uk-notification-bottom-right,
+.uk-notification-bottom-start,
+.uk-notification-bottom-end,
 .uk-notification-bottom-center {
     top: auto;
     bottom: var(--notification-position);
@@ -99,8 +117,8 @@
 @media (max-width: @breakpoint-xsmall-max) {
 
     .uk-notification {
-        left: var(--notification-position);
-        right: var(--notification-position);
+        inset-inline-start: var(--notification-position);
+        inset-inline-end: var(--notification-position);
         width: auto;
         margin: 0;
     }
@@ -133,7 +151,7 @@
     display: none;
     position: absolute;
     top: var(--notification-close-top);
-    right: var(--notification-close-right);
+    inset-inline-end: var(--notification-close-inline-end);
     .hook-notification-close();
 }
 

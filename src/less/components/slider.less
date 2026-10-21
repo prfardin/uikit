@@ -16,8 +16,8 @@
 
 .hook-slider-variables() {
 
-    --slider-container-margin-left:                      -25px;
-    --slider-container-margin-right:                     var(--slider-container-margin-left);
+    --slider-container-margin-inline-start:              -25px;
+    --slider-container-margin-inline-end:                var(--slider-container-margin-inline-start);
 
 }
 
@@ -59,10 +59,10 @@
  */
 
 .uk-slider-container-offset {
-    margin-left: var(--slider-container-margin-left);
-    margin-right: var(--slider-container-margin-right);
-    padding-left: calc(-1 * var(--slider-container-margin-left));
-    padding-right: calc(-1 * var(--slider-container-margin-right));
+    margin-inline-start: var(--slider-container-margin-inline-start);
+    margin-inline-end: var(--slider-container-margin-inline-end);
+    padding-inline-start: calc(var(--slider-container-margin-inline-start) * -1);
+    padding-inline-end: calc(var(--slider-container-margin-inline-end) * -1);
 }
 
 /* Items

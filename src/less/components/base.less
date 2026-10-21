@@ -59,7 +59,7 @@
     --base-h6-font-size:                             var(--global-small-font-size);
     --base-h6-line-height:                           1.4;
 
-    --base-list-padding-left:                        30px;
+    --base-list-padding-inline-start:                30px;
 
     --base-hr-margin-vertical:                       var(--global-margin);
     --base-hr-border-width:                          var(--global-border-width);
@@ -417,7 +417,7 @@ h6, .uk-h6 {
  ========================================================================== */
 
 ul,
-ol { padding-left: var(--base-list-padding-left); }
+ol { padding-inline-start: var(--base-list-padding-inline-start); }
 
 /*
  * Reset margin for nested lists
@@ -433,7 +433,7 @@ ol > li > ul { margin: 0; }
  ========================================================================== */
 
 dt { font-weight: bold; }
-dd { margin-left: 0; }
+dd { margin-inline-start: 0; }
 
 
 /* Horizontal rules
@@ -545,6 +545,20 @@ pre code { font-family: var(--base-pre-font-family); }
     --uk-breakpoint-m: @breakpoint-medium;
     --uk-breakpoint-l: @breakpoint-large;
     --uk-breakpoint-xl: @breakpoint-xlarge;
+    
+    --dir-sign: 1;
+    --dir-start: 0%;
+    --dir-end: 100%;
+    --dir-side-start: left;
+    --dir-side-end: right;
+}
+
+[dir="rtl"] {
+    --dir-sign: -1;
+    --dir-start: 100%;
+    --dir-end: 0;
+    --dir-side-start: right;
+    --dir-side-end: left;
 }
 
 // Hooks

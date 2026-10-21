@@ -40,7 +40,7 @@
 
 @keyframes uk-spinner-rotate {
     0% { transform: rotate(0deg); }
-    100% { transform: rotate(270deg); }
+    100% { transform: rotate(calc(270deg) * var(--dir-sign)); }
 }
 
 /*
@@ -60,11 +60,11 @@
     0% { stroke-dashoffset: var(--spinner-circumference); }
     50% {
         stroke-dashoffset: calc(var(--spinner-circumference) / 4);
-        transform: rotate(135deg);
+        transform: rotate(calc(135deg * var(--dir-sign)));
     }
     100% {
         stroke-dashoffset: var(--spinner-circumference);
-        transform: rotate(450deg);
+        transform: rotate(calc(450deg * var(--dir-sign)));
     }
 }
 
