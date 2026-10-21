@@ -40,7 +40,7 @@
 
 @keyframes uk-spinner-rotate {
     0% { transform: rotate(0deg); }
-    100% { transform: rotate(calc(270deg) * var(--dir-sign)); }
+    100% { transform: rotate(calc(270deg * var(--uk-dir-sign))); }
 }
 
 /*
@@ -60,11 +60,11 @@
     0% { stroke-dashoffset: var(--spinner-circumference); }
     50% {
         stroke-dashoffset: calc(var(--spinner-circumference) / 4);
-        transform: rotate(calc(135deg * var(--dir-sign)));
+        transform: rotate(calc(135deg * var(--uk-dir-sign)));
     }
     100% {
         stroke-dashoffset: var(--spinner-circumference);
-        transform: rotate(calc(450deg * var(--dir-sign)));
+        transform: rotate(calc(450deg * var(--uk-dir-sign)));
     }
 }
 
