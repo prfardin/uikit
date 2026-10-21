@@ -24,10 +24,6 @@
 // Variables
 // ========================================================================
 
-@list-bullet-icon-color:                        @global-color; // FIXME: need to change .svg-fill function
-
-@internal-list-bullet-image:                    "../../images/backgrounds/list-bullet.svg"; // FIXME: need to change .svg-fill function
-
 .hook-list-variables() {
 
     --list-margin-top:                               var(--global-small-margin);
@@ -130,7 +126,8 @@
     inset-inline-start: 0;
     width: var(--list-padding-inline-start);
     height: calc(var(--global-line-height) * 1em);
-    .svg-fill(@internal-list-bullet-image, "#000", @list-bullet-icon-color);
+    // .svg-fill(@internal-list-bullet-image, "#000", @list-bullet-icon-color);
+    background-image: url(var(--internal-list-bullet-image));
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
@@ -215,8 +212,6 @@
 // Inverse
 // ========================================================================
 
-@inverse-list-bullet-icon-color:                  @inverse-global-color; // FIXME: need to change .svg-fill function
-
 .hook-list-variables() {
     --inverse-list-muted-color:                        var(--inverse-global-muted-color);
     --inverse-list-emphasis-color:                     var(--inverse-global-emphasis-color);
@@ -237,7 +232,7 @@
     .uk-list-secondary > ::marker { color: var(--inverse-list-secondary-color) !important; }
 
     .uk-list-bullet > ::before {
-        .svg-fill(@internal-list-bullet-image, "#000", @inverse-list-bullet-icon-color);
+        background-color: var(--inverse-list-bullet-icon-color);
     }
 
     .uk-list-divider > :nth-child(n+2) {

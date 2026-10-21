@@ -11,10 +11,6 @@
 // Variables
 // ========================================================================
 
-@divider-icon-color:                            @global-border; // FIXME: need to change .svg-fill function
-
-@internal-divider-icon-image:                   "../../images/backgrounds/divider-icon.svg";  // FIXME: need to change .svg-fill function
-
 .hook-divider-variables() {
 
     --divider-margin-vertical:                       var(--global-margin);
@@ -66,7 +62,8 @@
 .uk-divider-icon {
     position: relative;
     height: var(--divider-icon-height);
-    .svg-fill(@internal-divider-icon-image, "#000", @divider-icon-color);
+    // .svg-fill(@internal-divider-icon-image, "#000", @divider-icon-color);
+    background-image: url(var(--internal-divider-icon-image));
     background-repeat: no-repeat;
     background-position: 50% 50%;
     .hook-divider-icon();
@@ -148,8 +145,6 @@
 // Inverse
 // ========================================================================
 
-@inverse-divider-icon-color:                      @inverse-global-border; // FIXME: need to change .svg-fill function
-
 .hook-divider-variables() {
     --inverse-divider-icon-color:                      var(--inverse-global-border);
     --inverse-divider-icon-line-border:                var(--inverse-global-border);
@@ -160,7 +155,8 @@
 .hook-inverse() {
 
     .uk-divider-icon {
-        .svg-fill(@internal-divider-icon-image, "#000", @inverse-divider-icon-color);
+        // .svg-fill(@internal-divider-icon-image, "#000", @inverse-divider-icon-color);
+        background-image: url(var(--internal-divider-icon-image));
         .hook-inverse-divider-icon();
     }
 
