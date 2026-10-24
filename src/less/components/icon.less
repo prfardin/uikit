@@ -60,6 +60,8 @@
  */
 
 .uk-icon {
+    .hook-icon-variables();
+
     /* 1 */
     margin: 0;
     /* 2 */
@@ -82,6 +84,7 @@
     fill: var(--icon-primary-color);
     /* 10 */
     line-height: 0;
+    .hook-icon();
 }
 
 /* Required for `button`. */
@@ -211,6 +214,8 @@ a:hover .uk-icon-overlay {
 
 .hook-icon-misc();
 
+.hook-icon-variables() {}
+.hook-icon() {}
 .hook-icon-link() {}
 .hook-icon-link-hover() {}
 .hook-icon-link-active() {}

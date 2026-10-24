@@ -46,6 +46,8 @@
  */
 
 .uk-container {
+    .hook-container-variables();
+
     display: flow-root;
     /* 1 */
     box-sizing: content-box;
@@ -54,6 +56,7 @@
     margin-inline-end: auto;
     padding-inline-start: var(--container-padding-horizontal);
     padding-inline-end: var(--container-padding-horizontal);
+    .hook-container();
 }
 
 /* Phone landscape and bigger */
@@ -218,4 +221,6 @@
 
 .hook-container-misc();
 
+.hook-container-variables() {}
+.hook-container() {}
 .hook-container-misc() {}

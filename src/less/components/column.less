@@ -28,7 +28,12 @@
    Component: Column
  ========================================================================== */
 
-[class*="uk-column-"] { column-gap: var(--column-gutter); }
+[class*="uk-column-"] {
+    .hook-column-variables();
+
+    column-gap: var(--column-gutter);
+    .hook-column();
+}
 
 /* Desktop and bigger */
 @media (min-width: @breakpoint-large) {
@@ -132,6 +137,8 @@
 
 .hook-column-misc();
 
+.hook-column-variables() {}
+.hook-column() {}
 .hook-column-misc() {}
 
 

@@ -62,8 +62,11 @@
  ========================================================================== */
 
 .uk-list {
+    .hook-list-variables();
+
     padding: 0;
     list-style: none;
+    .hook-list();
 }
 
 /*
@@ -204,6 +207,8 @@
 
 .hook-list-misc();
 
+.hook-list-variables() {}
+.hook-list() {}
 .hook-list-divider() {}
 .hook-list-striped() {}
 .hook-list-misc() {}

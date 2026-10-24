@@ -229,132 +229,6 @@
   --inverse-heading-bullet-border: var(--inverse-global-border);
   --inverse-heading-line-border: var(--inverse-global-border);
   /*
-     * Divider
-     */
-  --divider-margin-vertical: var(--global-margin);
-  --divider-icon-width: 50px;
-  --divider-icon-height: 20px;
-  --divider-icon-color: var(--global-border);
-  --divider-icon-line-top: 50%;
-  --divider-icon-line-width: 100%;
-  --divider-icon-line-border-width: var(--global-border-width);
-  --divider-icon-line-border: var(--global-border);
-  --internal-divider-icon-image: url("../../src/images/backgrounds/divider-icon.svg");
-  --divider-small-width: 100px;
-  --divider-small-border-width: var(--global-border-width);
-  --divider-small-border: var(--global-border);
-  --divider-vertical-height: 100px;
-  --divider-vertical-border-width: var(--global-border-width);
-  --divider-vertical-border: var(--global-border);
-  --inverse-divider-icon-color: var(--inverse-global-border);
-  --inverse-divider-icon-line-border: var(--inverse-global-border);
-  --inverse-divider-small-border: var(--inverse-global-border);
-  --inverse-divider-vertical-border: var(--inverse-global-border);
-  /*
-     * List
-     */
-  --list-margin-top: var(--global-small-margin);
-  --list-padding-inline-start: 30px;
-  --list-marker-height: calc(var(--global-line-height) * 1em);
-  --list-muted-color: var(--global-muted-color);
-  --list-emphasis-color: var(--global-emphasis-color);
-  --list-primary-color: var(--global-primary-background);
-  --list-secondary-color: var(--global-secondary-background);
-  --list-bullet-icon-color: var(--global-color);
-  --list-divider-margin-top: var(--global-small-margin);
-  --list-divider-border-width: var(--global-border-width);
-  --list-divider-border: var(--global-border);
-  --list-striped-padding-vertical: var(--global-small-margin);
-  --list-striped-padding-horizontal: var(--global-small-margin);
-  --list-striped-background: var(--global-muted-background);
-  --list-large-margin-top: var(--global-margin);
-  --list-large-divider-margin-top: var(--global-margin);
-  --list-large-striped-padding-vertical: var(--global-margin);
-  --list-large-striped-padding-horizontal: var(--global-small-margin);
-  --internal-list-bullet-image: url("../../src/images/backgrounds/list-bullet.svg");
-  --inverse-list-muted-color: var(--inverse-global-muted-color);
-  --inverse-list-emphasis-color: var(--inverse-global-emphasis-color);
-  --inverse-list-primary-color: var(--inverse-global-primary-background);
-  --inverse-list-secondary-color: var(--inverse-global-primary-background);
-  --inverse-list-divider-border: var(--inverse-global-border);
-  --inverse-list-striped-background: var(--inverse-global-muted-background);
-  --inverse-list-bullet-icon-color: var(--inverse-global-color);
-  --list-striped-border-width: var(--global-border-width);
-  --list-striped-border: var(--global-border);
-  /*
-     * Description list
-     */
-  --description-list-term-color: var(--global-emphasis-color);
-  --description-list-term-margin-top: var(--global-margin);
-  --description-list-divider-term-margin-top: var(--global-margin);
-  --description-list-divider-term-border-width: var(--global-border-width);
-  --description-list-divider-term-border: var(--global-border);
-  --description-list-term-font-size: var(--global-small-font-size);
-  --description-list-term-font-weight: normal;
-  --description-list-term-text-transform: uppercase;
-  /*
-     * Table
-     */
-  --table-margin-vertical: var(--global-margin);
-  --table-cell-padding-vertical: 16px;
-  --table-cell-padding-horizontal: 12px;
-  --table-header-cell-font-size: var(--global-font-size);
-  --table-header-cell-font-weight: bold;
-  --table-header-cell-color: var(--global-color);
-  --table-footer-font-size: var(--global-small-font-size);
-  --table-caption-font-size: var(--global-small-font-size);
-  --table-caption-color: var(--global-muted-color);
-  --table-row-active-background: #ffd;
-  --table-divider-border-width: var(--global-border-width);
-  --table-divider-border: var(--global-border);
-  --table-striped-row-background: var(--global-muted-background);
-  --table-hover-row-background: var(--table-row-active-background);
-  --table-small-cell-padding-vertical: 10px;
-  --table-small-cell-padding-horizontal: 12px;
-  --table-large-cell-padding-vertical: 22px;
-  --table-large-cell-padding-horizontal: 12px;
-  --table-expand-min-width: 150px;
-  --inverse-table-header-cell-color: var(--inverse-global-color);
-  --inverse-table-caption-color: var(--inverse-global-muted-color);
-  --inverse-table-row-active-background: rgb(from var(--inverse-global-muted-background) r g b / calc(alpha - 0.02));
-  --inverse-table-divider-border: var(--inverse-global-border);
-  --inverse-table-striped-row-background: var(--inverse-global-muted-background);
-  --inverse-table-hover-row-background: var(--inverse-table-row-active-background);
-  --table-header-cell-font-size: var(--global-small-font-size);
-  --table-header-cell-font-weight: normal;
-  --table-header-cell-color: var(--global-muted-color);
-  --table-striped-border-width: var(--global-border-width);
-  --table-striped-border: var(--global-border);
-  /*
-     * Icon
-     */
-  --icon-image-size: 20px;
-  --icon-link-color: var(--global-muted-color);
-  --icon-link-hover-color: var(--global-color);
-  --icon-link-active-color: hsl(from var(--global-color) h s calc(l - 5));
-  --icon-button-size: 36px;
-  --icon-button-border-radius: 500px;
-  --icon-button-background: var(--global-muted-background);
-  --icon-button-color: var(--global-muted-color);
-  --icon-button-hover-background: hsl(from var(--icon-button-background) h s calc(l - 5));
-  --icon-button-hover-color: var(--global-color);
-  --icon-button-active-background: hsl(from var(--icon-button-background) h s calc(l - 10));
-  --icon-button-active-color: var(--global-color);
-  --icon-primary-color: currentColor;
-  --icon-overlay-color: rgb(from var(--global-emphasis-color) r g b / 0.6);
-  --icon-overlay-hover-color: var(--global-emphasis-color);
-  --inverse-icon-link-color: var(--inverse-global-muted-color);
-  --inverse-icon-link-hover-color: var(--inverse-global-color);
-  --inverse-icon-link-active-color: var(--inverse-global-color);
-  --inverse-icon-button-background: var(--inverse-global-muted-background);
-  --inverse-icon-button-color: var(--inverse-global-muted-color);
-  --inverse-icon-button-hover-background: rgb(from var(--inverse-icon-button-background) r g b / calc(alpha + 0.05));
-  --inverse-icon-button-hover-color: var(--inverse-global-color);
-  --inverse-icon-button-active-background: rgb(from var(--inverse-icon-button-background) r g b / calc(alpha + 0.1));
-  --inverse-icon-button-active-color: var(--inverse-global-color);
-  --inverse-icon-overlay-color: rgb(from var(--inverse-global-emphasis-color) r g b / 0.6);
-  --inverse-icon-overlay-hover-color: var(--inverse-global-emphasis-color);
-  /*
      * Form range
      */
   --form-range-track-height: 3px;
@@ -476,1013 +350,6 @@
   --form-label-font-size: var(--global-small-font-size);
   --inverse-form-label-color: var(--inverse-global-emphasis-color);
   /*
-     * Button
-     */
-  --button-line-height: var(--global-control-height);
-  --button-small-line-height: var(--global-control-small-height);
-  --button-large-line-height: var(--global-control-large-height);
-  --button-font-size: var(--global-font-size);
-  --button-small-font-size: var(--global-small-font-size);
-  --button-large-font-size: var(--global-medium-font-size);
-  --button-padding-horizontal: var(--global-gutter);
-  --button-small-padding-horizontal: var(--global-small-gutter);
-  --button-large-padding-horizontal: var(--global-medium-gutter);
-  --button-default-background: var(--global-muted-background);
-  --button-default-color: var(--global-emphasis-color);
-  --button-default-hover-background: hsl(from var(--button-default-background) h s calc(l - 5));
-  --button-default-hover-color: var(--global-emphasis-color);
-  --button-default-active-background: hsl(from var(--button-default-background) h s calc(l - 10));
-  --button-default-active-color: var(--global-emphasis-color);
-  --button-primary-background: var(--global-primary-background);
-  --button-primary-color: var(--global-inverse-color);
-  --button-primary-hover-background: hsl(from var(--button-primary-background) h s calc(l - 5));
-  --button-primary-hover-color: var(--global-inverse-color);
-  --button-primary-active-background: hsl(from var(--button-primary-background) h s calc(l - 10));
-  --button-primary-active-color: var(--global-inverse-color);
-  --button-secondary-background: var(--global-secondary-background);
-  --button-secondary-color: var(--global-inverse-color);
-  --button-secondary-hover-background: hsl(from var(--button-secondary-background) h s calc(l - 5));
-  --button-secondary-hover-color: var(--global-inverse-color);
-  --button-secondary-active-background: hsl(from var(--button-secondary-background) h s calc(l - 10));
-  --button-secondary-active-color: var(--global-inverse-color);
-  --button-danger-background: var(--global-danger-background);
-  --button-danger-color: var(--global-inverse-color);
-  --button-danger-hover-background: hsl(from var(--button-danger-background) h s calc(l - 5));
-  --button-danger-hover-color: var(--global-inverse-color);
-  --button-danger-active-background: hsl(from var(--button-danger-background) h s calc(l - 10));
-  --button-danger-active-color: var(--global-inverse-color);
-  --button-disabled-background: var(--global-muted-background);
-  --button-disabled-color: var(--global-muted-color);
-  --button-text-line-height: var(--global-line-height);
-  --button-text-color: var(--global-emphasis-color);
-  --button-text-hover-color: var(--global-muted-color);
-  --button-text-disabled-color: var(--global-muted-color);
-  --button-link-line-height: var(--global-line-height);
-  --button-link-color: var(--global-emphasis-color);
-  --button-link-hover-color: var(--global-muted-color);
-  --button-link-hover-text-decoration: none;
-  --button-link-disabled-color: var(--global-muted-color);
-  --inverse-button-default-background: var(--inverse-global-primary-background);
-  --inverse-button-default-color: var(--inverse-global-inverse-color);
-  --inverse-button-default-hover-background: hsl(from var(--inverse-button-default-background) h s calc(l - 5));
-  --inverse-button-default-hover-color: var(--inverse-global-inverse-color);
-  --inverse-button-default-active-background: hsl(from var(--inverse-button-default-background) h s calc(l - 10));
-  --inverse-button-default-active-color: var(--inverse-global-inverse-color);
-  --inverse-button-primary-background: var(--inverse-global-primary-background);
-  --inverse-button-primary-color: var(--inverse-global-inverse-color);
-  --inverse-button-primary-hover-background: hsl(from var(--inverse-button-primary-background) h s calc(l - 5));
-  --inverse-button-primary-hover-color: var(--inverse-global-inverse-color);
-  --inverse-button-primary-active-background: hsl(from var(--inverse-button-primary-background) h s calc(l - 10));
-  --inverse-button-primary-active-color: var(--inverse-global-inverse-color);
-  --inverse-button-secondary-background: var(--inverse-global-primary-background);
-  --inverse-button-secondary-color: var(--inverse-global-inverse-color);
-  --inverse-button-secondary-hover-background: hsl(from var(--inverse-button-secondary-background) h s calc(l - 5));
-  --inverse-button-secondary-hover-color: var(--inverse-global-inverse-color);
-  --inverse-button-secondary-active-background: hsl(from var(--inverse-button-secondary-background) h s calc(l - 10));
-  --inverse-button-secondary-active-color: var(--inverse-global-inverse-color);
-  --inverse-button-text-color: var(--inverse-global-emphasis-color);
-  --inverse-button-text-hover-color: var(--inverse-global-muted-color);
-  --inverse-button-text-disabled-color: var(--inverse-global-muted-color);
-  --inverse-button-link-color: var(--inverse-global-emphasis-color);
-  --inverse-button-link-hover-color: var(--inverse-global-muted-color);
-  --button-line-height: calc(var(--global-control-height) - (var(--button-border-width) * 2));
-  --button-small-line-height: calc(var(--global-control-small-height) - (var(--button-border-width) * 2));
-  --button-large-line-height: calc(var(--global-control-large-height) - (var(--button-border-width) * 2));
-  --button-font-size: var(--global-small-font-size);
-  --button-large-font-size: var(--global-small-font-size);
-  --button-default-background: transparent;
-  --button-default-hover-background: transparent;
-  --button-default-active-background: transparent;
-  --button-disabled-background: transparent;
-  --button-text-hover-color: var(--global-emphasis-color);
-  --button-text-transform: uppercase;
-  --button-border-width: var(--global-border-width);
-  --button-default-border: var(--global-border);
-  --button-default-hover-border: hsl(from var(--global-border) h s calc(l - 20));
-  --button-default-active-border: hsl(from var(--global-border) h s calc(l - 30));
-  --button-disabled-border: var(--global-border);
-  --button-text-border-width: var(--global-border-width);
-  --button-text-border: currentColor;
-  --inverse-button-default-background: transparent;
-  --inverse-button-default-color: var(--inverse-global-emphasis-color);
-  --inverse-button-default-hover-background: transparent;
-  --inverse-button-default-hover-color: var(--inverse-global-emphasis-color);
-  --inverse-button-default-active-background: transparent;
-  --inverse-button-default-active-color: var(--inverse-global-emphasis-color);
-  --inverse-button-text-hover-color: var(--inverse-global-emphasis-color);
-  /*
-     * Progress
-     */
-  --progress-height: 15px;
-  --progress-margin-vertical: var(--global-margin);
-  --progress-background: var(--global-muted-background);
-  --progress-bar-background: var(--global-primary-background);
-  --progress-border-radius: 500px;
-  /*
-     * Section
-     */
-  --section-padding-vertical: var(--global-medium-margin);
-  --section-padding-vertical-m: var(--global-large-margin);
-  --section-xsmall-padding-vertical: var(--global-margin);
-  --section-small-padding-vertical: var(--global-medium-margin);
-  --section-large-padding-vertical: var(--global-large-margin);
-  --section-large-padding-vertical-m: var(--global-xlarge-margin);
-  --section-xlarge-padding-vertical: var(--global-xlarge-margin);
-  --section-xlarge-padding-vertical-m: calc(var(--global-large-margin) + var(--global-xlarge-margin));
-  --section-default-background: var(--global-background);
-  --section-default-color-mode: dark;
-  --section-muted-background: var(--global-muted-background);
-  --section-muted-color-mode: dark;
-  --section-primary-background: var(--global-primary-background);
-  --section-primary-color-mode: light;
-  --section-secondary-background: var(--global-secondary-background);
-  --section-secondary-color-mode: light;
-  /*
-     * Container
-     */
-  --container-max-width: 1200px;
-  --container-xsmall-max-width: 750px;
-  --container-small-max-width: 900px;
-  --container-large-max-width: 1400px;
-  --container-xlarge-max-width: 1600px;
-  --container-padding-horizontal: 15px;
-  --container-padding-horizontal-s: var(--global-gutter);
-  --container-padding-horizontal-m: var(--global-medium-gutter);
-  /*
-     * Tile
-     */
-  --tile-padding-horizontal: 15px;
-  --tile-padding-horizontal-s: var(--global-gutter);
-  --tile-padding-horizontal-m: var(--global-medium-gutter);
-  --tile-padding-vertical: var(--global-medium-margin);
-  --tile-padding-vertical-m: var(--global-large-margin);
-  --tile-xsmall-padding-vertical: var(--global-margin);
-  --tile-small-padding-vertical: var(--global-medium-margin);
-  --tile-large-padding-vertical: var(--global-large-margin);
-  --tile-large-padding-vertical-m: var(--global-xlarge-margin);
-  --tile-xlarge-padding-vertical: var(--global-xlarge-margin);
-  --tile-xlarge-padding-vertical-m: calc(var(--global-large-margin) + var(--global-xlarge-margin));
-  --tile-default-background: var(--global-background);
-  --tile-default-color-mode: dark;
-  --tile-muted-background: var(--global-muted-background);
-  --tile-muted-color-mode: dark;
-  --tile-primary-background: var(--global-primary-background);
-  --tile-primary-color-mode: light;
-  --tile-secondary-background: var(--global-secondary-background);
-  --tile-secondary-color-mode: light;
-  /*
-     * Card
-     */
-  --card-body-padding-horizontal: var(--global-gutter);
-  --card-body-padding-vertical: var(--global-gutter);
-  --card-body-padding-horizontal-l: var(--global-medium-gutter);
-  --card-body-padding-vertical-l: var(--global-medium-gutter);
-  --card-header-padding-horizontal: var(--global-gutter);
-  --card-header-padding-vertical: round(up, calc(var(--global-gutter) / 2), 1px);
-  --card-header-padding-horizontal-l: var(--global-medium-gutter);
-  --card-header-padding-vertical-l: round(up, calc(var(--global-medium-gutter) / 2), 1px);
-  --card-footer-padding-horizontal: var(--global-gutter);
-  --card-footer-padding-vertical: calc(var(--global-gutter) / 2);
-  --card-footer-padding-horizontal-l: var(--global-medium-gutter);
-  --card-footer-padding-vertical-l: round(up, calc(var(--global-medium-gutter) / 2), 1px);
-  --card-title-font-size: var(--global-large-font-size);
-  --card-title-line-height: 1.4;
-  --card-badge-top: 15px;
-  --card-badge-inline-end: 15px;
-  --card-badge-height: 22px;
-  --card-badge-padding-horizontal: 10px;
-  --card-badge-background: var(--global-primary-background);
-  --card-badge-color: var(--global-inverse-color);
-  --card-badge-font-size: var(--global-small-font-size);
-  --card-hover-background: var(--global-muted-background);
-  --card-default-background: var(--global-muted-background);
-  --card-default-color: var(--global-color);
-  --card-default-title-color: var(--global-emphasis-color);
-  --card-default-hover-background: hsl(from var(--card-default-background) h s calc(l - 5));
-  --card-default-color-mode: dark;
-  --card-primary-background: var(--global-primary-background);
-  --card-primary-color: var(--global-inverse-color);
-  --card-primary-title-color: var(--card-primary-color);
-  --card-primary-hover-background: hsl(from var(--card-primary-background) h s calc(l - 5));
-  --card-primary-color-mode: light;
-  --card-secondary-background: var(--global-secondary-background);
-  --card-secondary-color: var(--global-inverse-color);
-  --card-secondary-title-color: var(--card-secondary-color);
-  --card-secondary-hover-background: hsl(from var(--card-secondary-background) h s calc(l - 5));
-  --card-secondary-color-mode: light;
-  --card-overlay-background: rgb(from var(--global-background) r g b / 0.9);
-  --card-overlay-color: var(--global-color);
-  --card-overlay-title-color: var(--global-emphasis-color);
-  --card-overlay-hover-background: rgb(from var(--card-overlay-background) r g b / calc(alpha + 0.1));
-  --card-overlay-color-mode: dark;
-  --card-small-body-padding-horizontal: var(--global-margin);
-  --card-small-body-padding-vertical: var(--global-margin);
-  --card-small-header-padding-horizontal: var(--global-margin);
-  --card-small-header-padding-vertical: round(up, calc(var(--global-margin) / 1.5), 1px);
-  --card-small-footer-padding-horizontal: var(--global-margin);
-  --card-small-footer-padding-vertical: round(up, calc(var(--global-margin) / 1.5), 1px);
-  --card-large-body-padding-horizontal-l: var(--global-large-gutter);
-  --card-large-body-padding-vertical-l: var(--global-large-gutter);
-  --card-large-header-padding-horizontal-l: var(--global-large-gutter);
-  --card-large-header-padding-vertical-l: round(up, calc(var(--global-large-gutter) / 2), 1px);
-  --card-large-footer-padding-horizontal-l: var(--global-large-gutter);
-  --card-large-footer-padding-vertical-l: round(up, calc(var(--global-large-gutter) / 2), 1px);
-  --inverse-card-badge-background: var(--inverse-global-primary-background);
-  --inverse-card-badge-color: var(--inverse-global-inverse-color);
-  --card-hover-background: var(--global-background);
-  --card-default-background: var(--global-background);
-  --card-default-hover-background: var(--card-default-background);
-  --card-primary-hover-background: var(--card-primary-background);
-  --card-secondary-hover-background: var(--card-secondary-background);
-  --card-badge-border-radius: 2px;
-  --card-badge-text-transform: uppercase;
-  --card-hover-box-shadow: var(--global-large-box-shadow);
-  --card-default-box-shadow: var(--global-medium-box-shadow);
-  --card-default-hover-box-shadow: var(--global-large-box-shadow);
-  --card-default-header-border-width: var(--global-border-width);
-  --card-default-header-border: var(--global-border);
-  --card-default-footer-border-width: var(--global-border-width);
-  --card-default-footer-border: var(--global-border);
-  --card-primary-box-shadow: var(--global-medium-box-shadow);
-  --card-primary-hover-box-shadow: var(--global-large-box-shadow);
-  --card-secondary-box-shadow: var(--global-medium-box-shadow);
-  --card-secondary-hover-box-shadow: var(--global-large-box-shadow);
-  --card-overlay-box-shadow: var(--global-medium-box-shadow);
-  --card-overlay-hover-box-shadow: var(--global-large-box-shadow);
-  /*
-     * Close
-     */
-  --close-color: var(--global-muted-color);
-  --close-hover-color: var(--global-color);
-  --inverse-close-color: var(--inverse-global-muted-color);
-  --inverse-close-hover-color: var(--inverse-global-color);
-  /*
-     * Spinner
-     */
-  --spinner-size: 30px;
-  --spinner-stroke-width: 1;
-  --spinner-radius: round(down, calc((var(--spinner-size) - var(--spinner-stroke-width)) / 2));
-  --spinner-circumference: round(up, calc(2 * 3.141 * var(--spinner-radius)));
-  --spinner-duration: 1.4s;
-  /*
-     * Totop
-     */
-  --totop-padding: 5px;
-  --totop-color: var(--global-muted-color);
-  --totop-hover-color: var(--global-color);
-  --totop-active-color: var(--global-emphasis-color);
-  --inverse-totop-color: var(--inverse-global-muted-color);
-  --inverse-totop-hover-color: var(--inverse-global-color);
-  --inverse-totop-active-color: var(--inverse-global-emphasis-color);
-  /*
-     * Marker
-     */
-  --marker-padding: 5px;
-  --marker-background: var(--global-secondary-background);
-  --marker-color: var(--global-inverse-color);
-  --marker-hover-color: var(--global-inverse-color);
-  --inverse-marker-background: var(--global-muted-background);
-  --inverse-marker-color: var(--global-color);
-  --inverse-marker-hover-color: var(--global-color);
-  /*
-     * Alert
-     */
-  --alert-margin-vertical: var(--global-margin);
-  --alert-padding: 15px;
-  --alert-padding-inline-end: calc(var(--alert-padding) + 14px);
-  --alert-background: var(--global-muted-background);
-  --alert-color: var(--global-color);
-  --alert-close-top: calc(var(--alert-padding) + 5px);
-  --alert-close-inline-end: var(--alert-padding);
-  --alert-primary-background: hsl(from color-mix(in srgb, var(--global-primary-background), white 40%) h s calc(l + 20));
-  --alert-primary-color: var(--global-primary-background);
-  --alert-success-background: hsl(from color-mix(in srgb, var(--global-success-background), white 40%) h s calc(l + 25));
-  --alert-success-color: var(--global-success-background);
-  --alert-warning-background: hsl(from color-mix(in srgb, var(--global-warning-background), white 45%) h s calc(l + 15));
-  --alert-warning-color: var(--global-warning-background);
-  --alert-danger-background: hsl(from color-mix(in srgb, var(--global-danger-background), white 40%) h s calc(l + 20));
-  --alert-danger-color: var(--global-danger-background);
-  --alert-close-opacity: 0.4;
-  --alert-close-hover-opacity: 0.8;
-  /*
-     * Placeholder
-     */
-  --placeholder-margin-vertical: var(--global-margin);
-  --placeholder-padding-vertical: var(--global-gutter);
-  --placeholder-padding-horizontal: var(--global-gutter);
-  --placeholder-background: var(--global-muted-background);
-  --placeholder-background: transparent;
-  --placeholder-border-width: var(--global-border-width);
-  --placeholder-border: var(--global-border);
-  /*
-     * Badge
-     */
-  --badge-size: 18px;
-  --badge-padding-vertical: 0;
-  --badge-padding-horizontal: 5px;
-  --badge-border-radius: 500px;
-  --badge-background: var(--global-primary-background);
-  --badge-color: var(--global-inverse-color);
-  --badge-font-size: 11px;
-  --inverse-badge-background: var(--inverse-global-primary-background);
-  --inverse-badge-color: var(--inverse-global-inverse-color);
-  /*
-     * Label
-     */
-  --label-padding-vertical: 0;
-  --label-padding-horizontal: var(--global-small-margin);
-  --label-background: var(--global-primary-background);
-  --label-line-height: var(--global-line-height);
-  --label-font-size: var(--global-small-font-size);
-  --label-color: var(--global-inverse-color);
-  --label-success-background: var(--global-success-background);
-  --label-success-color: var(--global-inverse-color);
-  --label-warning-background: var(--global-warning-background);
-  --label-warning-color: var(--global-inverse-color);
-  --label-danger-background: var(--global-danger-background);
-  --label-danger-color: var(--global-inverse-color);
-  --inverse-label-background: var(--inverse-global-primary-background);
-  --inverse-label-color: var(--inverse-global-inverse-color);
-  --label-border-radius: 2px;
-  --label-text-transform: uppercase;
-  /*
-     * Overlay
-     */
-  --overlay-padding-horizontal: var(--global-gutter);
-  --overlay-padding-vertical: var(--global-gutter);
-  --overlay-default-background: rgb(from var(--global-background) r g b / 0.9);
-  --overlay-default-color-mode: dark;
-  --overlay-primary-background: rgb(from var(--global-secondary-background) r g b / 0.9);
-  --overlay-primary-color-mode: light;
-  /*
-     * Article
-     */
-  --article-margin-top: var(--global-large-margin);
-  --article-title-font-size-m: var(--global-2xlarge-font-size);
-  --article-title-font-size: calc(var(--article-title-font-size-m) * 0.85);
-  --article-title-line-height: 1.2;
-  --article-meta-font-size: var(--global-small-font-size);
-  --article-meta-line-height: 1.4;
-  --article-meta-color: var(--global-muted-color);
-  --inverse-article-meta-color: var(--inverse-global-muted-color);
-  --article-meta-link-color: var(--article-meta-color);
-  --article-meta-link-hover-color: var(--global-color);
-  /*
-     * Comment
-     */
-  --comment-header-margin-bottom: var(--global-margin);
-  --comment-title-font-size: var(--global-medium-font-size);
-  --comment-title-line-height: 1.4;
-  --comment-meta-font-size: var(--global-small-font-size);
-  --comment-meta-line-height: 1.4;
-  --comment-meta-color: var(--global-muted-color);
-  --comment-list-margin-top: var(--global-large-margin);
-  --comment-list-padding-inline-start: 30px;
-  --comment-list-padding-inline-start-m: 100px;
-  --comment-primary-padding: var(--global-gutter);
-  --comment-primary-background: var(--global-muted-background);
-  /*
-     * Search
-     */
-  --search-color: var(--global-color);
-  --search-placeholder-color: var(--global-muted-color);
-  --search-icon-color: var(--global-muted-color);
-  --search-default-width: 240px;
-  --search-default-height: var(--global-control-height);
-  --search-default-padding-horizontal: 10px;
-  --search-default-background: var(--global-muted-background);
-  --search-default-focus-background: hsl(from var(--search-default-background) h s calc(l - 2));
-  --search-default-icon-width: 20px;
-  --search-default-icon-padding: 10px;
-  --search-navbar-width: 240px;
-  --search-navbar-height: var(--global-control-height);
-  --search-navbar-padding-horizontal: 10px;
-  --search-navbar-background: var(--global-background);
-  --search-navbar-focus-background: hsl(from var(--search-navbar-background) h s calc(l - 1));
-  --search-navbar-icon-width: 20px;
-  --search-navbar-icon-padding: 10px;
-  --search-medium-width: 400px;
-  --search-medium-height: var(--global-control-large-height);
-  --search-medium-padding-horizontal: 12px;
-  --search-medium-background: var(--search-default-background);
-  --search-medium-font-size: var(--global-large-font-size);
-  --search-medium-focus-background: hsl(from var(--search-medium-background) h s calc(l - 2));
-  --search-medium-icon-width: 24px;
-  --search-medium-icon-padding: 12px;
-  --search-large-width: 500px;
-  --search-large-height: 90px;
-  --search-large-padding-horizontal: 20px;
-  --search-large-background: var(--search-default-background);
-  --search-large-font-size: var(--global-2xlarge-font-size);
-  --search-large-focus-background: hsl(from var(--search-large-background) h s calc(l - 2));
-  --search-large-icon-width: 40px;
-  --search-large-icon-padding: 20px;
-  --search-toggle-color: var(--global-muted-color);
-  --search-toggle-hover-color: var(--global-color);
-  --inverse-search-color: var(--inverse-global-color);
-  --inverse-search-placeholder-color: var(--inverse-global-muted-color);
-  --inverse-search-icon-color: var(--inverse-global-muted-color);
-  --inverse-search-default-background: var(--inverse-global-muted-background);
-  --inverse-search-default-focus-background: rgb(from var(--inverse-search-default-background) r g b / calc(alpha + 0.05));
-  --inverse-search-navbar-background: var(--inverse-global-muted-background);
-  --inverse-search-navbar-focus-background: rgb(from var(--inverse-search-navbar-background) r g b / calc(alpha + 0.05));
-  --inverse-search-medium-background: var(--inverse-search-default-background);
-  --inverse-search-medium-focus-background: rgb(from var(--inverse-search-medium-background) r g b / calc(alpha + 0.05));
-  --inverse-search-large-background: var(--inverse-search-default-background);
-  --inverse-search-large-focus-background: rgb(from var(--inverse-search-large-background) r g b / calc(alpha + 0.05));
-  --inverse-search-toggle-color: var(--inverse-global-muted-color);
-  --inverse-search-toggle-hover-color: var(--inverse-global-color);
-  --search-default-background: transparent;
-  --search-navbar-focus-background: var(--search-navbar-background);
-  --search-medium-background: transparent;
-  --search-large-background: transparent;
-  --search-default-border-width: var(--global-border-width);
-  --search-default-border: var(--global-border);
-  --search-default-focus-border: var(--global-primary-background);
-  --search-navbar-border-width: var(--global-border-width);
-  --search-navbar-border: var(--global-border);
-  --search-navbar-focus-border: var(--global-primary-background);
-  --search-medium-border-width: var(--global-border-width);
-  --search-medium-border: var(--global-border);
-  --search-medium-focus-border: var(--global-primary-background);
-  --search-large-border-width: var(--global-border-width);
-  --search-large-border: var(--global-border);
-  --search-large-focus-border: var(--global-primary-background);
-  --inverse-search-default-background: transparent;
-  --inverse-search-navbar-background: transparent;
-  --inverse-search-medium-background: transparent;
-  --inverse-search-large-background: transparent;
-  /*
-     * Accordion
-     */
-  --accordion-default-item-margin-top: var(--global-margin);
-  --accordion-default-title-gap: 15px;
-  --accordion-default-title-font-size: var(--global-medium-font-size);
-  --accordion-default-title-line-height: 1.4;
-  --accordion-default-title-color: var(--global-emphasis-color);
-  --accordion-default-title-hover-color: var(--global-color);
-  --accordion-default-content-margin-top: var(--global-margin);
-  --inverse-accordion-default-title-color: var(--inverse-global-emphasis-color);
-  --inverse-accordion-default-title-hover-color: var(--inverse-global-color);
-  --accordion-default-icon-color: var(--global-color);
-  --inverse-accordion-default-icon-color: var(--inverse-global-color);
-  /*
-     * Drop
-     */
-  --drop-z-index: calc(var(--global-z-index) + 20);
-  --drop-margin: var(--global-margin);
-  --drop-viewport-margin: 15px;
-  --drop-width: 300px;
-  --drop-parent-icon-margin-inline-start: 0.25em;
-  /*
-     * Dropbar
-     */
-  --dropbar-margin: 0;
-  --dropbar-padding-top: 15px;
-  --dropbar-padding-bottom: var(--dropbar-padding-top);
-  --dropbar-padding-horizontal: 15px;
-  --dropbar-padding-horizontal-s: var(--global-gutter);
-  --dropbar-padding-horizontal-m: var(--global-medium-gutter);
-  --dropbar-background: var(--global-muted-background);
-  --dropbar-color: var(--global-color);
-  --dropbar-color-mode: dark;
-  --dropbar-focus-outline: var(--base-focus-outline);
-  --dropbar-large-padding-top: 40px;
-  --dropbar-large-padding-bottom: var(--dropbar-large-padding-top);
-  --dropbar-padding-top: 25px;
-  --dropbar-background: var(--global-background);
-  --dropbar-top-box-shadow: 0 12px 7px -6px rgba(0, 0, 0, 0.05);
-  --dropbar-bottom-box-shadow: 0 -12px 7px -6px rgba(0, 0, 0, 0.05);
-  --dropbar-left-box-shadow: 12px 0 7px -6px rgba(0, 0, 0, 0.05);
-  --dropbar-right-box-shadow: -12px 0 7px -6px rgba(0, 0, 0, 0.05);
-  --dropbar-start-box-shadow: calc(12px * var(--uk-dir-sign)) 0 7px -6px rgba(0, 0, 0, 0.05);
-  --dropbar-end-box-shadow: calc(-12px * var(--uk-dir-sign)) 0 7px -6px rgba(0, 0, 0, 0.05);
-  /*
-     * Dropnav
-     */
-  --dropnav-dropbar-z-index: calc(var(--global-z-index) - 20);
-  /*
-     * Modal
-     */
-  --modal-z-index: calc(var(--global-z-index) + 10);
-  --modal-background: rgba(0, 0, 0, 0.6);
-  --modal-padding-horizontal: 15px;
-  --modal-padding-horizontal-s: var(--global-gutter);
-  --modal-padding-horizontal-m: var(--global-medium-gutter);
-  --modal-padding-vertical: var(--modal-padding-horizontal);
-  --modal-padding-vertical-s: 50px;
-  --modal-dialog-width: 600px;
-  --modal-dialog-background: var(--global-background);
-  --modal-container-width: 1200px;
-  --modal-body-padding-horizontal: 20px;
-  --modal-body-padding-vertical: 20px;
-  --modal-body-padding-horizontal-s: var(--global-gutter);
-  --modal-body-padding-vertical-s: var(--global-gutter);
-  --modal-header-padding-horizontal: 20px;
-  --modal-header-padding-vertical: calc(var(--modal-header-padding-horizontal) / 2);
-  --modal-header-padding-horizontal-s: var(--global-gutter);
-  --modal-header-padding-vertical-s: calc(var(--modal-header-padding-horizontal-s) / 2);
-  --modal-header-background: var(--global-muted-background);
-  --modal-footer-padding-horizontal: 20px;
-  --modal-footer-padding-vertical: calc(var(--modal-footer-padding-horizontal) / 2);
-  --modal-footer-padding-horizontal-s: var(--global-gutter);
-  --modal-footer-padding-vertical-s: calc(var(--modal-footer-padding-horizontal-s) / 2);
-  --modal-footer-background: var(--global-muted-background);
-  --modal-title-font-size: var(--global-xlarge-font-size);
-  --modal-title-line-height: 1.3;
-  --modal-close-position: var(--global-small-margin);
-  --modal-close-padding: 5px;
-  --modal-close-outside-position: 0;
-  --modal-close-outside-translate: 100%;
-  --modal-close-outside-color: hsl(from var(--global-inverse-color) h s calc(l + 20));
-  --modal-close-outside-hover-color: var(--global-inverse-color);
-  --modal-header-background: var(--modal-dialog-background);
-  --modal-footer-background: var(--modal-dialog-background);
-  --modal-header-border-width: var(--global-border-width);
-  --modal-header-border: var(--global-border);
-  --modal-footer-border-width: var(--global-border-width);
-  --modal-footer-border: var(--global-border);
-  --modal-close-full-padding: 10px;
-  --modal-close-full-background: var(--modal-dialog-background);
-  --modal-close-full-padding-m: var(--global-margin);
-  /*
-     * Slider
-     */
-  --slider-container-margin-inline-start: -25px;
-  --slider-container-margin-inline-end: var(--slider-container-margin-inline-start);
-  /*
-     * Sticky
-     */
-  --sticky-z-index: calc(var(--global-z-index) - 20);
-  --sticky-animation-duration: 0.2s;
-  --sticky-reverse-animation-duration: 0.2s;
-  /*
-     * Offcanvas
-     */
-  --offcanvas-z-index: var(--global-z-index);
-  --offcanvas-bar-width: 270px;
-  --offcanvas-bar-padding-vertical: 20px;
-  --offcanvas-bar-padding-horizontal: 20px;
-  --offcanvas-bar-background: var(--global-secondary-background);
-  --offcanvas-bar-color-mode: light;
-  --offcanvas-bar-width-s: 350px;
-  --offcanvas-bar-padding-vertical-s: var(--global-gutter);
-  --offcanvas-bar-padding-horizontal-s: var(--global-gutter);
-  --offcanvas-close-position: 5px;
-  --offcanvas-close-padding: 5px;
-  --offcanvas-close-position-s: 10px;
-  --offcanvas-overlay-background: rgba(0, 0, 0, 0.1);
-  /*
-     * Leader
-     */
-  --leader-fill-content: .;
-  --leader-fill-margin-inline-start: var(--global-small-gutter);
-  /*
-     * Notification
-     */
-  --notification-position: 10px;
-  --notification-z-index: calc(var(--global-z-index) + 40);
-  --notification-width: 350px;
-  --notification-message-margin-top: 10px;
-  --notification-message-padding: var(--global-small-gutter);
-  --notification-message-background: var(--global-muted-background);
-  --notification-message-color: var(--global-color);
-  --notification-message-font-size: var(--global-medium-font-size);
-  --notification-message-line-height: 1.4;
-  --notification-close-top: calc(var(--notification-message-padding) + 5px);
-  --notification-close-inline-end: var(--notification-message-padding);
-  --notification-message-primary-color: var(--global-primary-background);
-  --notification-message-success-color: var(--global-success-background);
-  --notification-message-warning-color: var(--global-warning-background);
-  --notification-message-danger-color: var(--global-danger-background);
-  /*
-     * Tooltip
-     */
-  --tooltip-z-index: calc(var(--global-z-index) + 30);
-  --tooltip-margin: 10px;
-  --tooltip-max-width: 200px;
-  --tooltip-padding-vertical: 3px;
-  --tooltip-padding-horizontal: 6px;
-  --tooltip-background: #666;
-  --tooltip-border-radius: 2px;
-  --tooltip-color: var(--global-inverse-color);
-  --tooltip-font-size: 12px;
-  /*
-     * Sortable
-     */
-  --sortable-dragged-z-index: calc(var(--global-z-index) + 50);
-  --sortable-placeholder-opacity: 0;
-  --sortable-empty-height: 50px;
-  /*
-     * Countdown
-     */
-  --countdown-separator-line-height: 2;
-  --countdown-separator-font-size: 0.5em;
-  /*
-     * Thumbnav
-     */
-  --thumbnav-margin-horizontal: 15px;
-  --thumbnav-margin-vertical: var(--thumbnav-margin-horizontal);
-  --thumbnav-item-gradient: linear-gradient(calc(180deg * var(--uk-dir-sign)), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
-  --thumbnav-item-hover-opacity: 0;
-  --thumbnav-item-active-opacity: 0;
-  --inverse-thumbnav-item-gradient: linear-gradient(calc(180deg * var(--uk-dir-sign)), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
-  /*
-     * Iconnav
-     */
-  --iconnav-margin-horizontal: var(--global-small-margin);
-  --iconnav-margin-vertical: var(--iconnav-margin-horizontal);
-  --iconnav-item-color: var(--global-muted-color);
-  --iconnav-item-hover-color: var(--global-color);
-  --iconnav-item-active-color: var(--global-color);
-  --inverse-iconnav-item-color: var(--inverse-global-muted-color);
-  --inverse-iconnav-item-hover-color: var(--inverse-global-color);
-  --inverse-iconnav-item-active-color: var(--inverse-global-color);
-  /*
-     * Grid
-     */
-  --grid-gutter-horizontal: var(--global-gutter);
-  --grid-gutter-vertical: var(--grid-gutter-horizontal);
-  --grid-gutter-horizontal-l: var(--global-medium-gutter);
-  --grid-gutter-vertical-l: var(--grid-gutter-horizontal-l);
-  --grid-small-gutter-horizontal: var(--global-small-gutter);
-  --grid-small-gutter-vertical: var(--grid-small-gutter-horizontal);
-  --grid-medium-gutter-horizontal: var(--global-gutter);
-  --grid-medium-gutter-vertical: var(--grid-medium-gutter-horizontal);
-  --grid-large-gutter-horizontal: var(--global-medium-gutter);
-  --grid-large-gutter-vertical: var(--grid-large-gutter-horizontal);
-  --grid-large-gutter-horizontal-l: var(--global-large-gutter);
-  --grid-large-gutter-vertical-l: var(--grid-large-gutter-horizontal-l);
-  --grid-divider-border-width: var(--global-border-width);
-  --grid-divider-border: var(--global-border);
-  --inverse-grid-divider-border: var(--inverse-global-border);
-  /*
-     * Nav
-     */
-  --nav-item-padding-vertical: 5px;
-  --nav-item-padding-horizontal: 0;
-  --nav-sublist-padding-vertical: 5px;
-  --nav-sublist-padding-inline-start: 15px;
-  --nav-sublist-deeper-padding-inline-start: 15px;
-  --nav-sublist-item-padding-vertical: 2px;
-  --nav-parent-icon-margin-inline-start: 0.25em;
-  --nav-header-padding-vertical: var(--nav-item-padding-vertical);
-  --nav-header-padding-horizontal: var(--nav-item-padding-horizontal);
-  --nav-header-font-size: var(--global-small-font-size);
-  --nav-header-text-transform: uppercase;
-  --nav-header-margin-top: var(--global-margin);
-  --nav-divider-margin-vertical: 5px;
-  --nav-divider-margin-horizontal: 0;
-  --nav-default-font-size: var(--global-font-size);
-  --nav-default-line-height: var(--global-line-height);
-  --nav-default-item-color: var(--global-muted-color);
-  --nav-default-item-hover-color: var(--global-color);
-  --nav-default-item-active-color: var(--global-emphasis-color);
-  --nav-default-subtitle-font-size: var(--global-small-font-size);
-  --nav-default-header-color: var(--global-emphasis-color);
-  --nav-default-divider-border-width: var(--global-border-width);
-  --nav-default-divider-border: var(--global-border);
-  --nav-default-sublist-font-size: var(--nav-default-font-size);
-  --nav-default-sublist-line-height: var(--nav-default-line-height);
-  --nav-default-sublist-item-color: var(--global-muted-color);
-  --nav-default-sublist-item-hover-color: var(--global-color);
-  --nav-default-sublist-item-active-color: var(--global-emphasis-color);
-  --nav-primary-font-size: var(--global-large-font-size);
-  --nav-primary-line-height: var(--global-line-height);
-  --nav-primary-item-color: var(--global-muted-color);
-  --nav-primary-item-hover-color: var(--global-color);
-  --nav-primary-item-active-color: var(--global-emphasis-color);
-  --nav-primary-subtitle-font-size: var(--global-medium-font-size);
-  --nav-primary-header-color: var(--global-emphasis-color);
-  --nav-primary-divider-border-width: var(--global-border-width);
-  --nav-primary-divider-border: var(--global-border);
-  --nav-primary-sublist-font-size: var(--global-medium-font-size);
-  --nav-primary-sublist-line-height: var(--global-line-height);
-  --nav-primary-sublist-item-color: var(--global-muted-color);
-  --nav-primary-sublist-item-hover-color: var(--global-color);
-  --nav-primary-sublist-item-active-color: var(--global-emphasis-color);
-  --nav-secondary-font-size: var(--global-font-size);
-  --nav-secondary-line-height: var(--global-line-height);
-  --nav-secondary-item-color: var(--global-emphasis-color);
-  --nav-secondary-item-hover-color: var(--global-emphasis-color);
-  --nav-secondary-item-active-color: var(--global-emphasis-color);
-  --nav-secondary-subtitle-font-size: var(--global-small-font-size);
-  --nav-secondary-subtitle-color: var(--global-muted-color);
-  --nav-secondary-subtitle-hover-color: var(--global-color);
-  --nav-secondary-subtitle-active-color: var(--global-emphasis-color);
-  --nav-secondary-header-color: var(--global-emphasis-color);
-  --nav-secondary-divider-border-width: var(--global-border-width);
-  --nav-secondary-divider-border: var(--global-border);
-  --nav-secondary-sublist-font-size: var(--global-small-font-size);
-  --nav-secondary-sublist-line-height: var(--global-line-height);
-  --nav-secondary-sublist-item-color: var(--global-muted-color);
-  --nav-secondary-sublist-item-hover-color: var(--global-color);
-  --nav-secondary-sublist-item-active-color: var(--global-emphasis-color);
-  --nav-medium-line-height: 1;
-  --nav-medium-font-size: calc(var(--nav-medium-font-size-m) * 0.825);
-  --nav-medium-font-size-m: calc(var(--nav-medium-font-size-l) * 0.875);
-  --nav-medium-font-size-l: 4rem;
-  --nav-large-line-height: 1;
-  --nav-large-font-size: calc(var(--nav-large-font-size-m) * 0.85);
-  --nav-large-font-size-m: 4rem;
-  --nav-large-font-size-l: 6rem;
-  --nav-xlarge-line-height: 1;
-  --nav-xlarge-font-size: 4rem;
-  --nav-xlarge-font-size-m: 6rem;
-  --nav-xlarge-font-size-l: 8rem;
-  --nav-dividers-margin-top: 5px;
-  --nav-dividers-border-width: var(--global-border-width);
-  --nav-dividers-border: var(--global-border);
-  --inverse-nav-default-item-color: var(--inverse-global-muted-color);
-  --inverse-nav-default-item-hover-color: var(--inverse-global-color);
-  --inverse-nav-default-item-active-color: var(--inverse-global-emphasis-color);
-  --inverse-nav-default-header-color: var(--inverse-global-emphasis-color);
-  --inverse-nav-default-divider-border: var(--inverse-global-border);
-  --inverse-nav-default-sublist-item-color: var(--inverse-global-muted-color);
-  --inverse-nav-default-sublist-item-hover-color: var(--inverse-global-color);
-  --inverse-nav-default-sublist-item-active-color: var(--inverse-global-emphasis-color);
-  --inverse-nav-primary-item-color: var(--inverse-global-muted-color);
-  --inverse-nav-primary-item-hover-color: var(--inverse-global-color);
-  --inverse-nav-primary-item-active-color: var(--inverse-global-emphasis-color);
-  --inverse-nav-primary-header-color: var(--inverse-global-emphasis-color);
-  --inverse-nav-primary-divider-border: var(--inverse-global-border);
-  --inverse-nav-primary-sublist-item-color: var(--inverse-global-muted-color);
-  --inverse-nav-primary-sublist-item-hover-color: var(--inverse-global-color);
-  --inverse-nav-primary-sublist-item-active-color: var(--inverse-global-emphasis-color);
-  --inverse-nav-secondary-item-color: var(--inverse-global-emphasis-color);
-  --inverse-nav-secondary-item-hover-color: var(--inverse-global-emphasis-color);
-  --inverse-nav-secondary-item-active-color: var(--inverse-global-emphasis-color);
-  --inverse-nav-secondary-subtitle-color: var(--inverse-global-muted-color);
-  --inverse-nav-secondary-subtitle-hover-color: var(--inverse-global-color);
-  --inverse-nav-secondary-subtitle-active-color: var(--inverse-global-emphasis-color);
-  --inverse-nav-secondary-header-color: var(--inverse-global-emphasis-color);
-  --inverse-nav-secondary-divider-border: var(--inverse-global-border);
-  --inverse-nav-secondary-sublist-item-color: var(--inverse-global-muted-color);
-  --inverse-nav-secondary-sublist-item-hover-color: var(--inverse-global-color);
-  --inverse-nav-secondary-sublist-item-active-color: var(--inverse-global-emphasis-color);
-  --inverse-nav-dividers-border: var(--inverse-global-border);
-  --nav-default-font-size: var(--global-small-font-size);
-  --nav-default-subtitle-font-size: 12px;
-  --nav-secondary-margin-top: 0;
-  --nav-secondary-item-padding-horizontal: 10px;
-  --nav-secondary-item-padding-vertical: 10px;
-  --nav-secondary-item-hover-background: var(--global-muted-background);
-  --nav-secondary-item-active-background: var(--global-muted-background);
-  --inverse-nav-background-item-hover-background: var(--inverse-global-muted-background);
-  --inverse-nav-background-item-active-background: var(--inverse-global-muted-background);
-  /*
-     * Navbar
-     */
-  --navbar-background: var(--global-muted-background);
-  --navbar-gap: 0px;
-  --navbar-color-mode: dark;
-  --navbar-nav-gap: 0px;
-  --navbar-nav-item-height: 80px;
-  --navbar-nav-item-padding-horizontal: 15px;
-  --navbar-nav-item-color: var(--global-muted-color);
-  --navbar-nav-item-font-size: var(--global-font-size);
-  --navbar-nav-item-font-family: var(--global-font-family);
-  --navbar-nav-item-hover-color: var(--global-color);
-  --navbar-nav-item-onclick-color: var(--global-emphasis-color);
-  --navbar-nav-item-active-color: var(--global-emphasis-color);
-  --navbar-parent-icon-margin-inline-start: 4px;
-  --navbar-item-padding-horizontal: 15px;
-  --navbar-item-color: var(--global-color);
-  --navbar-toggle-color: var(--global-muted-color);
-  --navbar-toggle-hover-color: var(--global-color);
-  --navbar-subtitle-font-size: var(--global-small-font-size);
-  --navbar-dropdown-margin: 0;
-  --navbar-dropdown-shift-margin: 0;
-  --navbar-dropdown-viewport-margin: 15px;
-  --navbar-dropdown-width: 200px;
-  --navbar-dropdown-padding: 15px;
-  --navbar-dropdown-background: var(--global-muted-background);
-  --navbar-dropdown-color: var(--global-color);
-  --navbar-dropdown-color-mode: dark;
-  --navbar-dropdown-focus-outline: var(--base-focus-outline);
-  --navbar-dropdown-grid-gutter-horizontal: var(--global-gutter);
-  --navbar-dropdown-grid-gutter-vertical: var(--navbar-dropdown-grid-gutter-horizontal);
-  --navbar-dropdown-large-shift-margin: 0;
-  --navbar-dropdown-large-padding: 40px;
-  --navbar-dropdown-dropbar-margin: 0;
-  --navbar-dropdown-dropbar-shift-margin: 0;
-  --navbar-dropdown-dropbar-padding-top: var(--navbar-dropdown-padding);
-  --navbar-dropdown-dropbar-padding-bottom: var(--navbar-dropdown-dropbar-padding-top);
-  --navbar-dropdown-dropbar-viewport-margin: 15px;
-  --navbar-dropdown-dropbar-viewport-margin-s: var(--global-gutter);
-  --navbar-dropdown-dropbar-viewport-margin-m: var(--global-medium-gutter);
-  --navbar-dropdown-dropbar-large-shift-margin: 0;
-  --navbar-dropdown-dropbar-large-padding-top: var(--navbar-dropdown-large-padding);
-  --navbar-dropdown-dropbar-large-padding-bottom: var(--navbar-dropdown-dropbar-large-padding-top);
-  --navbar-dropdown-nav-item-color: var(--global-muted-color);
-  --navbar-dropdown-nav-item-hover-color: var(--global-color);
-  --navbar-dropdown-nav-item-active-color: var(--global-emphasis-color);
-  --navbar-dropdown-nav-subtitle-font-size: var(--global-small-font-size);
-  --navbar-dropdown-nav-header-color: var(--global-emphasis-color);
-  --navbar-dropdown-nav-divider-border-width: var(--global-border-width);
-  --navbar-dropdown-nav-divider-border: var(--global-border);
-  --navbar-dropdown-nav-sublist-item-color: var(--global-muted-color);
-  --navbar-dropdown-nav-sublist-item-hover-color: var(--global-color);
-  --navbar-dropdown-nav-sublist-item-active-color: var(--global-emphasis-color);
-  --inverse-navbar-nav-item-color: var(--inverse-global-muted-color);
-  --inverse-navbar-nav-item-hover-color: var(--inverse-global-color);
-  --inverse-navbar-nav-item-onclick-color: var(--inverse-global-emphasis-color);
-  --inverse-navbar-nav-item-active-color: var(--inverse-global-emphasis-color);
-  --inverse-navbar-item-color: var(--inverse-global-color);
-  --inverse-navbar-toggle-color: var(--inverse-global-muted-color);
-  --inverse-navbar-toggle-hover-color: var(--inverse-global-color);
-  --navbar-gap: 15px;
-  --navbar-nav-gap: 15px;
-  --navbar-nav-item-padding-horizontal: 0;
-  --navbar-nav-item-font-size: var(--global-small-font-size);
-  --navbar-item-padding-horizontal: 0;
-  --navbar-dropdown-margin: 15px;
-  --navbar-dropdown-padding: 25px;
-  --navbar-dropdown-background: var(--global-background);
-  --navbar-dropdown-nav-subtitle-font-size: 12px;
-  --navbar-gap-m: 30px;
-  --navbar-nav-gap-m: 30px;
-  --navbar-nav-item-text-transform: uppercase;
-  --navbar-dropdown-nav-font-size: var(--global-small-font-size);
-  --navbar-dropdown-box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
-  /*
-     * Subnav
-     */
-  --subnav-margin-horizontal: 20px;
-  --subnav-item-color: var(--global-muted-color);
-  --subnav-item-hover-color: var(--global-color);
-  --subnav-item-hover-text-decoration: none;
-  --subnav-item-active-color: var(--global-emphasis-color);
-  --subnav-divider-margin-horizontal: var(--subnav-margin-horizontal);
-  --subnav-divider-border-height: 1.5em;
-  --subnav-divider-border-width: var(--global-border-width);
-  --subnav-divider-border: var(--global-border);
-  --subnav-pill-margin-horizontal: var(--subnav-margin-horizontal);
-  --subnav-pill-item-padding-vertical: 5px;
-  --subnav-pill-item-padding-horizontal: 10px;
-  --subnav-pill-item-background: transparent;
-  --subnav-pill-item-color: var(--subnav-item-color);
-  --subnav-pill-item-hover-background: var(--global-muted-background);
-  --subnav-pill-item-hover-color: var(--global-color);
-  --subnav-pill-item-onclick-background: var(--subnav-pill-item-hover-background);
-  --subnav-pill-item-onclick-color: var(--subnav-pill-item-hover-color);
-  --subnav-pill-item-active-background: var(--global-primary-background);
-  --subnav-pill-item-active-color: var(--global-inverse-color);
-  --subnav-item-disabled-color: var(--global-muted-color);
-  --inverse-subnav-item-color: var(--inverse-global-muted-color);
-  --inverse-subnav-item-hover-color: var(--inverse-global-color);
-  --inverse-subnav-item-active-color: var(--inverse-global-emphasis-color);
-  --inverse-subnav-divider-border: var(--inverse-global-border);
-  --inverse-subnav-pill-item-background: transparent;
-  --inverse-subnav-pill-item-color: var(--inverse-global-muted-color);
-  --inverse-subnav-pill-item-hover-background: var(--inverse-global-muted-background);
-  --inverse-subnav-pill-item-hover-color: var(--inverse-global-color);
-  --inverse-subnav-pill-item-onclick-background: var(--inverse-subnav-pill-item-hover-background);
-  --inverse-subnav-pill-item-onclick-color: var(--inverse-subnav-pill-item-hover-color);
-  --inverse-subnav-pill-item-active-background: var(--inverse-global-primary-background);
-  --inverse-subnav-pill-item-active-color: var(--inverse-global-inverse-color);
-  --inverse-subnav-item-disabled-color: var(--inverse-global-muted-color);
-  --subnav-item-font-size: var(--global-small-font-size);
-  --subnav-item-text-transform: uppercase;
-  /*
-     * Breadcrumb
-     */
-  --breadcrumb-item-font-size: var(--global-small-font-size);
-  --breadcrumb-item-color: var(--global-muted-color);
-  --breadcrumb-item-hover-color: var(--global-color);
-  --breadcrumb-item-hover-text-decoration: none;
-  --breadcrumb-item-active-color: var(--global-color);
-  --breadcrumb-divider: "/";
-  --breadcrumb-divider-margin-horizontal: 20px;
-  --breadcrumb-divider-font-size: var(--breadcrumb-item-font-size);
-  --breadcrumb-divider-color: var(--global-muted-color);
-  --inverse-breadcrumb-item-color: var(--inverse-global-muted-color);
-  --inverse-breadcrumb-item-hover-color: var(--inverse-global-color);
-  --inverse-breadcrumb-item-active-color: var(--inverse-global-color);
-  --inverse-breadcrumb-divider-color: var(--inverse-global-muted-color);
-  /*
-     * Pagination
-     */
-  --pagination-margin-horizontal: 0;
-  --pagination-item-padding-vertical: 5px;
-  --pagination-item-padding-horizontal: 10px;
-  --pagination-item-color: var(--global-muted-color);
-  --pagination-item-hover-color: var(--global-color);
-  --pagination-item-hover-text-decoration: none;
-  --pagination-item-active-color: var(--global-color);
-  --pagination-item-disabled-color: var(--global-muted-color);
-  --inverse-pagination-item-color: var(--inverse-global-muted-color);
-  --inverse-pagination-item-hover-color: var(--inverse-global-color);
-  --inverse-pagination-item-active-color: var(--inverse-global-color);
-  --inverse-pagination-item-disabled-color: var(--inverse-global-muted-color);
-  /*
-     * Tab
-     */
-  --tab-margin-horizontal: 20px;
-  --tab-item-padding-horizontal: 10px;
-  --tab-item-padding-vertical: 5px;
-  --tab-item-color: var(--global-muted-color);
-  --tab-item-hover-color: var(--global-color);
-  --tab-item-hover-text-decoration: none;
-  --tab-item-active-color: var(--global-emphasis-color);
-  --tab-item-disabled-color: var(--global-muted-color);
-  --inverse-tab-item-color: var(--inverse-global-muted-color);
-  --inverse-tab-item-hover-color: var(--inverse-global-color);
-  --inverse-tab-item-active-color: var(--inverse-global-emphasis-color);
-  --inverse-tab-item-disabled-color: var(--inverse-global-muted-color);
-  --tab-border-width: var(--global-border-width);
-  --tab-border: var(--global-border);
-  --tab-item-border-width: var(--global-border-width);
-  --tab-item-font-size: var(--global-small-font-size);
-  --tab-item-text-transform: uppercase;
-  --tab-item-active-border: var(--global-primary-background);
-  --inverse-tab-border: var(--inverse-global-border);
-  /*
-     * Slidenav
-     */
-  --slidenav-padding-vertical: 5px;
-  --slidenav-padding-horizontal: 10px;
-  --slidenav-color: rgb(from var(--global-color) r g b / 0.5);
-  --slidenav-hover-color: rgb(from var(--global-color) r g b / 0.9);
-  --slidenav-active-color: rgb(from var(--global-color) r g b / 0.5);
-  --slidenav-large-padding-vertical: 10px;
-  --slidenav-large-padding-horizontal: var(--slidenav-large-padding-vertical);
-  --inverse-slidenav-color: rgb(from var(--inverse-global-color) r g b / 0.7);
-  --inverse-slidenav-hover-color: rgb(from var(--inverse-global-color) r g b / 0.95);
-  --inverse-slidenav-active-color: rgb(from var(--inverse-global-color) r g b / 0.7);
-  /*
-     * Dotnav
-     */
-  --dotnav-margin-horizontal: 12px;
-  --dotnav-margin-vertical: var(--dotnav-margin-horizontal);
-  --dotnav-item-width: 10px;
-  --dotnav-item-height: var(--dotnav-item-width);
-  --dotnav-item-border-radius: 50%;
-  --dotnav-item-background: rgb(from var(--global-color) r g b / 0.2);
-  --dotnav-item-hover-background: rgb(from var(--global-color) r g b / 0.6);
-  --dotnav-item-onclick-background: rgb(from var(--global-color) r g b / 0.2);
-  --dotnav-item-active-background: rgb(from var(--global-color) r g b / 0.6);
-  --inverse-dotnav-item-background: rgb(from var(--inverse-global-color) r g b / 0.5);
-  --inverse-dotnav-item-hover-background: rgb(from var(--inverse-global-color) r g b / 0.9);
-  --inverse-dotnav-item-onclick-background: rgb(from var(--inverse-global-color) r g b / 0.5);
-  --inverse-dotnav-item-active-background: rgb(from var(--inverse-global-color) r g b / 0.9);
-  --dotnav-item-background: transparent;
-  --dotnav-item-border-width: 1px;
-  --dotnav-item-border: rgb(from var(--global-color) r g b / 0.4);
-  --dotnav-item-hover-border: transparent;
-  --dotnav-item-onclick-border: transparent;
-  --dotnav-item-active-border: transparent;
-  --inverse-dotnav-item-background: transparent;
-  /*
-     * Dropdown
-     */
-  --dropdown-margin: var(--global-small-margin);
-  --dropdown-viewport-margin: 15px;
-  --dropdown-min-width: 200px;
-  --dropdown-padding: 15px;
-  --dropdown-background: var(--global-muted-background);
-  --dropdown-color: var(--global-color);
-  --dropdown-color-mode: dark;
-  --dropdown-focus-outline: var(--base-focus-outline);
-  --dropdown-large-padding: 40px;
-  --dropdown-dropbar-margin: var(--dropdown-margin);
-  --dropdown-dropbar-padding-top: var(--dropdown-padding);
-  --dropdown-dropbar-padding-bottom: var(--dropdown-padding);
-  --dropdown-dropbar-viewport-margin: 15px;
-  --dropdown-dropbar-viewport-margin-s: var(--global-gutter);
-  --dropdown-dropbar-viewport-margin-m: var(--global-medium-gutter);
-  --dropdown-dropbar-large-padding-top: var(--dropdown-large-padding);
-  --dropdown-dropbar-large-padding-bottom: var(--dropdown-large-padding);
-  --dropdown-nav-item-color: var(--global-muted-color);
-  --dropdown-nav-item-hover-color: var(--global-color);
-  --dropdown-nav-subtitle-font-size: var(--global-small-font-size);
-  --dropdown-nav-header-color: var(--global-emphasis-color);
-  --dropdown-nav-divider-border-width: var(--global-border-width);
-  --dropdown-nav-divider-border: var(--global-border);
-  --dropdown-nav-sublist-item-color: var(--global-muted-color);
-  --dropdown-nav-sublist-item-hover-color: var(--global-color);
-  --dropdown-padding: 25px;
-  --dropdown-background: var(--global-background);
-  --dropdown-dropbar-padding-top: 5px;
-  --dropdown-nav-subtitle-font-size: 12px;
-  --dropdown-nav-font-size: var(--global-small-font-size);
-  --dropdown-box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
-  /*
-     * Lightbox
-     */
-  --lightbox-z-index: calc(var(--global-z-index) + 10);
-  --lightbox-background: #000;
-  --lightbox-color-mode: light;
-  --lightbox-focus-outline: rgba(255, 255, 255, 0.7);
-  --lightbox-item-max-width: 100vw;
-  --lightbox-item-max-height: 100vh;
-  --lightbox-thumbnav-vertical-width: 100px;
-  --lightbox-thumbnav-height: 100px;
-  --lightbox-caption-padding-vertical: 10px;
-  --lightbox-caption-padding-horizontal: 10px;
-  --lightbox-caption-background: rgba(0, 0, 0, 0.3);
-  --lightbox-caption-color: rgba(255, 255, 255, 0.7);
-  /*
      * Animation
      */
   --animation-duration: 0.5s;
@@ -1538,26 +405,12 @@
   --text-meta-link-hover-color: var(--global-color);
   --internal-text-background-color-gradient: linear-gradient(calc(90deg * var(--uk-dir-sign)), var(--text-background-color) 0%, hsl(from var(--text-background-color) calc(h + 40) s l) 100%);
   /*
-     * Column
-     */
-  --column-gutter: var(--global-gutter);
-  --column-gutter-l: var(--global-medium-gutter);
-  --column-divider-rule-color: var(--global-border);
-  --column-divider-rule-width: 1px;
-  --inverse-column-divider-rule-color: var(--inverse-global-border);
-  /*
      * Background
      */
   --background-default-background: var(--global-background);
   --background-muted-background: var(--global-muted-background);
   --background-primary-background: var(--global-primary-background);
   --background-secondary-background: var(--global-secondary-background);
-  /*
-     * Align
-     */
-  --align-margin-horizontal: var(--global-gutter);
-  --align-margin-vertical: var(--global-gutter);
-  --align-margin-horizontal-l: var(--global-medium-gutter);
   /*
      * Utility
      */
@@ -2270,6 +1123,25 @@ a.uk-link-reset,
  * 2. Set margin if a `div` is used for semantical reason
  */
 [class*="uk-divider"] {
+  --divider-margin-vertical: var(--global-margin);
+  --divider-icon-width: 50px;
+  --divider-icon-height: 20px;
+  --divider-icon-color: var(--global-border);
+  --divider-icon-line-top: 50%;
+  --divider-icon-line-width: 100%;
+  --divider-icon-line-border-width: var(--global-border-width);
+  --divider-icon-line-border: var(--global-border);
+  --internal-divider-icon-image: url("../../src/images/backgrounds/divider-icon.svg");
+  --divider-small-width: 100px;
+  --divider-small-border-width: var(--global-border-width);
+  --divider-small-border: var(--global-border);
+  --divider-vertical-height: 100px;
+  --divider-vertical-border-width: var(--global-border-width);
+  --divider-vertical-border: var(--global-border);
+  --inverse-divider-icon-color: var(--inverse-global-border);
+  --inverse-divider-icon-line-border: var(--inverse-global-border);
+  --inverse-divider-small-border: var(--inverse-global-border);
+  --inverse-divider-vertical-border: var(--inverse-global-border);
   /* 1 */
   border: none;
   /* 2 */
@@ -2336,6 +1208,34 @@ a.uk-link-reset,
    Component: List
  ========================================================================== */
 .uk-list {
+  --list-margin-top: var(--global-small-margin);
+  --list-padding-inline-start: 30px;
+  --list-marker-height: calc(var(--global-line-height) * 1em);
+  --list-muted-color: var(--global-muted-color);
+  --list-emphasis-color: var(--global-emphasis-color);
+  --list-primary-color: var(--global-primary-background);
+  --list-secondary-color: var(--global-secondary-background);
+  --list-bullet-icon-color: var(--global-color);
+  --list-divider-margin-top: var(--global-small-margin);
+  --list-divider-border-width: var(--global-border-width);
+  --list-divider-border: var(--global-border);
+  --list-striped-padding-vertical: var(--global-small-margin);
+  --list-striped-padding-horizontal: var(--global-small-margin);
+  --list-striped-background: var(--global-muted-background);
+  --list-large-margin-top: var(--global-margin);
+  --list-large-divider-margin-top: var(--global-margin);
+  --list-large-striped-padding-vertical: var(--global-margin);
+  --list-large-striped-padding-horizontal: var(--global-small-margin);
+  --internal-list-bullet-image: url("../../src/images/backgrounds/list-bullet.svg");
+  --inverse-list-muted-color: var(--inverse-global-muted-color);
+  --inverse-list-emphasis-color: var(--inverse-global-emphasis-color);
+  --inverse-list-primary-color: var(--inverse-global-primary-background);
+  --inverse-list-secondary-color: var(--inverse-global-primary-background);
+  --inverse-list-divider-border: var(--inverse-global-border);
+  --inverse-list-striped-background: var(--inverse-global-muted-background);
+  --inverse-list-bullet-icon-color: var(--inverse-global-color);
+  --list-striped-border-width: var(--global-border-width);
+  --list-striped-border: var(--global-border);
   padding: 0;
   list-style: none;
 }
@@ -2478,6 +1378,16 @@ a.uk-link-reset,
 /* ========================================================================
    Component: Description list
  ========================================================================== */
+.uk-description-list {
+  --description-list-term-color: var(--global-emphasis-color);
+  --description-list-term-margin-top: var(--global-margin);
+  --description-list-divider-term-margin-top: var(--global-margin);
+  --description-list-divider-term-border-width: var(--global-border-width);
+  --description-list-divider-term-border: var(--global-border);
+  --description-list-term-font-size: var(--global-small-font-size);
+  --description-list-term-font-weight: normal;
+  --description-list-term-text-transform: uppercase;
+}
 /*
  * Term
  */
@@ -2512,6 +1422,36 @@ a.uk-link-reset,
  * 3. Style
  */
 .uk-table {
+  --table-margin-vertical: var(--global-margin);
+  --table-cell-padding-vertical: 16px;
+  --table-cell-padding-horizontal: 12px;
+  --table-header-cell-font-size: var(--global-font-size);
+  --table-header-cell-font-weight: bold;
+  --table-header-cell-color: var(--global-color);
+  --table-footer-font-size: var(--global-small-font-size);
+  --table-caption-font-size: var(--global-small-font-size);
+  --table-caption-color: var(--global-muted-color);
+  --table-row-active-background: #ffd;
+  --table-divider-border-width: var(--global-border-width);
+  --table-divider-border: var(--global-border);
+  --table-striped-row-background: var(--global-muted-background);
+  --table-hover-row-background: var(--table-row-active-background);
+  --table-small-cell-padding-vertical: 10px;
+  --table-small-cell-padding-horizontal: 12px;
+  --table-large-cell-padding-vertical: 22px;
+  --table-large-cell-padding-horizontal: 12px;
+  --table-expand-min-width: 150px;
+  --inverse-table-header-cell-color: var(--inverse-global-color);
+  --inverse-table-caption-color: var(--inverse-global-muted-color);
+  --inverse-table-row-active-background: rgb(from var(--inverse-global-muted-background) r g b / calc(alpha - 0.02));
+  --inverse-table-divider-border: var(--inverse-global-border);
+  --inverse-table-striped-row-background: var(--inverse-global-muted-background);
+  --inverse-table-hover-row-background: var(--inverse-table-row-active-background);
+  --table-header-cell-font-size: var(--global-small-font-size);
+  --table-header-cell-font-weight: normal;
+  --table-header-cell-color: var(--global-muted-color);
+  --table-striped-border-width: var(--global-border-width);
+  --table-striped-border: var(--global-border);
   /* 1 */
   border-collapse: collapse;
   border-spacing: 0;
@@ -2706,6 +1646,32 @@ a.uk-link-reset,
  * 10. Let the container fit the height of the icon
  */
 .uk-icon {
+  --icon-image-size: 20px;
+  --icon-link-color: var(--global-muted-color);
+  --icon-link-hover-color: var(--global-color);
+  --icon-link-active-color: hsl(from var(--global-color) h s calc(l - 5));
+  --icon-button-size: 36px;
+  --icon-button-border-radius: 500px;
+  --icon-button-background: var(--global-muted-background);
+  --icon-button-color: var(--global-muted-color);
+  --icon-button-hover-background: hsl(from var(--icon-button-background) h s calc(l - 5));
+  --icon-button-hover-color: var(--global-color);
+  --icon-button-active-background: hsl(from var(--icon-button-background) h s calc(l - 10));
+  --icon-button-active-color: var(--global-color);
+  --icon-primary-color: currentColor;
+  --icon-overlay-color: rgb(from var(--global-emphasis-color) r g b / 0.6);
+  --icon-overlay-hover-color: var(--global-emphasis-color);
+  --inverse-icon-link-color: var(--inverse-global-muted-color);
+  --inverse-icon-link-hover-color: var(--inverse-global-color);
+  --inverse-icon-link-active-color: var(--inverse-global-color);
+  --inverse-icon-button-background: var(--inverse-global-muted-background);
+  --inverse-icon-button-color: var(--inverse-global-muted-color);
+  --inverse-icon-button-hover-background: rgb(from var(--inverse-icon-button-background) r g b / calc(alpha + 0.05));
+  --inverse-icon-button-hover-color: var(--inverse-global-color);
+  --inverse-icon-button-active-background: rgb(from var(--inverse-icon-button-background) r g b / calc(alpha + 0.1));
+  --inverse-icon-button-active-color: var(--inverse-global-color);
+  --inverse-icon-overlay-color: rgb(from var(--inverse-global-emphasis-color) r g b / 0.6);
+  --inverse-icon-overlay-hover-color: var(--inverse-global-emphasis-color);
   /* 1 */
   margin: 0;
   /* 2 */
@@ -3534,6 +2500,98 @@ select.uk-form-width-xsmall {
  * 10. Required for `a`.
  */
 .uk-button {
+  --button-line-height: var(--global-control-height);
+  --button-small-line-height: var(--global-control-small-height);
+  --button-large-line-height: var(--global-control-large-height);
+  --button-font-size: var(--global-font-size);
+  --button-small-font-size: var(--global-small-font-size);
+  --button-large-font-size: var(--global-medium-font-size);
+  --button-padding-horizontal: var(--global-gutter);
+  --button-small-padding-horizontal: var(--global-small-gutter);
+  --button-large-padding-horizontal: var(--global-medium-gutter);
+  --button-default-background: var(--global-muted-background);
+  --button-default-color: var(--global-emphasis-color);
+  --button-default-hover-background: hsl(from var(--button-default-background) h s calc(l - 5));
+  --button-default-hover-color: var(--global-emphasis-color);
+  --button-default-active-background: hsl(from var(--button-default-background) h s calc(l - 10));
+  --button-default-active-color: var(--global-emphasis-color);
+  --button-primary-background: var(--global-primary-background);
+  --button-primary-color: var(--global-inverse-color);
+  --button-primary-hover-background: hsl(from var(--button-primary-background) h s calc(l - 5));
+  --button-primary-hover-color: var(--global-inverse-color);
+  --button-primary-active-background: hsl(from var(--button-primary-background) h s calc(l - 10));
+  --button-primary-active-color: var(--global-inverse-color);
+  --button-secondary-background: var(--global-secondary-background);
+  --button-secondary-color: var(--global-inverse-color);
+  --button-secondary-hover-background: hsl(from var(--button-secondary-background) h s calc(l - 5));
+  --button-secondary-hover-color: var(--global-inverse-color);
+  --button-secondary-active-background: hsl(from var(--button-secondary-background) h s calc(l - 10));
+  --button-secondary-active-color: var(--global-inverse-color);
+  --button-danger-background: var(--global-danger-background);
+  --button-danger-color: var(--global-inverse-color);
+  --button-danger-hover-background: hsl(from var(--button-danger-background) h s calc(l - 5));
+  --button-danger-hover-color: var(--global-inverse-color);
+  --button-danger-active-background: hsl(from var(--button-danger-background) h s calc(l - 10));
+  --button-danger-active-color: var(--global-inverse-color);
+  --button-disabled-background: var(--global-muted-background);
+  --button-disabled-color: var(--global-muted-color);
+  --button-text-line-height: var(--global-line-height);
+  --button-text-color: var(--global-emphasis-color);
+  --button-text-hover-color: var(--global-muted-color);
+  --button-text-disabled-color: var(--global-muted-color);
+  --button-link-line-height: var(--global-line-height);
+  --button-link-color: var(--global-emphasis-color);
+  --button-link-hover-color: var(--global-muted-color);
+  --button-link-hover-text-decoration: none;
+  --button-link-disabled-color: var(--global-muted-color);
+  --inverse-button-default-background: var(--inverse-global-primary-background);
+  --inverse-button-default-color: var(--inverse-global-inverse-color);
+  --inverse-button-default-hover-background: hsl(from var(--inverse-button-default-background) h s calc(l - 5));
+  --inverse-button-default-hover-color: var(--inverse-global-inverse-color);
+  --inverse-button-default-active-background: hsl(from var(--inverse-button-default-background) h s calc(l - 10));
+  --inverse-button-default-active-color: var(--inverse-global-inverse-color);
+  --inverse-button-primary-background: var(--inverse-global-primary-background);
+  --inverse-button-primary-color: var(--inverse-global-inverse-color);
+  --inverse-button-primary-hover-background: hsl(from var(--inverse-button-primary-background) h s calc(l - 5));
+  --inverse-button-primary-hover-color: var(--inverse-global-inverse-color);
+  --inverse-button-primary-active-background: hsl(from var(--inverse-button-primary-background) h s calc(l - 10));
+  --inverse-button-primary-active-color: var(--inverse-global-inverse-color);
+  --inverse-button-secondary-background: var(--inverse-global-primary-background);
+  --inverse-button-secondary-color: var(--inverse-global-inverse-color);
+  --inverse-button-secondary-hover-background: hsl(from var(--inverse-button-secondary-background) h s calc(l - 5));
+  --inverse-button-secondary-hover-color: var(--inverse-global-inverse-color);
+  --inverse-button-secondary-active-background: hsl(from var(--inverse-button-secondary-background) h s calc(l - 10));
+  --inverse-button-secondary-active-color: var(--inverse-global-inverse-color);
+  --inverse-button-text-color: var(--inverse-global-emphasis-color);
+  --inverse-button-text-hover-color: var(--inverse-global-muted-color);
+  --inverse-button-text-disabled-color: var(--inverse-global-muted-color);
+  --inverse-button-link-color: var(--inverse-global-emphasis-color);
+  --inverse-button-link-hover-color: var(--inverse-global-muted-color);
+  --button-line-height: calc(var(--global-control-height) - (var(--button-border-width) * 2));
+  --button-small-line-height: calc(var(--global-control-small-height) - (var(--button-border-width) * 2));
+  --button-large-line-height: calc(var(--global-control-large-height) - (var(--button-border-width) * 2));
+  --button-font-size: var(--global-small-font-size);
+  --button-large-font-size: var(--global-small-font-size);
+  --button-default-background: transparent;
+  --button-default-hover-background: transparent;
+  --button-default-active-background: transparent;
+  --button-disabled-background: transparent;
+  --button-text-hover-color: var(--global-emphasis-color);
+  --button-text-transform: uppercase;
+  --button-border-width: var(--global-border-width);
+  --button-default-border: var(--global-border);
+  --button-default-hover-border: hsl(from var(--global-border) h s calc(l - 20));
+  --button-default-active-border: hsl(from var(--global-border) h s calc(l - 30));
+  --button-disabled-border: var(--global-border);
+  --button-text-border-width: var(--global-border-width);
+  --button-text-border: currentColor;
+  --inverse-button-default-background: transparent;
+  --inverse-button-default-color: var(--inverse-global-emphasis-color);
+  --inverse-button-default-hover-background: transparent;
+  --inverse-button-default-hover-color: var(--inverse-global-emphasis-color);
+  --inverse-button-default-active-background: transparent;
+  --inverse-button-default-active-color: var(--inverse-global-emphasis-color);
+  --inverse-button-text-hover-color: var(--inverse-global-emphasis-color);
   /* 1 */
   margin: 0;
   /* 2 */
@@ -3787,6 +2845,11 @@ select.uk-form-width-xsmall {
  * 5. Style
  */
 .uk-progress-progress {
+  --progress-height: 15px;
+  --progress-margin-vertical: var(--global-margin);
+  --progress-background: var(--global-muted-background);
+  --progress-bar-background: var(--global-primary-background);
+  --progress-border-radius: 500px;
   /* 1 */
   vertical-align: baseline;
   /* 2 */
@@ -3833,6 +2896,22 @@ select.uk-form-width-xsmall {
  * 1. Make it work with `100vh` and height in general
  */
 .uk-section {
+  --section-padding-vertical: var(--global-medium-margin);
+  --section-padding-vertical-m: var(--global-large-margin);
+  --section-xsmall-padding-vertical: var(--global-margin);
+  --section-small-padding-vertical: var(--global-medium-margin);
+  --section-large-padding-vertical: var(--global-large-margin);
+  --section-large-padding-vertical-m: var(--global-xlarge-margin);
+  --section-xlarge-padding-vertical: var(--global-xlarge-margin);
+  --section-xlarge-padding-vertical-m: calc(var(--global-large-margin) + var(--global-xlarge-margin));
+  --section-default-background: var(--global-background);
+  --section-default-color-mode: dark;
+  --section-muted-background: var(--global-muted-background);
+  --section-muted-color-mode: dark;
+  --section-primary-background: var(--global-primary-background);
+  --section-primary-color-mode: light;
+  --section-secondary-background: var(--global-secondary-background);
+  --section-secondary-color-mode: light;
   display: flow-root;
   box-sizing: border-box;
   /* 1 */
@@ -3994,6 +3073,14 @@ select.uk-form-width-xsmall {
  *    unaffected by the padding on different breakpoints. It's important for the size modifiers.
  */
 .uk-container {
+  --container-max-width: 1200px;
+  --container-xsmall-max-width: 750px;
+  --container-small-max-width: 900px;
+  --container-large-max-width: 1400px;
+  --container-xlarge-max-width: 1600px;
+  --container-padding-horizontal: 15px;
+  --container-padding-horizontal-s: var(--global-gutter);
+  --container-padding-horizontal-m: var(--global-medium-gutter);
   display: flow-root;
   /* 1 */
   box-sizing: content-box;
@@ -4182,6 +3269,25 @@ select.uk-form-width-xsmall {
    Component: Tile
  ========================================================================== */
 .uk-tile {
+  --tile-padding-horizontal: 15px;
+  --tile-padding-horizontal-s: var(--global-gutter);
+  --tile-padding-horizontal-m: var(--global-medium-gutter);
+  --tile-padding-vertical: var(--global-medium-margin);
+  --tile-padding-vertical-m: var(--global-large-margin);
+  --tile-xsmall-padding-vertical: var(--global-margin);
+  --tile-small-padding-vertical: var(--global-medium-margin);
+  --tile-large-padding-vertical: var(--global-large-margin);
+  --tile-large-padding-vertical-m: var(--global-xlarge-margin);
+  --tile-xlarge-padding-vertical: var(--global-xlarge-margin);
+  --tile-xlarge-padding-vertical-m: calc(var(--global-large-margin) + var(--global-xlarge-margin));
+  --tile-default-background: var(--global-background);
+  --tile-default-color-mode: dark;
+  --tile-muted-background: var(--global-muted-background);
+  --tile-muted-color-mode: dark;
+  --tile-primary-background: var(--global-primary-background);
+  --tile-primary-color-mode: light;
+  --tile-secondary-background: var(--global-secondary-background);
+  --tile-secondary-color-mode: light;
   display: flow-root;
   position: relative;
   box-sizing: border-box;
@@ -4290,6 +3396,82 @@ select.uk-form-width-xsmall {
    Component: Card
  ========================================================================== */
 .uk-card {
+  --card-body-padding-horizontal: var(--global-gutter);
+  --card-body-padding-vertical: var(--global-gutter);
+  --card-body-padding-horizontal-l: var(--global-medium-gutter);
+  --card-body-padding-vertical-l: var(--global-medium-gutter);
+  --card-header-padding-horizontal: var(--global-gutter);
+  --card-header-padding-vertical: round(up, calc(var(--global-gutter) / 2), 1px);
+  --card-header-padding-horizontal-l: var(--global-medium-gutter);
+  --card-header-padding-vertical-l: round(up, calc(var(--global-medium-gutter) / 2), 1px);
+  --card-footer-padding-horizontal: var(--global-gutter);
+  --card-footer-padding-vertical: calc(var(--global-gutter) / 2);
+  --card-footer-padding-horizontal-l: var(--global-medium-gutter);
+  --card-footer-padding-vertical-l: round(up, calc(var(--global-medium-gutter) / 2), 1px);
+  --card-title-font-size: var(--global-large-font-size);
+  --card-title-line-height: 1.4;
+  --card-badge-top: 15px;
+  --card-badge-inline-end: 15px;
+  --card-badge-height: 22px;
+  --card-badge-padding-horizontal: 10px;
+  --card-badge-background: var(--global-primary-background);
+  --card-badge-color: var(--global-inverse-color);
+  --card-badge-font-size: var(--global-small-font-size);
+  --card-hover-background: var(--global-muted-background);
+  --card-default-background: var(--global-muted-background);
+  --card-default-color: var(--global-color);
+  --card-default-title-color: var(--global-emphasis-color);
+  --card-default-hover-background: hsl(from var(--card-default-background) h s calc(l - 5));
+  --card-default-color-mode: dark;
+  --card-primary-background: var(--global-primary-background);
+  --card-primary-color: var(--global-inverse-color);
+  --card-primary-title-color: var(--card-primary-color);
+  --card-primary-hover-background: hsl(from var(--card-primary-background) h s calc(l - 5));
+  --card-primary-color-mode: light;
+  --card-secondary-background: var(--global-secondary-background);
+  --card-secondary-color: var(--global-inverse-color);
+  --card-secondary-title-color: var(--card-secondary-color);
+  --card-secondary-hover-background: hsl(from var(--card-secondary-background) h s calc(l - 5));
+  --card-secondary-color-mode: light;
+  --card-overlay-background: rgb(from var(--global-background) r g b / 0.9);
+  --card-overlay-color: var(--global-color);
+  --card-overlay-title-color: var(--global-emphasis-color);
+  --card-overlay-hover-background: rgb(from var(--card-overlay-background) r g b / calc(alpha + 0.1));
+  --card-overlay-color-mode: dark;
+  --card-small-body-padding-horizontal: var(--global-margin);
+  --card-small-body-padding-vertical: var(--global-margin);
+  --card-small-header-padding-horizontal: var(--global-margin);
+  --card-small-header-padding-vertical: round(up, calc(var(--global-margin) / 1.5), 1px);
+  --card-small-footer-padding-horizontal: var(--global-margin);
+  --card-small-footer-padding-vertical: round(up, calc(var(--global-margin) / 1.5), 1px);
+  --card-large-body-padding-horizontal-l: var(--global-large-gutter);
+  --card-large-body-padding-vertical-l: var(--global-large-gutter);
+  --card-large-header-padding-horizontal-l: var(--global-large-gutter);
+  --card-large-header-padding-vertical-l: round(up, calc(var(--global-large-gutter) / 2), 1px);
+  --card-large-footer-padding-horizontal-l: var(--global-large-gutter);
+  --card-large-footer-padding-vertical-l: round(up, calc(var(--global-large-gutter) / 2), 1px);
+  --inverse-card-badge-background: var(--inverse-global-primary-background);
+  --inverse-card-badge-color: var(--inverse-global-inverse-color);
+  --card-hover-background: var(--global-background);
+  --card-default-background: var(--global-background);
+  --card-default-hover-background: var(--card-default-background);
+  --card-primary-hover-background: var(--card-primary-background);
+  --card-secondary-hover-background: var(--card-secondary-background);
+  --card-badge-border-radius: 2px;
+  --card-badge-text-transform: uppercase;
+  --card-hover-box-shadow: var(--global-large-box-shadow);
+  --card-default-box-shadow: var(--global-medium-box-shadow);
+  --card-default-hover-box-shadow: var(--global-large-box-shadow);
+  --card-default-header-border-width: var(--global-border-width);
+  --card-default-header-border: var(--global-border);
+  --card-default-footer-border-width: var(--global-border-width);
+  --card-default-footer-border: var(--global-border);
+  --card-primary-box-shadow: var(--global-medium-box-shadow);
+  --card-primary-hover-box-shadow: var(--global-large-box-shadow);
+  --card-secondary-box-shadow: var(--global-medium-box-shadow);
+  --card-secondary-hover-box-shadow: var(--global-large-box-shadow);
+  --card-overlay-box-shadow: var(--global-medium-box-shadow);
+  --card-overlay-hover-box-shadow: var(--global-large-box-shadow);
   position: relative;
   box-sizing: border-box;
   transition: box-shadow 0.1s ease-in-out;
@@ -4573,6 +3755,10 @@ select.uk-form-width-xsmall {
  * Adopts `uk-icon`
  */
 .uk-close {
+  --close-color: var(--global-muted-color);
+  --close-hover-color: var(--global-color);
+  --inverse-close-color: var(--inverse-global-muted-color);
+  --inverse-close-hover-color: var(--inverse-global-color);
   color: var(--close-color);
   transition: 0.1s ease-in-out;
   transition-property: color, opacity;
@@ -4587,6 +3773,13 @@ select.uk-form-width-xsmall {
 /*
  * Adopts `uk-icon`
  */
+.uk-spinner {
+  --spinner-size: 30px;
+  --spinner-stroke-width: 1;
+  --spinner-radius: round(down, calc((var(--spinner-size) - var(--spinner-stroke-width)) / 2));
+  --spinner-circumference: round(up, calc(2 * 3.141 * var(--spinner-radius)));
+  --spinner-duration: 1.4s;
+}
 /* SVG
  ========================================================================== */
 .uk-spinner > * {
@@ -4631,6 +3824,13 @@ select.uk-form-width-xsmall {
  * Adopts `uk-icon`
  */
 .uk-totop {
+  --totop-padding: 5px;
+  --totop-color: var(--global-muted-color);
+  --totop-hover-color: var(--global-color);
+  --totop-active-color: var(--global-emphasis-color);
+  --inverse-totop-color: var(--inverse-global-muted-color);
+  --inverse-totop-hover-color: var(--inverse-global-color);
+  --inverse-totop-active-color: var(--inverse-global-emphasis-color);
   padding: var(--totop-padding);
   color: var(--totop-color);
   transition: color 0.1s ease-in-out;
@@ -4650,6 +3850,13 @@ select.uk-form-width-xsmall {
  * Addopts `uk-icon`
  */
 .uk-marker {
+  --marker-padding: 5px;
+  --marker-background: var(--global-secondary-background);
+  --marker-color: var(--global-inverse-color);
+  --marker-hover-color: var(--global-inverse-color);
+  --inverse-marker-background: var(--global-muted-background);
+  --inverse-marker-color: var(--global-color);
+  --inverse-marker-hover-color: var(--global-color);
   padding: var(--marker-padding);
   background: var(--marker-background);
   color: var(--marker-color);
@@ -4663,6 +3870,23 @@ select.uk-form-width-xsmall {
    Component: Alert
  ========================================================================== */
 .uk-alert {
+  --alert-margin-vertical: var(--global-margin);
+  --alert-padding: 15px;
+  --alert-padding-inline-end: calc(var(--alert-padding) + 14px);
+  --alert-background: var(--global-muted-background);
+  --alert-color: var(--global-color);
+  --alert-close-top: calc(var(--alert-padding) + 5px);
+  --alert-close-inline-end: var(--alert-padding);
+  --alert-primary-background: hsl(from color-mix(in srgb, var(--global-primary-background), white 40%) h s calc(l + 20));
+  --alert-primary-color: var(--global-primary-background);
+  --alert-success-background: hsl(from color-mix(in srgb, var(--global-success-background), white 40%) h s calc(l + 25));
+  --alert-success-color: var(--global-success-background);
+  --alert-warning-background: hsl(from color-mix(in srgb, var(--global-warning-background), white 45%) h s calc(l + 15));
+  --alert-warning-color: var(--global-warning-background);
+  --alert-danger-background: hsl(from color-mix(in srgb, var(--global-danger-background), white 40%) h s calc(l + 20));
+  --alert-danger-color: var(--global-danger-background);
+  --alert-close-opacity: 0.4;
+  --alert-close-hover-opacity: 0.8;
   position: relative;
   margin-bottom: var(--alert-margin-vertical);
   padding: var(--alert-padding);
@@ -4756,6 +3980,13 @@ select.uk-form-width-xsmall {
    Component: Placeholder
  ========================================================================== */
 .uk-placeholder {
+  --placeholder-margin-vertical: var(--global-margin);
+  --placeholder-padding-vertical: var(--global-gutter);
+  --placeholder-padding-horizontal: var(--global-gutter);
+  --placeholder-background: var(--global-muted-background);
+  --placeholder-background: transparent;
+  --placeholder-border-width: var(--global-border-width);
+  --placeholder-border: var(--global-border);
   margin-bottom: var(--placeholder-margin-vertical);
   padding: var(--placeholder-padding-vertical) var(--placeholder-padding-horizontal);
   background: var(--placeholder-background);
@@ -4779,6 +4010,15 @@ select.uk-form-width-xsmall {
  * 2. Center child vertically and horizontally
  */
 .uk-badge {
+  --badge-size: 18px;
+  --badge-padding-vertical: 0;
+  --badge-padding-horizontal: 5px;
+  --badge-border-radius: 500px;
+  --badge-background: var(--global-primary-background);
+  --badge-color: var(--global-inverse-color);
+  --badge-font-size: 11px;
+  --inverse-badge-background: var(--inverse-global-primary-background);
+  --inverse-badge-color: var(--inverse-global-inverse-color);
   box-sizing: border-box;
   min-width: var(--badge-size);
   height: var(--badge-size);
@@ -4805,6 +4045,22 @@ select.uk-form-width-xsmall {
    Component: Label
  ========================================================================== */
 .uk-label {
+  --label-padding-vertical: 0;
+  --label-padding-horizontal: var(--global-small-margin);
+  --label-background: var(--global-primary-background);
+  --label-line-height: var(--global-line-height);
+  --label-font-size: var(--global-small-font-size);
+  --label-color: var(--global-inverse-color);
+  --label-success-background: var(--global-success-background);
+  --label-success-color: var(--global-inverse-color);
+  --label-warning-background: var(--global-warning-background);
+  --label-warning-color: var(--global-inverse-color);
+  --label-danger-background: var(--global-danger-background);
+  --label-danger-color: var(--global-inverse-color);
+  --inverse-label-background: var(--inverse-global-primary-background);
+  --inverse-label-color: var(--inverse-global-inverse-color);
+  --label-border-radius: 2px;
+  --label-text-transform: uppercase;
   display: inline-block;
   padding: var(--label-padding-vertical) var(--label-padding-horizontal);
   background: var(--label-background);
@@ -4843,6 +4099,12 @@ select.uk-form-width-xsmall {
    Component: Overlay
  ========================================================================== */
 .uk-overlay {
+  --overlay-padding-horizontal: var(--global-gutter);
+  --overlay-padding-vertical: var(--global-gutter);
+  --overlay-default-background: rgb(from var(--global-background) r g b / 0.9);
+  --overlay-default-color-mode: dark;
+  --overlay-primary-background: rgb(from var(--global-secondary-background) r g b / 0.9);
+  --overlay-primary-color-mode: light;
   padding: var(--overlay-padding-vertical) var(--overlay-padding-horizontal);
 }
 /*
@@ -4873,6 +4135,16 @@ select.uk-form-width-xsmall {
    Component: Article
  ========================================================================== */
 .uk-article {
+  --article-margin-top: var(--global-large-margin);
+  --article-title-font-size-m: var(--global-2xlarge-font-size);
+  --article-title-font-size: calc(var(--article-title-font-size-m) * 0.85);
+  --article-title-line-height: 1.2;
+  --article-meta-font-size: var(--global-small-font-size);
+  --article-meta-line-height: 1.4;
+  --article-meta-color: var(--global-muted-color);
+  --inverse-article-meta-color: var(--inverse-global-muted-color);
+  --article-meta-link-color: var(--article-meta-color);
+  --article-meta-link-hover-color: var(--global-color);
   display: flow-root;
 }
 /*
@@ -4915,6 +4187,19 @@ select.uk-form-width-xsmall {
 /* ========================================================================
    Component: Comment
  ========================================================================== */
+.uk-comment {
+  --comment-header-margin-bottom: var(--global-margin);
+  --comment-title-font-size: var(--global-medium-font-size);
+  --comment-title-line-height: 1.4;
+  --comment-meta-font-size: var(--global-small-font-size);
+  --comment-meta-line-height: 1.4;
+  --comment-meta-color: var(--global-muted-color);
+  --comment-list-margin-top: var(--global-large-margin);
+  --comment-list-padding-inline-start: 30px;
+  --comment-list-padding-inline-start-m: 100px;
+  --comment-primary-padding: var(--global-gutter);
+  --comment-primary-background: var(--global-muted-background);
+}
 /* Sections
  ========================================================================== */
 .uk-comment-body {
@@ -4993,6 +4278,74 @@ select.uk-form-width-xsmall {
  * 4. Reset `form`
  */
 .uk-search {
+  --search-color: var(--global-color);
+  --search-placeholder-color: var(--global-muted-color);
+  --search-icon-color: var(--global-muted-color);
+  --search-default-width: 240px;
+  --search-default-height: var(--global-control-height);
+  --search-default-padding-horizontal: 10px;
+  --search-default-background: var(--global-muted-background);
+  --search-default-focus-background: hsl(from var(--search-default-background) h s calc(l - 2));
+  --search-default-icon-width: 20px;
+  --search-default-icon-padding: 10px;
+  --search-navbar-width: 240px;
+  --search-navbar-height: var(--global-control-height);
+  --search-navbar-padding-horizontal: 10px;
+  --search-navbar-background: var(--global-background);
+  --search-navbar-focus-background: hsl(from var(--search-navbar-background) h s calc(l - 1));
+  --search-navbar-icon-width: 20px;
+  --search-navbar-icon-padding: 10px;
+  --search-medium-width: 400px;
+  --search-medium-height: var(--global-control-large-height);
+  --search-medium-padding-horizontal: 12px;
+  --search-medium-background: var(--search-default-background);
+  --search-medium-font-size: var(--global-large-font-size);
+  --search-medium-focus-background: hsl(from var(--search-medium-background) h s calc(l - 2));
+  --search-medium-icon-width: 24px;
+  --search-medium-icon-padding: 12px;
+  --search-large-width: 500px;
+  --search-large-height: 90px;
+  --search-large-padding-horizontal: 20px;
+  --search-large-background: var(--search-default-background);
+  --search-large-font-size: var(--global-2xlarge-font-size);
+  --search-large-focus-background: hsl(from var(--search-large-background) h s calc(l - 2));
+  --search-large-icon-width: 40px;
+  --search-large-icon-padding: 20px;
+  --search-toggle-color: var(--global-muted-color);
+  --search-toggle-hover-color: var(--global-color);
+  --inverse-search-color: var(--inverse-global-color);
+  --inverse-search-placeholder-color: var(--inverse-global-muted-color);
+  --inverse-search-icon-color: var(--inverse-global-muted-color);
+  --inverse-search-default-background: var(--inverse-global-muted-background);
+  --inverse-search-default-focus-background: rgb(from var(--inverse-search-default-background) r g b / calc(alpha + 0.05));
+  --inverse-search-navbar-background: var(--inverse-global-muted-background);
+  --inverse-search-navbar-focus-background: rgb(from var(--inverse-search-navbar-background) r g b / calc(alpha + 0.05));
+  --inverse-search-medium-background: var(--inverse-search-default-background);
+  --inverse-search-medium-focus-background: rgb(from var(--inverse-search-medium-background) r g b / calc(alpha + 0.05));
+  --inverse-search-large-background: var(--inverse-search-default-background);
+  --inverse-search-large-focus-background: rgb(from var(--inverse-search-large-background) r g b / calc(alpha + 0.05));
+  --inverse-search-toggle-color: var(--inverse-global-muted-color);
+  --inverse-search-toggle-hover-color: var(--inverse-global-color);
+  --search-default-background: transparent;
+  --search-navbar-focus-background: var(--search-navbar-background);
+  --search-medium-background: transparent;
+  --search-large-background: transparent;
+  --search-default-border-width: var(--global-border-width);
+  --search-default-border: var(--global-border);
+  --search-default-focus-border: var(--global-primary-background);
+  --search-navbar-border-width: var(--global-border-width);
+  --search-navbar-border: var(--global-border);
+  --search-navbar-focus-border: var(--global-primary-background);
+  --search-medium-border-width: var(--global-border-width);
+  --search-medium-border: var(--global-border);
+  --search-medium-focus-border: var(--global-primary-background);
+  --search-large-border-width: var(--global-border-width);
+  --search-large-border: var(--global-border);
+  --search-large-focus-border: var(--global-primary-background);
+  --inverse-search-default-background: transparent;
+  --inverse-search-navbar-background: transparent;
+  --inverse-search-medium-background: transparent;
+  --inverse-search-large-background: transparent;
   /* 1 */
   display: inline-block;
   /* 2 */
@@ -5237,6 +4590,17 @@ select.uk-form-width-xsmall {
    Component: Accordion
  ========================================================================== */
 .uk-accordion {
+  --accordion-default-item-margin-top: var(--global-margin);
+  --accordion-default-title-gap: 15px;
+  --accordion-default-title-font-size: var(--global-medium-font-size);
+  --accordion-default-title-line-height: 1.4;
+  --accordion-default-title-color: var(--global-emphasis-color);
+  --accordion-default-title-hover-color: var(--global-color);
+  --accordion-default-content-margin-top: var(--global-margin);
+  --inverse-accordion-default-title-color: var(--inverse-global-emphasis-color);
+  --inverse-accordion-default-title-hover-color: var(--inverse-global-color);
+  --accordion-default-icon-color: var(--global-color);
+  --inverse-accordion-default-icon-color: var(--inverse-global-color);
   padding: 0;
   list-style: none;
 }
@@ -5309,6 +4673,11 @@ select.uk-form-width-xsmall {
  * 3. Set a default width
  */
 .uk-drop {
+  --drop-z-index: calc(var(--global-z-index) + 20);
+  --drop-margin: var(--global-margin);
+  --drop-viewport-margin: 15px;
+  --drop-width: 300px;
+  --drop-parent-icon-margin-inline-start: 0.25em;
   /* 1 */
   display: none;
   /* 2 */
@@ -5347,6 +4716,26 @@ select.uk-form-width-xsmall {
  * 2. Style
  */
 .uk-dropbar {
+  --dropbar-margin: 0;
+  --dropbar-padding-top: 15px;
+  --dropbar-padding-bottom: var(--dropbar-padding-top);
+  --dropbar-padding-horizontal: 15px;
+  --dropbar-padding-horizontal-s: var(--global-gutter);
+  --dropbar-padding-horizontal-m: var(--global-medium-gutter);
+  --dropbar-background: var(--global-muted-background);
+  --dropbar-color: var(--global-color);
+  --dropbar-color-mode: dark;
+  --dropbar-focus-outline: var(--base-focus-outline);
+  --dropbar-large-padding-top: 40px;
+  --dropbar-large-padding-bottom: var(--dropbar-large-padding-top);
+  --dropbar-padding-top: 25px;
+  --dropbar-background: var(--global-background);
+  --dropbar-top-box-shadow: 0 12px 7px -6px rgba(0, 0, 0, 0.05);
+  --dropbar-bottom-box-shadow: 0 -12px 7px -6px rgba(0, 0, 0, 0.05);
+  --dropbar-left-box-shadow: 12px 0 7px -6px rgba(0, 0, 0, 0.05);
+  --dropbar-right-box-shadow: -12px 0 7px -6px rgba(0, 0, 0, 0.05);
+  --dropbar-start-box-shadow: calc(12px * var(--uk-dir-sign)) 0 7px -6px rgba(0, 0, 0, 0.05);
+  --dropbar-end-box-shadow: calc(-12px * var(--uk-dir-sign)) 0 7px -6px rgba(0, 0, 0, 0.05);
   --uk-position-offset: var(--dropbar-margin);
   --uk-position-shift-offset: 0;
   --uk-position-viewport-offset: 0;
@@ -5416,6 +4805,7 @@ select.uk-form-width-xsmall {
  * 3. Width
  */
 .uk-dropnav-dropbar {
+  --dropnav-dropbar-z-index: calc(var(--global-z-index) - 20);
   /* 1 */
   position: absolute;
   z-index: var(--dropnav-dropbar-z-index);
@@ -5437,6 +4827,47 @@ select.uk-form-width-xsmall {
  * 6. Fade-in transition
  */
 .uk-modal {
+  --modal-z-index: calc(var(--global-z-index) + 10);
+  --modal-background: rgba(0, 0, 0, 0.6);
+  --modal-padding-horizontal: 15px;
+  --modal-padding-horizontal-s: var(--global-gutter);
+  --modal-padding-horizontal-m: var(--global-medium-gutter);
+  --modal-padding-vertical: var(--modal-padding-horizontal);
+  --modal-padding-vertical-s: 50px;
+  --modal-dialog-width: 600px;
+  --modal-dialog-background: var(--global-background);
+  --modal-container-width: 1200px;
+  --modal-body-padding-horizontal: 20px;
+  --modal-body-padding-vertical: 20px;
+  --modal-body-padding-horizontal-s: var(--global-gutter);
+  --modal-body-padding-vertical-s: var(--global-gutter);
+  --modal-header-padding-horizontal: 20px;
+  --modal-header-padding-vertical: calc(var(--modal-header-padding-horizontal) / 2);
+  --modal-header-padding-horizontal-s: var(--global-gutter);
+  --modal-header-padding-vertical-s: calc(var(--modal-header-padding-horizontal-s) / 2);
+  --modal-header-background: var(--global-muted-background);
+  --modal-footer-padding-horizontal: 20px;
+  --modal-footer-padding-vertical: calc(var(--modal-footer-padding-horizontal) / 2);
+  --modal-footer-padding-horizontal-s: var(--global-gutter);
+  --modal-footer-padding-vertical-s: calc(var(--modal-footer-padding-horizontal-s) / 2);
+  --modal-footer-background: var(--global-muted-background);
+  --modal-title-font-size: var(--global-xlarge-font-size);
+  --modal-title-line-height: 1.3;
+  --modal-close-position: var(--global-small-margin);
+  --modal-close-padding: 5px;
+  --modal-close-outside-position: 0;
+  --modal-close-outside-translate: 100%;
+  --modal-close-outside-color: hsl(from var(--global-inverse-color) h s calc(l + 20));
+  --modal-close-outside-hover-color: var(--global-inverse-color);
+  --modal-header-background: var(--modal-dialog-background);
+  --modal-footer-background: var(--modal-dialog-background);
+  --modal-header-border-width: var(--global-border-width);
+  --modal-header-border: var(--global-border);
+  --modal-footer-border-width: var(--global-border-width);
+  --modal-footer-border: var(--global-border);
+  --modal-close-full-padding: 10px;
+  --modal-close-full-background: var(--modal-dialog-background);
+  --modal-close-full-padding-m: var(--global-margin);
   /* 1 */
   display: none;
   /* 2 */
@@ -5719,6 +5150,8 @@ select.uk-form-width-xsmall {
  * 1. Prevent tab highlighting on iOS.
  */
 .uk-slider {
+  --slider-container-margin-inline-start: -25px;
+  --slider-container-margin-inline-end: var(--slider-container-margin-inline-start);
   /* 1 */
   -webkit-tap-highlight-color: transparent;
 }
@@ -5801,6 +5234,9 @@ select.uk-form-width-xsmall {
  * 2. More robust if padding and border are used and the sticky height is transitioned
  */
 .uk-sticky {
+  --sticky-z-index: calc(var(--global-z-index) - 20);
+  --sticky-animation-duration: 0.2s;
+  --sticky-reverse-animation-duration: 0.2s;
   /* 1 */
   position: relative;
   /* 2 */
@@ -5835,6 +5271,19 @@ select.uk-form-width-xsmall {
  * 2. Set position
  */
 .uk-offcanvas {
+  --offcanvas-z-index: var(--global-z-index);
+  --offcanvas-bar-width: 270px;
+  --offcanvas-bar-padding-vertical: 20px;
+  --offcanvas-bar-padding-horizontal: 20px;
+  --offcanvas-bar-background: var(--global-secondary-background);
+  --offcanvas-bar-color-mode: light;
+  --offcanvas-bar-width-s: 350px;
+  --offcanvas-bar-padding-vertical-s: var(--global-gutter);
+  --offcanvas-bar-padding-horizontal-s: var(--global-gutter);
+  --offcanvas-close-position: 5px;
+  --offcanvas-close-padding: 5px;
+  --offcanvas-close-position-s: 10px;
+  --offcanvas-overlay-background: rgba(0, 0, 0, 0.1);
   /* 1 */
   display: none;
   /* 2 */
@@ -6087,6 +5536,8 @@ select.uk-form-width-xsmall {
    Component: Leader
  ========================================================================== */
 .uk-leader {
+  --leader-fill-content: .;
+  --leader-fill-margin-inline-start: var(--global-small-gutter);
   overflow: hidden;
 }
 /*
@@ -6126,6 +5577,21 @@ select.uk-form-width-xsmall {
  * 2. Dimensions
  */
 .uk-notification {
+  --notification-position: 10px;
+  --notification-z-index: calc(var(--global-z-index) + 40);
+  --notification-width: 350px;
+  --notification-message-margin-top: 10px;
+  --notification-message-padding: var(--global-small-gutter);
+  --notification-message-background: var(--global-muted-background);
+  --notification-message-color: var(--global-color);
+  --notification-message-font-size: var(--global-medium-font-size);
+  --notification-message-line-height: 1.4;
+  --notification-close-top: calc(var(--notification-message-padding) + 5px);
+  --notification-close-inline-end: var(--notification-message-padding);
+  --notification-message-primary-color: var(--global-primary-background);
+  --notification-message-success-color: var(--global-success-background);
+  --notification-message-warning-color: var(--global-warning-background);
+  --notification-message-danger-color: var(--global-danger-background);
   /* 1 */
   position: fixed;
   top: var(--notification-position);
@@ -6239,6 +5705,15 @@ select.uk-form-width-xsmall {
  * 5. Style
  */
 .uk-tooltip {
+  --tooltip-z-index: calc(var(--global-z-index) + 30);
+  --tooltip-margin: 10px;
+  --tooltip-max-width: 200px;
+  --tooltip-padding-vertical: 3px;
+  --tooltip-padding-horizontal: 6px;
+  --tooltip-background: #666;
+  --tooltip-border-radius: 2px;
+  --tooltip-color: var(--global-inverse-color);
+  --tooltip-font-size: 12px;
   /* 1 */
   display: none;
   /* 2 */
@@ -6266,6 +5741,9 @@ select.uk-form-width-xsmall {
    Component: Sortable
  ========================================================================== */
 .uk-sortable {
+  --sortable-dragged-z-index: calc(var(--global-z-index) + 50);
+  --sortable-placeholder-opacity: 0;
+  --sortable-empty-height: 50px;
   position: relative;
 }
 /*
@@ -6302,6 +5780,8 @@ select.uk-form-width-xsmall {
    Component: Countdown
  ========================================================================== */
 .uk-countdown {
+  --countdown-separator-line-height: 2;
+  --countdown-separator-font-size: 0.5em;
   margin: 0;
 }
 /* Item
@@ -6333,6 +5813,12 @@ select.uk-form-width-xsmall {
  * 3. Gutter
  */
 .uk-thumbnav {
+  --thumbnav-margin-horizontal: 15px;
+  --thumbnav-margin-vertical: var(--thumbnav-margin-horizontal);
+  --thumbnav-item-gradient: linear-gradient(calc(180deg * var(--uk-dir-sign)), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
+  --thumbnav-item-hover-opacity: 0;
+  --thumbnav-item-active-opacity: 0;
+  --inverse-thumbnav-item-gradient: linear-gradient(calc(180deg * var(--uk-dir-sign)), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
   display: flex;
   /* 1 */
   flex-wrap: wrap;
@@ -6405,6 +5891,15 @@ select.uk-form-width-xsmall {
  * 3. Gutter
  */
 .uk-iconnav {
+  --iconnav-margin-horizontal: var(--global-small-margin);
+  --iconnav-margin-vertical: var(--iconnav-margin-horizontal);
+  --iconnav-item-color: var(--global-muted-color);
+  --iconnav-item-hover-color: var(--global-color);
+  --iconnav-item-active-color: var(--global-color);
+  --inverse-iconnav-item-color: var(--inverse-global-muted-color);
+  --inverse-iconnav-item-hover-color: var(--inverse-global-color);
+  --inverse-iconnav-item-active-color: var(--inverse-global-color);
+  --subnav-item-font-size: var(--global-small-font-size);
   display: flex;
   /* 1 */
   flex-wrap: wrap;
@@ -6483,6 +5978,21 @@ select.uk-form-width-xsmall {
  * 2. Reset list
  */
 .uk-grid {
+  --grid-gutter-horizontal: var(--global-gutter);
+  --grid-gutter-vertical: var(--grid-gutter-horizontal);
+  --grid-gutter-horizontal-l: var(--global-medium-gutter);
+  --grid-gutter-vertical-l: var(--grid-gutter-horizontal-l);
+  --grid-small-gutter-horizontal: var(--global-small-gutter);
+  --grid-small-gutter-vertical: var(--grid-small-gutter-horizontal);
+  --grid-medium-gutter-horizontal: var(--global-gutter);
+  --grid-medium-gutter-vertical: var(--grid-medium-gutter-horizontal);
+  --grid-large-gutter-horizontal: var(--global-medium-gutter);
+  --grid-large-gutter-vertical: var(--grid-large-gutter-horizontal);
+  --grid-large-gutter-horizontal-l: var(--global-large-gutter);
+  --grid-large-gutter-vertical-l: var(--grid-large-gutter-horizontal-l);
+  --grid-divider-border-width: var(--global-border-width);
+  --grid-divider-border: var(--global-border);
+  --inverse-grid-divider-border: var(--inverse-global-border);
   display: flex;
   /* 1 */
   flex-wrap: wrap;
@@ -6854,6 +6364,117 @@ select.uk-form-width-xsmall {
  */
 .uk-nav,
 .uk-nav ul {
+  --nav-item-padding-vertical: 5px;
+  --nav-item-padding-horizontal: 0;
+  --nav-sublist-padding-vertical: 5px;
+  --nav-sublist-padding-inline-start: 15px;
+  --nav-sublist-deeper-padding-inline-start: 15px;
+  --nav-sublist-item-padding-vertical: 2px;
+  --nav-parent-icon-margin-inline-start: 0.25em;
+  --nav-header-padding-vertical: var(--nav-item-padding-vertical);
+  --nav-header-padding-horizontal: var(--nav-item-padding-horizontal);
+  --nav-header-font-size: var(--global-small-font-size);
+  --nav-header-text-transform: uppercase;
+  --nav-header-margin-top: var(--global-margin);
+  --nav-divider-margin-vertical: 5px;
+  --nav-divider-margin-horizontal: 0;
+  --nav-default-font-size: var(--global-font-size);
+  --nav-default-line-height: var(--global-line-height);
+  --nav-default-item-color: var(--global-muted-color);
+  --nav-default-item-hover-color: var(--global-color);
+  --nav-default-item-active-color: var(--global-emphasis-color);
+  --nav-default-subtitle-font-size: var(--global-small-font-size);
+  --nav-default-header-color: var(--global-emphasis-color);
+  --nav-default-divider-border-width: var(--global-border-width);
+  --nav-default-divider-border: var(--global-border);
+  --nav-default-sublist-font-size: var(--nav-default-font-size);
+  --nav-default-sublist-line-height: var(--nav-default-line-height);
+  --nav-default-sublist-item-color: var(--global-muted-color);
+  --nav-default-sublist-item-hover-color: var(--global-color);
+  --nav-default-sublist-item-active-color: var(--global-emphasis-color);
+  --nav-primary-font-size: var(--global-large-font-size);
+  --nav-primary-line-height: var(--global-line-height);
+  --nav-primary-item-color: var(--global-muted-color);
+  --nav-primary-item-hover-color: var(--global-color);
+  --nav-primary-item-active-color: var(--global-emphasis-color);
+  --nav-primary-subtitle-font-size: var(--global-medium-font-size);
+  --nav-primary-header-color: var(--global-emphasis-color);
+  --nav-primary-divider-border-width: var(--global-border-width);
+  --nav-primary-divider-border: var(--global-border);
+  --nav-primary-sublist-font-size: var(--global-medium-font-size);
+  --nav-primary-sublist-line-height: var(--global-line-height);
+  --nav-primary-sublist-item-color: var(--global-muted-color);
+  --nav-primary-sublist-item-hover-color: var(--global-color);
+  --nav-primary-sublist-item-active-color: var(--global-emphasis-color);
+  --nav-secondary-font-size: var(--global-font-size);
+  --nav-secondary-line-height: var(--global-line-height);
+  --nav-secondary-item-color: var(--global-emphasis-color);
+  --nav-secondary-item-hover-color: var(--global-emphasis-color);
+  --nav-secondary-item-active-color: var(--global-emphasis-color);
+  --nav-secondary-subtitle-font-size: var(--global-small-font-size);
+  --nav-secondary-subtitle-color: var(--global-muted-color);
+  --nav-secondary-subtitle-hover-color: var(--global-color);
+  --nav-secondary-subtitle-active-color: var(--global-emphasis-color);
+  --nav-secondary-header-color: var(--global-emphasis-color);
+  --nav-secondary-divider-border-width: var(--global-border-width);
+  --nav-secondary-divider-border: var(--global-border);
+  --nav-secondary-sublist-font-size: var(--global-small-font-size);
+  --nav-secondary-sublist-line-height: var(--global-line-height);
+  --nav-secondary-sublist-item-color: var(--global-muted-color);
+  --nav-secondary-sublist-item-hover-color: var(--global-color);
+  --nav-secondary-sublist-item-active-color: var(--global-emphasis-color);
+  --nav-medium-line-height: 1;
+  --nav-medium-font-size: calc(var(--nav-medium-font-size-m) * 0.825);
+  --nav-medium-font-size-m: calc(var(--nav-medium-font-size-l) * 0.875);
+  --nav-medium-font-size-l: 4rem;
+  --nav-large-line-height: 1;
+  --nav-large-font-size: calc(var(--nav-large-font-size-m) * 0.85);
+  --nav-large-font-size-m: 4rem;
+  --nav-large-font-size-l: 6rem;
+  --nav-xlarge-line-height: 1;
+  --nav-xlarge-font-size: 4rem;
+  --nav-xlarge-font-size-m: 6rem;
+  --nav-xlarge-font-size-l: 8rem;
+  --nav-dividers-margin-top: 5px;
+  --nav-dividers-border-width: var(--global-border-width);
+  --nav-dividers-border: var(--global-border);
+  --inverse-nav-default-item-color: var(--inverse-global-muted-color);
+  --inverse-nav-default-item-hover-color: var(--inverse-global-color);
+  --inverse-nav-default-item-active-color: var(--inverse-global-emphasis-color);
+  --inverse-nav-default-header-color: var(--inverse-global-emphasis-color);
+  --inverse-nav-default-divider-border: var(--inverse-global-border);
+  --inverse-nav-default-sublist-item-color: var(--inverse-global-muted-color);
+  --inverse-nav-default-sublist-item-hover-color: var(--inverse-global-color);
+  --inverse-nav-default-sublist-item-active-color: var(--inverse-global-emphasis-color);
+  --inverse-nav-primary-item-color: var(--inverse-global-muted-color);
+  --inverse-nav-primary-item-hover-color: var(--inverse-global-color);
+  --inverse-nav-primary-item-active-color: var(--inverse-global-emphasis-color);
+  --inverse-nav-primary-header-color: var(--inverse-global-emphasis-color);
+  --inverse-nav-primary-divider-border: var(--inverse-global-border);
+  --inverse-nav-primary-sublist-item-color: var(--inverse-global-muted-color);
+  --inverse-nav-primary-sublist-item-hover-color: var(--inverse-global-color);
+  --inverse-nav-primary-sublist-item-active-color: var(--inverse-global-emphasis-color);
+  --inverse-nav-secondary-item-color: var(--inverse-global-emphasis-color);
+  --inverse-nav-secondary-item-hover-color: var(--inverse-global-emphasis-color);
+  --inverse-nav-secondary-item-active-color: var(--inverse-global-emphasis-color);
+  --inverse-nav-secondary-subtitle-color: var(--inverse-global-muted-color);
+  --inverse-nav-secondary-subtitle-hover-color: var(--inverse-global-color);
+  --inverse-nav-secondary-subtitle-active-color: var(--inverse-global-emphasis-color);
+  --inverse-nav-secondary-header-color: var(--inverse-global-emphasis-color);
+  --inverse-nav-secondary-divider-border: var(--inverse-global-border);
+  --inverse-nav-secondary-sublist-item-color: var(--inverse-global-muted-color);
+  --inverse-nav-secondary-sublist-item-hover-color: var(--inverse-global-color);
+  --inverse-nav-secondary-sublist-item-active-color: var(--inverse-global-emphasis-color);
+  --inverse-nav-dividers-border: var(--inverse-global-border);
+  --nav-default-font-size: var(--global-small-font-size);
+  --nav-default-subtitle-font-size: 12px;
+  --nav-secondary-margin-top: 0;
+  --nav-secondary-item-padding-horizontal: 10px;
+  --nav-secondary-item-padding-vertical: 10px;
+  --nav-secondary-item-hover-background: var(--global-muted-background);
+  --nav-secondary-item-active-background: var(--global-muted-background);
+  --inverse-nav-background-item-hover-background: var(--inverse-global-muted-background);
+  --inverse-nav-background-item-active-background: var(--inverse-global-muted-background);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -7186,6 +6807,117 @@ ul.uk-nav-sub {
  * 1. Create position context to center navbar group
  */
 .uk-navbar {
+  --nav-item-padding-vertical: 5px;
+  --nav-item-padding-horizontal: 0;
+  --nav-sublist-padding-vertical: 5px;
+  --nav-sublist-padding-inline-start: 15px;
+  --nav-sublist-deeper-padding-inline-start: 15px;
+  --nav-sublist-item-padding-vertical: 2px;
+  --nav-parent-icon-margin-inline-start: 0.25em;
+  --nav-header-padding-vertical: var(--nav-item-padding-vertical);
+  --nav-header-padding-horizontal: var(--nav-item-padding-horizontal);
+  --nav-header-font-size: var(--global-small-font-size);
+  --nav-header-text-transform: uppercase;
+  --nav-header-margin-top: var(--global-margin);
+  --nav-divider-margin-vertical: 5px;
+  --nav-divider-margin-horizontal: 0;
+  --nav-default-font-size: var(--global-font-size);
+  --nav-default-line-height: var(--global-line-height);
+  --nav-default-item-color: var(--global-muted-color);
+  --nav-default-item-hover-color: var(--global-color);
+  --nav-default-item-active-color: var(--global-emphasis-color);
+  --nav-default-subtitle-font-size: var(--global-small-font-size);
+  --nav-default-header-color: var(--global-emphasis-color);
+  --nav-default-divider-border-width: var(--global-border-width);
+  --nav-default-divider-border: var(--global-border);
+  --nav-default-sublist-font-size: var(--nav-default-font-size);
+  --nav-default-sublist-line-height: var(--nav-default-line-height);
+  --nav-default-sublist-item-color: var(--global-muted-color);
+  --nav-default-sublist-item-hover-color: var(--global-color);
+  --nav-default-sublist-item-active-color: var(--global-emphasis-color);
+  --nav-primary-font-size: var(--global-large-font-size);
+  --nav-primary-line-height: var(--global-line-height);
+  --nav-primary-item-color: var(--global-muted-color);
+  --nav-primary-item-hover-color: var(--global-color);
+  --nav-primary-item-active-color: var(--global-emphasis-color);
+  --nav-primary-subtitle-font-size: var(--global-medium-font-size);
+  --nav-primary-header-color: var(--global-emphasis-color);
+  --nav-primary-divider-border-width: var(--global-border-width);
+  --nav-primary-divider-border: var(--global-border);
+  --nav-primary-sublist-font-size: var(--global-medium-font-size);
+  --nav-primary-sublist-line-height: var(--global-line-height);
+  --nav-primary-sublist-item-color: var(--global-muted-color);
+  --nav-primary-sublist-item-hover-color: var(--global-color);
+  --nav-primary-sublist-item-active-color: var(--global-emphasis-color);
+  --nav-secondary-font-size: var(--global-font-size);
+  --nav-secondary-line-height: var(--global-line-height);
+  --nav-secondary-item-color: var(--global-emphasis-color);
+  --nav-secondary-item-hover-color: var(--global-emphasis-color);
+  --nav-secondary-item-active-color: var(--global-emphasis-color);
+  --nav-secondary-subtitle-font-size: var(--global-small-font-size);
+  --nav-secondary-subtitle-color: var(--global-muted-color);
+  --nav-secondary-subtitle-hover-color: var(--global-color);
+  --nav-secondary-subtitle-active-color: var(--global-emphasis-color);
+  --nav-secondary-header-color: var(--global-emphasis-color);
+  --nav-secondary-divider-border-width: var(--global-border-width);
+  --nav-secondary-divider-border: var(--global-border);
+  --nav-secondary-sublist-font-size: var(--global-small-font-size);
+  --nav-secondary-sublist-line-height: var(--global-line-height);
+  --nav-secondary-sublist-item-color: var(--global-muted-color);
+  --nav-secondary-sublist-item-hover-color: var(--global-color);
+  --nav-secondary-sublist-item-active-color: var(--global-emphasis-color);
+  --nav-medium-line-height: 1;
+  --nav-medium-font-size: calc(var(--nav-medium-font-size-m) * 0.825);
+  --nav-medium-font-size-m: calc(var(--nav-medium-font-size-l) * 0.875);
+  --nav-medium-font-size-l: 4rem;
+  --nav-large-line-height: 1;
+  --nav-large-font-size: calc(var(--nav-large-font-size-m) * 0.85);
+  --nav-large-font-size-m: 4rem;
+  --nav-large-font-size-l: 6rem;
+  --nav-xlarge-line-height: 1;
+  --nav-xlarge-font-size: 4rem;
+  --nav-xlarge-font-size-m: 6rem;
+  --nav-xlarge-font-size-l: 8rem;
+  --nav-dividers-margin-top: 5px;
+  --nav-dividers-border-width: var(--global-border-width);
+  --nav-dividers-border: var(--global-border);
+  --inverse-nav-default-item-color: var(--inverse-global-muted-color);
+  --inverse-nav-default-item-hover-color: var(--inverse-global-color);
+  --inverse-nav-default-item-active-color: var(--inverse-global-emphasis-color);
+  --inverse-nav-default-header-color: var(--inverse-global-emphasis-color);
+  --inverse-nav-default-divider-border: var(--inverse-global-border);
+  --inverse-nav-default-sublist-item-color: var(--inverse-global-muted-color);
+  --inverse-nav-default-sublist-item-hover-color: var(--inverse-global-color);
+  --inverse-nav-default-sublist-item-active-color: var(--inverse-global-emphasis-color);
+  --inverse-nav-primary-item-color: var(--inverse-global-muted-color);
+  --inverse-nav-primary-item-hover-color: var(--inverse-global-color);
+  --inverse-nav-primary-item-active-color: var(--inverse-global-emphasis-color);
+  --inverse-nav-primary-header-color: var(--inverse-global-emphasis-color);
+  --inverse-nav-primary-divider-border: var(--inverse-global-border);
+  --inverse-nav-primary-sublist-item-color: var(--inverse-global-muted-color);
+  --inverse-nav-primary-sublist-item-hover-color: var(--inverse-global-color);
+  --inverse-nav-primary-sublist-item-active-color: var(--inverse-global-emphasis-color);
+  --inverse-nav-secondary-item-color: var(--inverse-global-emphasis-color);
+  --inverse-nav-secondary-item-hover-color: var(--inverse-global-emphasis-color);
+  --inverse-nav-secondary-item-active-color: var(--inverse-global-emphasis-color);
+  --inverse-nav-secondary-subtitle-color: var(--inverse-global-muted-color);
+  --inverse-nav-secondary-subtitle-hover-color: var(--inverse-global-color);
+  --inverse-nav-secondary-subtitle-active-color: var(--inverse-global-emphasis-color);
+  --inverse-nav-secondary-header-color: var(--inverse-global-emphasis-color);
+  --inverse-nav-secondary-divider-border: var(--inverse-global-border);
+  --inverse-nav-secondary-sublist-item-color: var(--inverse-global-muted-color);
+  --inverse-nav-secondary-sublist-item-hover-color: var(--inverse-global-color);
+  --inverse-nav-secondary-sublist-item-active-color: var(--inverse-global-emphasis-color);
+  --inverse-nav-dividers-border: var(--inverse-global-border);
+  --nav-default-font-size: var(--global-small-font-size);
+  --nav-default-subtitle-font-size: 12px;
+  --nav-secondary-margin-top: 0;
+  --nav-secondary-item-padding-horizontal: 10px;
+  --nav-secondary-item-padding-vertical: 10px;
+  --nav-secondary-item-hover-background: var(--global-muted-background);
+  --nav-secondary-item-active-background: var(--global-muted-background);
+  --inverse-nav-background-item-hover-background: var(--inverse-global-muted-background);
+  --inverse-nav-background-item-active-background: var(--inverse-global-muted-background);
   display: flex;
   /* 1 */
   position: relative;
@@ -7606,6 +7338,42 @@ ul.uk-nav-sub {
  * 4. Reset list
  */
 .uk-subnav {
+  --subnav-margin-horizontal: 20px;
+  --subnav-item-color: var(--global-muted-color);
+  --subnav-item-hover-color: var(--global-color);
+  --subnav-item-hover-text-decoration: none;
+  --subnav-item-active-color: var(--global-emphasis-color);
+  --subnav-divider-margin-horizontal: var(--subnav-margin-horizontal);
+  --subnav-divider-border-height: 1.5em;
+  --subnav-divider-border-width: var(--global-border-width);
+  --subnav-divider-border: var(--global-border);
+  --subnav-pill-margin-horizontal: var(--subnav-margin-horizontal);
+  --subnav-pill-item-padding-vertical: 5px;
+  --subnav-pill-item-padding-horizontal: 10px;
+  --subnav-pill-item-background: transparent;
+  --subnav-pill-item-color: var(--subnav-item-color);
+  --subnav-pill-item-hover-background: var(--global-muted-background);
+  --subnav-pill-item-hover-color: var(--global-color);
+  --subnav-pill-item-onclick-background: var(--subnav-pill-item-hover-background);
+  --subnav-pill-item-onclick-color: var(--subnav-pill-item-hover-color);
+  --subnav-pill-item-active-background: var(--global-primary-background);
+  --subnav-pill-item-active-color: var(--global-inverse-color);
+  --subnav-item-disabled-color: var(--global-muted-color);
+  --inverse-subnav-item-color: var(--inverse-global-muted-color);
+  --inverse-subnav-item-hover-color: var(--inverse-global-color);
+  --inverse-subnav-item-active-color: var(--inverse-global-emphasis-color);
+  --inverse-subnav-divider-border: var(--inverse-global-border);
+  --inverse-subnav-pill-item-background: transparent;
+  --inverse-subnav-pill-item-color: var(--inverse-global-muted-color);
+  --inverse-subnav-pill-item-hover-background: var(--inverse-global-muted-background);
+  --inverse-subnav-pill-item-hover-color: var(--inverse-global-color);
+  --inverse-subnav-pill-item-onclick-background: var(--inverse-subnav-pill-item-hover-background);
+  --inverse-subnav-pill-item-onclick-color: var(--inverse-subnav-pill-item-hover-color);
+  --inverse-subnav-pill-item-active-background: var(--inverse-global-primary-background);
+  --inverse-subnav-pill-item-active-color: var(--inverse-global-inverse-color);
+  --inverse-subnav-item-disabled-color: var(--inverse-global-muted-color);
+  --subnav-item-font-size: var(--global-small-font-size);
+  --subnav-item-text-transform: uppercase;
   display: flex;
   /* 1 */
   flex-wrap: wrap;
@@ -7736,6 +7504,19 @@ ul.uk-nav-sub {
  * 2. Remove space between elements
  */
 .uk-breadcrumb {
+  --breadcrumb-item-font-size: var(--global-small-font-size);
+  --breadcrumb-item-color: var(--global-muted-color);
+  --breadcrumb-item-hover-color: var(--global-color);
+  --breadcrumb-item-hover-text-decoration: none;
+  --breadcrumb-item-active-color: var(--global-color);
+  --breadcrumb-divider: "/";
+  --breadcrumb-divider-margin-horizontal: 20px;
+  --breadcrumb-divider-font-size: var(--breadcrumb-item-font-size);
+  --breadcrumb-divider-color: var(--global-muted-color);
+  --inverse-breadcrumb-item-color: var(--inverse-global-muted-color);
+  --inverse-breadcrumb-item-hover-color: var(--inverse-global-color);
+  --inverse-breadcrumb-item-active-color: var(--inverse-global-color);
+  --inverse-breadcrumb-divider-color: var(--inverse-global-muted-color);
   /* 1 */
   padding: 0;
   list-style: none;
@@ -7790,6 +7571,18 @@ ul.uk-nav-sub {
  * 4. Reset list
  */
 .uk-pagination {
+  --pagination-margin-horizontal: 0;
+  --pagination-item-padding-vertical: 5px;
+  --pagination-item-padding-horizontal: 10px;
+  --pagination-item-color: var(--global-muted-color);
+  --pagination-item-hover-color: var(--global-color);
+  --pagination-item-hover-text-decoration: none;
+  --pagination-item-active-color: var(--global-color);
+  --pagination-item-disabled-color: var(--global-muted-color);
+  --inverse-pagination-item-color: var(--inverse-global-muted-color);
+  --inverse-pagination-item-hover-color: var(--inverse-global-color);
+  --inverse-pagination-item-active-color: var(--inverse-global-color);
+  --inverse-pagination-item-disabled-color: var(--inverse-global-muted-color);
   display: flex;
   /* 1 */
   flex-wrap: wrap;
@@ -7854,6 +7647,25 @@ ul.uk-nav-sub {
  * 3. Reset list
  */
 .uk-tab {
+  --tab-margin-horizontal: 20px;
+  --tab-item-padding-horizontal: 10px;
+  --tab-item-padding-vertical: 5px;
+  --tab-item-color: var(--global-muted-color);
+  --tab-item-hover-color: var(--global-color);
+  --tab-item-hover-text-decoration: none;
+  --tab-item-active-color: var(--global-emphasis-color);
+  --tab-item-disabled-color: var(--global-muted-color);
+  --inverse-tab-item-color: var(--inverse-global-muted-color);
+  --inverse-tab-item-hover-color: var(--inverse-global-color);
+  --inverse-tab-item-active-color: var(--inverse-global-emphasis-color);
+  --inverse-tab-item-disabled-color: var(--inverse-global-muted-color);
+  --tab-border-width: var(--global-border-width);
+  --tab-border: var(--global-border);
+  --tab-item-border-width: var(--global-border-width);
+  --tab-item-font-size: var(--global-small-font-size);
+  --tab-item-text-transform: uppercase;
+  --tab-item-active-border: var(--global-primary-background);
+  --inverse-tab-border: var(--inverse-global-border);
   display: flex;
   /* 1 */
   flex-wrap: wrap;
@@ -8016,6 +7828,16 @@ ul.uk-nav-sub {
  * Adopts `uk-icon`
  */
 .uk-slidenav {
+  --slidenav-padding-vertical: 5px;
+  --slidenav-padding-horizontal: 10px;
+  --slidenav-color: rgb(from var(--global-color) r g b / 0.5);
+  --slidenav-hover-color: rgb(from var(--global-color) r g b / 0.9);
+  --slidenav-active-color: rgb(from var(--global-color) r g b / 0.5);
+  --slidenav-large-padding-vertical: 10px;
+  --slidenav-large-padding-horizontal: var(--slidenav-large-padding-vertical);
+  --inverse-slidenav-color: rgb(from var(--inverse-global-color) r g b / 0.7);
+  --inverse-slidenav-hover-color: rgb(from var(--inverse-global-color) r g b / 0.95);
+  --inverse-slidenav-active-color: rgb(from var(--inverse-global-color) r g b / 0.7);
   padding: var(--slidenav-padding-vertical) var(--slidenav-padding-horizontal);
   color: var(--slidenav-color);
   transition: color 0.1s ease-in-out;
@@ -8055,6 +7877,26 @@ ul.uk-nav-sub {
  * 3. Gutter
  */
 .uk-dotnav {
+  --dotnav-margin-horizontal: 12px;
+  --dotnav-margin-vertical: var(--dotnav-margin-horizontal);
+  --dotnav-item-width: 10px;
+  --dotnav-item-height: var(--dotnav-item-width);
+  --dotnav-item-border-radius: 50%;
+  --dotnav-item-background: rgb(from var(--global-color) r g b / 0.2);
+  --dotnav-item-hover-background: rgb(from var(--global-color) r g b / 0.6);
+  --dotnav-item-onclick-background: rgb(from var(--global-color) r g b / 0.2);
+  --dotnav-item-active-background: rgb(from var(--global-color) r g b / 0.6);
+  --inverse-dotnav-item-background: rgb(from var(--inverse-global-color) r g b / 0.5);
+  --inverse-dotnav-item-hover-background: rgb(from var(--inverse-global-color) r g b / 0.9);
+  --inverse-dotnav-item-onclick-background: rgb(from var(--inverse-global-color) r g b / 0.5);
+  --inverse-dotnav-item-active-background: rgb(from var(--inverse-global-color) r g b / 0.9);
+  --dotnav-item-background: transparent;
+  --dotnav-item-border-width: 1px;
+  --dotnav-item-border: rgb(from var(--global-color) r g b / 0.4);
+  --dotnav-item-hover-border: transparent;
+  --dotnav-item-onclick-border: transparent;
+  --dotnav-item-active-border: transparent;
+  --inverse-dotnav-item-background: transparent;
   display: flex;
   /* 1 */
   flex-wrap: wrap;
@@ -8139,6 +7981,37 @@ ul.uk-nav-sub {
  * 3. Style
  */
 .uk-dropdown {
+  --dropdown-margin: var(--global-small-margin);
+  --dropdown-viewport-margin: 15px;
+  --dropdown-min-width: 200px;
+  --dropdown-padding: 15px;
+  --dropdown-background: var(--global-muted-background);
+  --dropdown-color: var(--global-color);
+  --dropdown-color-mode: dark;
+  --dropdown-focus-outline: var(--base-focus-outline);
+  --dropdown-large-padding: 40px;
+  --dropdown-dropbar-margin: var(--dropdown-margin);
+  --dropdown-dropbar-padding-top: var(--dropdown-padding);
+  --dropdown-dropbar-padding-bottom: var(--dropdown-padding);
+  --dropdown-dropbar-viewport-margin: 15px;
+  --dropdown-dropbar-viewport-margin-s: var(--global-gutter);
+  --dropdown-dropbar-viewport-margin-m: var(--global-medium-gutter);
+  --dropdown-dropbar-large-padding-top: var(--dropdown-large-padding);
+  --dropdown-dropbar-large-padding-bottom: var(--dropdown-large-padding);
+  --dropdown-nav-item-color: var(--global-muted-color);
+  --dropdown-nav-item-hover-color: var(--global-color);
+  --dropdown-nav-subtitle-font-size: var(--global-small-font-size);
+  --dropdown-nav-header-color: var(--global-emphasis-color);
+  --dropdown-nav-divider-border-width: var(--global-border-width);
+  --dropdown-nav-divider-border: var(--global-border);
+  --dropdown-nav-sublist-item-color: var(--global-muted-color);
+  --dropdown-nav-sublist-item-hover-color: var(--global-color);
+  --dropdown-padding: 25px;
+  --dropdown-background: var(--global-background);
+  --dropdown-dropbar-padding-top: 5px;
+  --dropdown-nav-subtitle-font-size: 12px;
+  --dropdown-nav-font-size: var(--global-small-font-size);
+  --dropdown-box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
   --uk-position-offset: var(--dropdown-margin);
   --uk-position-viewport-offset: var(--dropdown-viewport-margin);
   --uk-inverse: var(--dropdown-color-mode);
@@ -8258,6 +8131,18 @@ ul.uk-nav-sub {
  * 7. Prevent cancellation of pointer events while dragging
  */
 .uk-lightbox {
+  --lightbox-z-index: calc(var(--global-z-index) + 10);
+  --lightbox-background: #000;
+  --lightbox-color-mode: light;
+  --lightbox-focus-outline: rgba(255, 255, 255, 0.7);
+  --lightbox-item-max-width: 100vw;
+  --lightbox-item-max-height: 100vh;
+  --lightbox-thumbnav-vertical-width: 100px;
+  --lightbox-thumbnav-height: 100px;
+  --lightbox-caption-padding-vertical: 10px;
+  --lightbox-caption-padding-horizontal: 10px;
+  --lightbox-caption-background: rgba(0, 0, 0, 0.3);
+  --lightbox-caption-color: rgba(255, 255, 255, 0.7);
   --uk-inverse: var(--lightbox-color-mode);
   /* 1 */
   display: none;
@@ -9723,6 +9608,11 @@ td.uk-text-break {
    Component: Column
  ========================================================================== */
 [class*="uk-column-"] {
+  --column-gutter: var(--global-gutter);
+  --column-gutter-l: var(--global-medium-gutter);
+  --column-divider-rule-color: var(--global-border);
+  --column-divider-rule-width: 1px;
+  --inverse-column-divider-rule-color: var(--inverse-global-border);
   column-gap: var(--column-gutter);
 }
 /* Desktop and bigger */
@@ -10083,6 +9973,9 @@ iframe[data-uk-cover] {
  * Default
  */
 [class*="uk-align"] {
+  --align-margin-horizontal: var(--global-gutter);
+  --align-margin-vertical: var(--global-gutter);
+  --align-margin-horizontal-l: var(--global-medium-gutter);
   display: block;
   margin-bottom: var(--align-margin-vertical);
 }

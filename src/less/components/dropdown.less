@@ -64,6 +64,8 @@
  */
 
 .uk-dropdown {
+    .hook-dropdown-variables();
+
     --uk-position-offset: var(--dropdown-margin);
     --uk-position-viewport-offset: var(--dropdown-viewport-margin);
     --uk-inverse: var(--dropdown-color-mode);
@@ -207,6 +209,7 @@
 
 .hook-dropdown-misc();
 
+.hook-dropdown-variables() {}
 .hook-dropdown() {}
 .hook-dropdown-dropbar() {}
 .hook-dropdown-dropbar-large() {}

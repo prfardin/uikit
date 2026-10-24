@@ -46,10 +46,13 @@
  */
 
 [class*="uk-divider"] {
+    .hook-divider-variables();
+
     /* 1 */
     border: none;
     /* 2 */
     margin-bottom: var(--divider-margin-vertical);
+    .hook-divider();
 }
 
 /* Add margin if adjacent element */
@@ -133,6 +136,8 @@
 
 .hook-divider-misc();
 
+.hook-divider-variables() {}
+.hook-divider() {}
 .hook-divider-icon() {}
 .hook-divider-icon-line() {}
 .hook-divider-icon-line-start() {}

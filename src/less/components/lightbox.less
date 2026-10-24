@@ -61,6 +61,8 @@
  */
 
 .uk-lightbox {
+    .hook-lightbox-variables();
+
     --uk-inverse: var(--lightbox-color-mode);
     /* 1 */
     display: none;
@@ -212,6 +214,7 @@
 
 .hook-lightbox-misc();
 
+.hook-lightbox-variables() {}
 .hook-lightbox() {}
 .hook-lightbox-item() {}
 .hook-lightbox-caption() {}

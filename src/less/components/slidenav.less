@@ -39,6 +39,8 @@
  */
 
 .uk-slidenav {
+    .hook-slidenav-variables();
+
     padding: var(--slidenav-padding-vertical) var(--slidenav-padding-horizontal);
     color: var(--slidenav-color);
     .hook-slidenav();
@@ -100,6 +102,7 @@
 
 .hook-slidenav-misc();
 
+.hook-slidenav-variables() {}
 .hook-slidenav() {}
 .hook-slidenav-hover() {}
 .hook-slidenav-active() {}

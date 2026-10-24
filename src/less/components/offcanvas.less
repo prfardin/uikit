@@ -59,6 +59,8 @@
  */
 
 .uk-offcanvas {
+    .hook-offcanvas-variables();
+
     /* 1 */
     display: none;
     /* 2 */
@@ -67,6 +69,7 @@
     bottom: 0;
     inset-inline-start: 0;
     z-index: var(--offcanvas-z-index);
+    .hook-offcanvas();
 }
 
 /*
@@ -329,6 +332,8 @@
 
 .hook-offcanvas-misc();
 
+.hook-offcanvas-variables() {}
+.hook-offcanvas() {}
 .hook-offcanvas-bar() {}
 .hook-offcanvas-close() {}
 .hook-offcanvas-overlay() {}

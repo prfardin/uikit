@@ -32,8 +32,11 @@
  */
 
 [class*="uk-align"] {
+    .hook-align-variables();
+
     display: block;
     margin-bottom: var(--align-margin-vertical);
+    .hook-align();
 }
 
 * + [class*="uk-align"] { margin-top: var(--align-margin-vertical); }
@@ -217,4 +220,6 @@
 
 .hook-align-misc();
 
+.hook-align-variables() {}
+.hook-align() {}
 .hook-align-misc() {}

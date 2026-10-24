@@ -130,9 +130,12 @@
 
 .uk-nav,
 .uk-nav ul {
+    .hook-nav-variables();
+
     margin: 0;
     padding: 0;
     list-style: none;
+    .hook-nav();
 }
 
 /*
@@ -539,6 +542,8 @@ ul.uk-nav-sub {
 
 .hook-nav-misc();
 
+.hook-nav-variables() {}
+.hook-nav() {}
 .hook-nav-sub() {}
 .hook-nav-header() {}
 .hook-nav-divider() {}

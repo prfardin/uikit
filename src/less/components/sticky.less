@@ -35,12 +35,15 @@
  */
 
 .uk-sticky {
+    .hook-sticky-variables();
+
     /* 1 */
     position: relative;
     /* 2 */
     z-index: var(--sticky-z-index);
     /* 3 */
     box-sizing: border-box;
+    .hook-sticky();
 }
 
 .uk-sticky-fixed { margin: 0 !important; }
@@ -66,4 +69,6 @@
 
 .hook-sticky-misc();
 
+.hook-sticky-variables() {}
+.hook-sticky() {}
 .hook-sticky-misc() {}

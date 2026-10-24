@@ -82,6 +82,8 @@
  */
 
 .uk-search {
+    .hook-search-variables();
+
     /* 1 */
     display: inline-block;
     /* 2 */
@@ -90,6 +92,7 @@
     max-width: 100%;
     /* 4 */
     margin: 0;
+    .hook-search();
 }
 
 
@@ -358,6 +361,8 @@
 
 .hook-search-misc();
 
+.hook-search-variables() {}
+.hook-search() {}
 .hook-search-input() {}
 .hook-search-icon() {}
 .hook-search-default-input() {}
