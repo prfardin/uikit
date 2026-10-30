@@ -34,11 +34,11 @@
     --subnav-pill-item-padding-horizontal:           10px;
     --subnav-pill-item-background:                   transparent;
     --subnav-pill-item-color:                        var(--subnav-item-color);
-    --subnav-pill-item-hover-background:             var(--global-muted-background);
+    --subnav-pill-item-hover-background:             var(--global-muted-color-default);
     --subnav-pill-item-hover-color:                  var(--global-color);
     --subnav-pill-item-onclick-background:           var(--subnav-pill-item-hover-background);
     --subnav-pill-item-onclick-color:                var(--subnav-pill-item-hover-color);
-    --subnav-pill-item-active-background:            var(--global-primary-background);
+    --subnav-pill-item-active-background:            var(--global-primary-color);
     --subnav-pill-item-active-color:                 var(--global-inverse-color);
 
     --subnav-item-disabled-color:                    var(--global-muted-color);
@@ -235,19 +235,24 @@
 // ========================================================================
 
 .hook-subnav-variables() {
+
     --inverse-subnav-item-color:                    var(--inverse-global-muted-color);
     --inverse-subnav-item-hover-color:              var(--inverse-global-color);
     --inverse-subnav-item-active-color:             var(--inverse-global-emphasis-color);
+
     --inverse-subnav-divider-border:                var(--inverse-global-border);
+
     --inverse-subnav-pill-item-background:          transparent;
     --inverse-subnav-pill-item-color:               var(--inverse-global-muted-color);
-    --inverse-subnav-pill-item-hover-background:    var(--inverse-global-muted-background);
+    --inverse-subnav-pill-item-hover-background:    var(--inverse-global-muted-color-default);
     --inverse-subnav-pill-item-hover-color:         var(--inverse-global-color);
     --inverse-subnav-pill-item-onclick-background:  var(--inverse-subnav-pill-item-hover-background);
     --inverse-subnav-pill-item-onclick-color:       var(--inverse-subnav-pill-item-hover-color);
-    --inverse-subnav-pill-item-active-background:   var(--inverse-global-primary-background);
-    --inverse-subnav-pill-item-active-color:        var(--inverse-global-inverse-color);
+    --inverse-subnav-pill-item-active-background:   var(--inverse-global-primary-color);
+    --inverse-subnav-pill-item-active-color:        var(--inverse-global-emphasis-color);
+    
     --inverse-subnav-item-disabled-color:           var(--inverse-global-muted-color);
+
 }
 
 .hook-inverse() {

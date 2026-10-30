@@ -25,7 +25,7 @@
     --icon-link-active-color:                        hsl(from var(--global-color) h s calc(l - 5));
     --icon-button-size:                              36px;
     --icon-button-border-radius:                     500px;
-    --icon-button-background:                        var(--global-muted-background);
+    --icon-button-background:                        var(--global-muted-color-default);
     --icon-button-color:                             var(--global-muted-color);
 
     --icon-button-hover-background:                  hsl(from var(--icon-button-background) h s calc(l - 5));
@@ -231,17 +231,22 @@ a:hover .uk-icon-overlay {
 // ========================================================================
 
 .hook-icon-variables() {
+
     --inverse-icon-link-color:                      var(--inverse-global-muted-color);
     --inverse-icon-link-hover-color:                var(--inverse-global-color);
     --inverse-icon-link-active-color:               var(--inverse-global-color);
-    --inverse-icon-button-background:               var(--inverse-global-muted-background);
+    --inverse-icon-button-background:               var(--inverse-global-muted-color-default);
     --inverse-icon-button-color:                    var(--inverse-global-muted-color);
+
     --inverse-icon-button-hover-background:         rgb(from var(--inverse-icon-button-background) r g b / ~'calc(alpha + 0.05)');
     --inverse-icon-button-hover-color:              var(--inverse-global-color);
+
     --inverse-icon-button-active-background:        rgb(from var(--inverse-icon-button-background) r g b / ~'calc(alpha + 0.1)');
     --inverse-icon-button-active-color:             var(--inverse-global-color);
+    
     --inverse-icon-overlay-color:                   rgb(from var(--inverse-global-emphasis-color) r g b / 0.6);
     --inverse-icon-overlay-hover-color:             var(--inverse-global-emphasis-color);
+
 }
 
 .hook-inverse() {

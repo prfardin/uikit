@@ -84,3 +84,24 @@
 .hook-tooltip-variables() {}
 .hook-tooltip() {}
 .hook-tooltip-misc() {}
+
+
+// Inverse
+// ========================================================================
+
+.hook-tooltip-variables() {
+
+    --inverse-tooltip-background:                        #333;
+    
+}
+
+.hook-inverse() {
+
+    .uk-tooltip {
+        background-color: var(--inverse-tile-default-background);
+        .hook-inverse-tooltip();
+    }
+
+}
+
+.hook-inverse-tooltip() {}

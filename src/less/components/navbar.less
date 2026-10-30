@@ -41,7 +41,7 @@
 
 .hook-navbar-variables() {
 
-    --navbar-background:                             var(--global-muted-background);
+    --navbar-background:                             var(--global-muted-color-default);
     --navbar-gap:                                    0px; // Must have a unit because of `calc`
     --navbar-color-mode:                             @navbar-color-mode;
 
@@ -71,7 +71,7 @@
     --navbar-dropdown-viewport-margin:               15px;
     --navbar-dropdown-width:                         200px;
     --navbar-dropdown-padding:                       15px;
-    --navbar-dropdown-background:                    var(--global-muted-background);
+    --navbar-dropdown-background:                    var(--global-muted-color-default);
     --navbar-dropdown-color:                         var(--global-color);
     --navbar-dropdown-color-mode:                    @navbar-dropdown-color-mode;
     --navbar-dropdown-focus-outline:                 var(--base-focus-outline);
@@ -635,16 +635,38 @@
 // ========================================================================
 
 .hook-navbar-variables() {
-    --inverse-navbar-nav-item-color:                var(--inverse-global-muted-color);
-    --inverse-navbar-nav-item-hover-color:          var(--inverse-global-color);
-    --inverse-navbar-nav-item-onclick-color:        var(--inverse-global-emphasis-color);
-    --inverse-navbar-nav-item-active-color:         var(--inverse-global-emphasis-color);
-    --inverse-navbar-item-color:                    var(--inverse-global-color);
-    --inverse-navbar-toggle-color:                  var(--inverse-global-muted-color);
-    --inverse-navbar-toggle-hover-color:            var(--inverse-global-color);
+
+    --inverse-navbar-background:                             var(--inverse-global-muted-color-default);
+
+    --inverse-navbar-nav-item-color:                         var(--inverse-global-muted-color);
+    --inverse-navbar-nav-item-hover-color:                   var(--inverse-global-color);
+    --inverse-navbar-nav-item-onclick-color:                 var(--inverse-global-emphasis-color);
+    --inverse-navbar-nav-item-active-color:                  var(--inverse-global-emphasis-color);
+    --inverse-navbar-item-color:                             var(--inverse-global-color);
+    --inverse-navbar-toggle-color:                           var(--inverse-global-muted-color);
+    --inverse-navbar-toggle-hover-color:                     var(--inverse-global-color);
+
+    --inverse-navbar-dropdown-background:                    var(--inverse-global-muted-color-default);
+    --inverse-navbar-dropdown-color:                         var(--inverse-global-color);
+
+    --inverse-navbar-dropdown-nav-item-color:                var(--inverse-global-muted-color);
+    --inverse-navbar-dropdown-nav-item-hover-color:          var(--inverse-global-color);
+    --inverse-navbar-dropdown-nav-item-active-color:         var(--inverse-global-emphasis-color);
+    --inverse-navbar-dropdown-nav-header-color:              var(--inverse-global-emphasis-color);
+    --inverse-navbar-dropdown-nav-divider-border:            var(--inverse-global-border);
+    --inverse-navbar-dropdown-nav-sublist-item-color:        var(--inverse-global-muted-color);
+    --inverse-navbar-dropdown-nav-sublist-item-hover-color:  var(--inverse-global-color);
+    --inverse-navbar-dropdown-nav-sublist-item-active-color: var(--inverse-global-emphasis-color);
+
 }
 
 .hook-inverse() {
+
+    // Container
+    .uk-navbar-container:not(.uk-navbar-transparent) {
+        background: var(--inverse-navbar-background);
+        .hook-inverse-navbar-container();
+    }
 
     //
     // Nav Item
@@ -695,8 +717,55 @@
         .hook-inverse-navbar-toggle-hover();
     }
 
+    //
+    // Dropdown
+    //
+
+    .uk-navbar-dropdown {
+        background: var(--inverse-navbar-dropdown-background);
+        color: var(--inverse-navbar-dropdown-color);
+        .hook-inverse-navbar-dropdown();
+    }
+
+    //
+    // Dropdown Nav Item
+    //
+
+    .uk-navbar-dropdown-nav > li > a {
+        color: var(--inverse-navbar-dropdown-nav-item-color);
+        .hook-inverse-navbar-dropdown-nav-item();
+    }
+
+    .uk-navbar-dropdown-nav > li > a:hover {
+        color: var(--inverse-navbar-dropdown-nav-item-hover-color);
+        .hook-inverse-navbar-dropdown-nav-item-hover();
+    }
+
+    .uk-navbar-dropdown-nav > li.uk-active > a {
+        color: var(--inverse-navbar-dropdown-nav-item-active-color);
+        .hook-inverse-navbar-dropdown-nav-item-active();
+    }
+
+    // Header
+    .uk-navbar-dropdown-nav .uk-nav-header {
+        color: var(--inverse-navbar-dropdown-nav-header-color);
+        .hook-inverse-navbar-dropdown-nav-header();
+    }
+
+    // Divider
+    .uk-navbar-dropdown-nav .uk-nav-divider {
+        border-top-color: var(--inverse-navbar-dropdown-nav-divider-border);
+        .hook-inverse-navbar-dropdown-nav-divider();
+    }
+
+    // Sublists
+    .uk-navbar-dropdown-nav .uk-nav-sub a { color: var(--inverse-navbar-dropdown-nav-sublist-item-color); }
+    .uk-navbar-dropdown-nav .uk-nav-sub a:hover { color: var(--inverse-navbar-dropdown-nav-sublist-item-hover-color); }
+    .uk-navbar-dropdown-nav .uk-nav-sub li.uk-active > a { color: var(--inverse-navbar-dropdown-nav-sublist-item-active-color); }
+
 }
 
+.hook-inverse-navbar-container() {}
 .hook-inverse-navbar-nav-item() {}
 .hook-inverse-navbar-nav-item-hover() {}
 .hook-inverse-navbar-nav-item-onclick() {}
@@ -704,3 +773,9 @@
 .hook-inverse-navbar-item() {}
 .hook-inverse-navbar-toggle() {}
 .hook-inverse-navbar-toggle-hover() {}
+.hook-inverse-navbar-dropdown() {}
+.hook-inverse-navbar-dropdown-nav-item() {}
+.hook-inverse-navbar-dropdown-nav-item-hover() {}
+.hook-inverse-navbar-dropdown-nav-item-active() {}
+.hook-inverse-navbar-dropdown-nav-header() {}
+.hook-inverse-navbar-dropdown-nav-divider() {}

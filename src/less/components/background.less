@@ -11,10 +11,10 @@
 
 .hook-background-variables() {
 
-    --background-default-background:                 var(--global-background);
-    --background-muted-background:                   var(--global-muted-background);
-    --background-primary-background:                 var(--global-primary-background);
-    --background-secondary-background:               var(--global-secondary-background);
+    --background-default-background:                 var(--global-default-color);
+    --background-muted-background:                   var(--global-muted-color-default);
+    --background-primary-background:                 var(--global-primary-color);
+    --background-secondary-background:               var(--global-secondary-color);
     
 }
 
@@ -149,3 +149,21 @@
 
 .hook-background-variables() {}
 .hook-background-misc() {}
+
+
+// Inverse
+// ========================================================================
+
+.hook-background-variables() {
+
+    --inverse-background-default-background:        var(--inverse-global-default-color);
+    --inverse-background-muted-background:          var(--inverse-global-muted-color-default);
+    
+}
+
+.hook-inverse() {
+
+    .uk-background-default { background-color: var(--inverse-background-default-background); }
+    .uk-background-muted { background-color: var(--inverse-background-muted-background); }
+
+}

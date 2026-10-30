@@ -17,6 +17,7 @@
 
     --search-large-background:                           transparent;
 
+<<<<<<< HEAD
     //
     // New
     //
@@ -38,6 +39,23 @@
     --search-large-focus-border:                         var(--global-primary-background);
 
 }
+=======
+@search-default-border-width:                       @global-border-width;
+@search-default-border:                             @global-border;
+@search-default-focus-border:                       @global-primary-color;
+
+@search-navbar-border-width:                        @global-border-width;
+@search-navbar-border:                              @global-border;
+@search-navbar-focus-border:                        @global-primary-color;
+
+@search-medium-border-width:                        @global-border-width;
+@search-medium-border:                              @global-border;
+@search-medium-focus-border:                        @global-primary-color;
+
+@search-large-border-width:                         @global-border-width;
+@search-large-border:                               @global-border;
+@search-large-focus-border:                         @global-primary-color;
+>>>>>>> refactor/colors
 
 
 // Component
@@ -106,13 +124,19 @@
 .hook-search-variables() {
     --inverse-search-default-background:             transparent;
 
+<<<<<<< HEAD
     --inverse-search-navbar-background:              transparent;
+=======
+@inverse-search-navbar-background:              transparent;
+@inverse-search-navbar-focus-background:        @inverse-search-navbar-background;
+>>>>>>> refactor/colors
 
     --inverse-search-medium-background:              transparent;
 
     --inverse-search-large-background:               transparent;
 }
 
+<<<<<<< HEAD
 .hook-inverse-search-default-input() { border-color: var(--inverse-global-border); }
 .hook-inverse-search-default-input-focus() {}
 
@@ -124,6 +148,19 @@
 
 .hook-inverse-search-large-input() { border-color: var(--inverse-global-border); }
 .hook-inverse-search-large-input-focus() {}
+=======
+.hook-inverse-search-default-input() { border-color: @inverse-global-border; }
+.hook-inverse-search-default-input-focus() { border-color: @inverse-global-color; }
+
+.hook-inverse-search-navbar-input() { border-color: @inverse-global-border; }
+.hook-inverse-search-navbar-input-focus() { border-color: @inverse-global-color; }
+
+.hook-inverse-search-medium-input() { border-color: @inverse-global-border; }
+.hook-inverse-search-medium-input-focus() { border-color: @inverse-global-color; }
+
+.hook-inverse-search-large-input() { border-color: @inverse-global-border; }
+.hook-inverse-search-large-input-focus() { border-color: @inverse-global-color; }
+>>>>>>> refactor/colors
 
 .hook-inverse-search-toggle() {}
 .hook-inverse-search-toggle-hover() {}

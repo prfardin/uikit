@@ -29,7 +29,7 @@
     --search-default-width:                              240px;
     --search-default-height:                             var(--global-control-height);
     --search-default-padding-horizontal:                 10px;
-    --search-default-background:                         var(--global-muted-background);
+    --search-default-background:                         var(--global-muted-color-default);
     --search-default-focus-background:                   hsl(from var(--search-default-background) h s calc(l - 2));
 
     --search-default-icon-width:                         20px;
@@ -38,7 +38,7 @@
     --search-navbar-width:                               240px;
     --search-navbar-height:                              var(--global-control-height);
     --search-navbar-padding-horizontal:                  10px;
-    --search-navbar-background:                          var(--global-background);
+    --search-navbar-background:                          var(--global-default-color);
     --search-navbar-focus-background:                    hsl(from var(--search-navbar-background) h s calc(l - 1));
 
     --search-navbar-icon-width:                          20px;
@@ -384,15 +384,16 @@
 // ========================================================================
 
 .hook-search-variables() {
+
     --inverse-search-color:                         var(--inverse-global-color);
     --inverse-search-placeholder-color:             var(--inverse-global-muted-color);
 
     --inverse-search-icon-color:                    var(--inverse-global-muted-color);
 
-    --inverse-search-default-background:            var(--inverse-global-muted-background);
+    --inverse-search-default-background:            var(--inverse-global-muted-color-default);
     --inverse-search-default-focus-background:      rgb(from var(--inverse-search-default-background) r g b / ~'calc(alpha + 0.05)');
 
-    --inverse-search-navbar-background:             var(--inverse-global-muted-background);
+    --inverse-search-navbar-background:             var(--inverse-global-muted-color-default);
     --inverse-search-navbar-focus-background:       rgb(from var(--inverse-search-navbar-background) r g b / ~'calc(alpha + 0.05)');
 
     --inverse-search-medium-background:             var(--inverse-search-default-background);
@@ -403,6 +404,7 @@
 
     --inverse-search-toggle-color:                  var(--inverse-global-muted-color);
     --inverse-search-toggle-hover-color:            var(--inverse-global-color);
+    
 }
 
 .hook-inverse() {

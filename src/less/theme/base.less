@@ -13,14 +13,21 @@
     // New
     //
 
+<<<<<<< HEAD
     --base-code-padding-horizontal:                  6px;
     --base-code-padding-vertical:                    2px;
     --base-code-background:                          var(--global-muted-background);
+=======
+@base-code-padding-horizontal:                  6px;
+@base-code-padding-vertical:                    2px;
+@base-code-background:                          @global-muted-color-default;
+>>>>>>> refactor/colors
 
     --base-blockquote-color:                         var(--global-emphasis-color);
 
     --base-blockquote-footer-color:                  var(--global-color);
 
+<<<<<<< HEAD
     --base-pre-padding:                              10px;
     --base-pre-background:                           var(--global-background);
     --base-pre-border-width:                         var(--global-border-width);
@@ -28,6 +35,13 @@
     --base-pre-border-radius:                        3px;
 
 }
+=======
+@base-pre-padding:                              10px;
+@base-pre-background:                           @global-default-color;
+@base-pre-border-width:                         @global-border-width;
+@base-pre-border:                               @global-border;
+@base-pre-border-radius:                        3px;
+>>>>>>> refactor/colors
 
 
 // Body
@@ -113,16 +127,28 @@
 // Inverse
 // ========================================================================
 
+<<<<<<< HEAD
 .hook-base-variables() {
     --inverse-base-blockquote-color:                var(--inverse-global-emphasis-color);
     --inverse-base-blockquote-footer-color:         var(--inverse-global-color);
 }
+=======
+@inverse-base-blockquote-color:                @inverse-global-emphasis-color;
+@inverse-base-blockquote-footer-color:         @inverse-global-color;
+@inverse-base-pre-background:                  @inverse-global-default-color;
+@inverse-base-pre-border:                      @inverse-global-border;
+@inverse-base-pre-color:                       @inverse-global-color;
+>>>>>>> refactor/colors
 
 .hook-inverse-base-link() {}
 .hook-inverse-base-link-hover() {}
 
 .hook-inverse-base-code() {
+<<<<<<< HEAD
     background-color: var(--inverse-global-muted-background);
+=======
+    background-color: @inverse-global-muted-color-default;
+>>>>>>> refactor/colors
 }
 
 .hook-inverse-base-heading() {}
@@ -136,5 +162,11 @@
 
 .hook-inverse-base-blockquote() { color: var(--inverse-base-blockquote-color); }
 .hook-inverse-base-blockquote-footer() { color: var(--inverse-base-blockquote-footer-color); }
+
+.hook-inverse-base-pre {
+    color: @inverse-base-pre-color;
+    border-color: @inverse-base-pre-border;
+    background: @inverse-base-pre-background;
+}
 
 .hook-inverse-base-hr() {}

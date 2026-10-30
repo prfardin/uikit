@@ -21,7 +21,7 @@
 
     --link-text-hover-color:                         var(--global-muted-color);
 
-    --link-heading-hover-color:                      var(--global-primary-background);
+    --link-heading-hover-color:                      var(--global-primary-color);
     --link-heading-hover-text-decoration:            none;
 
 }
@@ -132,10 +132,14 @@ a.uk-link-reset,
 // ========================================================================
 
 .hook-link-variables() {
+
     --inverse-link-muted-color:                        var(--inverse-global-muted-color);
     --inverse-link-muted-hover-color:                  var(--inverse-global-color);
+    
     --inverse-link-text-hover-color:                   var(--inverse-global-muted-color);
-    --inverse-link-heading-hover-color:                var(--inverse-global-primary-background);
+    
+    --inverse-link-heading-hover-color:                var(--inverse-global-emphasis-background);
+
 }
 
 .hook-inverse() {

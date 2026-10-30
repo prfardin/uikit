@@ -43,19 +43,19 @@
     --form-multi-line-padding-horizontal:            var(--form-padding-horizontal);
     --form-multi-line-padding-vertical:              ~'round(up, calc(var(--form-multi-line-padding-horizontal) * 0.6), 1px)';
 
-    --form-background:                               var(--global-muted-background);
+    --form-background:                               var(--global-muted-color-default);
     --form-color:                                    var(--global-color);
 
     --form-focus-background:                         hsl(from var(--form-background) h s calc(l - 5));
     --form-focus-color:                              var(--global-color);
 
-    --form-disabled-background:                      var(--global-muted-background);
+    --form-disabled-background:                      var(--global-muted-color-default);
     --form-disabled-color:                           var(--global-muted-color);
 
     --form-placeholder-color:                        var(--global-muted-color);
 
-    --form-danger-color:                             var(--global-danger-background);
-    --form-success-color:                            var(--global-success-background);
+    --form-danger-color:                             var(--global-danger-color);
+    --form-success-color:                            var(--global-success-color);
 
     --form-width-xsmall:                             50px;
     --form-width-small:                              130px;
@@ -72,16 +72,16 @@
 
     --form-radio-size:                               16px;
     --form-radio-margin-top:                         -4px;
-    --form-radio-background:                         hsl(from var(--global-muted-background) h s calc(l - 5));
+    --form-radio-background:                         hsl(from var(--global-muted-color-default) h s calc(l - 5));
 
     --form-radio-focus-background:                   hsl(from var(--form-radio-background) h s calc(l - 5));
 
-    --form-radio-checked-background:                 var(--global-primary-background);
+    --form-radio-checked-background:                 var(--global-primary-color);
     --form-radio-checked-icon-color:                 var(--global-inverse-color);
 
-    --form-radio-checked-focus-background:           hsl(from var(--global-primary-background) h s calc(l - 10));
+    --form-radio-checked-focus-background:           hsl(from var(--global-primary-color) h s calc(l - 10));
 
-    --form-radio-disabled-background:                var(--global-muted-background);
+    --form-radio-disabled-background:                var(--global-muted-color-default);
     --form-radio-disabled-icon-color:                var(--global-muted-color);
 
     --form-small-font-size:                          var(--global-small-font-size);
@@ -835,27 +835,38 @@ select.uk-form-width-xsmall { width: calc(var(--form-width-xsmall) + 25px); }
 // ========================================================================
 
 .hook-form-variables() {
-    --inverse-form-background:                      var(--inverse-global-muted-background);
+
+    --inverse-form-background:                      var(--inverse-global-muted-color-default);
     --inverse-form-color:                           var(--inverse-global-color);
     --inverse-form-focus-background:                rgb(from var(--inverse-form-background) r g b / ~'calc(alpha + 0.05)');
     --inverse-form-focus-color:                     var(--inverse-global-color);
     --inverse-form-placeholder-color:               var(--inverse-global-muted-color);
 
+    --inverse-form-disabled-background:             var(--inverse-global-muted-color-default);
+    --inverse-form-disabled-color:                  var(--inverse-global-muted-color);
+
+    --inverse-form-danger-color:                    var(--global-danger-color);
+    --inverse-form-success-color:                   var(--global-success-color);
+
     --inverse-form-select-icon-color:               var(--inverse-global-color);
 
     --inverse-form-datalist-icon-color:             var(--inverse-global-color);
 
-    --inverse-form-radio-background:                var(--inverse-global-muted-background);
+    --inverse-form-radio-background:                var(--inverse-global-muted-color-default);
 
     --inverse-form-radio-focus-background:          rgb(from var(--inverse-form-radio-background) r g b / ~'calc(alpha + 0.05)');
 
-    --inverse-form-radio-checked-background:        var(--inverse-global-primary-background);
-    --inverse-form-radio-checked-icon-color:        var(--inverse-global-inverse-color);
+    --inverse-form-radio-checked-background:        var(--inverse-global-primary-color);
+    --inverse-form-radio-checked-icon-color:        var(--inverse-global-emphasis-color);
 
-    --inverse-form-radio-checked-focus-background:  rgb(from var(--inverse-global-primary-background) r g b / ~'calc(alpha + 0.1)');
+    --inverse-form-radio-checked-focus-background:  rgb(from var(--inverse-global-primary-color) r g b / ~'calc(alpha + 0.1)');
+    
+    --inverse-form-radio-disabled-background:       var(--inverse-global-muted-color-default);
+    --inverse-form-radio-disabled-icon-color:       var(--inverse-global-muted-color);
 
     --inverse-form-icon-color:                      var(--inverse-global-muted-color);
     --inverse-form-icon-hover-color:                var(--inverse-global-color);
+    
 }
 
 .hook-inverse() {
@@ -873,6 +884,51 @@ select.uk-form-width-xsmall { width: calc(var(--form-width-xsmall) + 25px); }
             color: var(--inverse-form-focus-color);
             .hook-inverse-form-focus();
         }
+    }
+
+    //
+    // Disabled
+    //
+
+    .uk-input:disabled,
+    .uk-select:disabled,
+    .uk-textarea:disabled {
+        background-color: var(--inverse-form-disabled-background);
+        color: var(--inverse-form-disabled-color);
+        .hook-inverse-form-disabled();
+    }
+
+    //
+    // Error
+    //
+
+    .uk-form-danger,
+    .uk-form-danger:focus {
+        color: var(--inverse-form-danger-color);
+        .hook-inverse-form-danger();
+    }
+
+    //
+    // Success
+    //
+
+    .uk-form-success,
+    .uk-form-success:focus {
+        color: var(--inverse-form-success-color);
+        .hook-inverse-form-success();
+    }
+
+    //
+    // Blank
+    //
+
+    .uk-form-blank {
+        background: none;
+        .hook-inverse-form-blank();
+    }
+
+    .uk-form-blank:focus {
+        .hook-inverse-form-blank-focus();
     }
 
     //
@@ -949,6 +1005,29 @@ select.uk-form-width-xsmall { width: calc(var(--form-width-xsmall) + 25px); }
         background-image: var(--internal-form-checkbox-indeterminate-image);
     }
 
+    //
+    // Disabled
+    //
+
+    .uk-radio:disabled,
+    .uk-checkbox:disabled {
+        background-color: var(--inverse-form-radio-disabled-background);
+        .hook-inverse-form-radio-disabled();
+    }
+
+    .uk-radio:disabled:checked {
+        // .svg-fill(@internal-form-radio-image, "#000", @inverse-form-radio-disabled-icon-color);
+        background-image: var(--internal-form-radio-image);
+    }
+    .uk-checkbox:disabled:checked {
+        // .svg-fill(@internal-form-checkbox-image, "#000", @inverse-form-radio-disabled-icon-color);
+        background-image: var(--internal-form-checkbox-image);
+    }
+    .uk-checkbox:disabled:indeterminate {
+        // .svg-fill(@internal-form-checkbox-indeterminate-image, "#000", @inverse-form-radio-disabled-icon-color);
+        background-image: var(--internal-form-checkbox-indeterminate-image);
+    }
+
     // Label
     .uk-form-label {
         .hook-inverse-form-label();
@@ -965,9 +1044,15 @@ select.uk-form-width-xsmall { width: calc(var(--form-width-xsmall) + 25px); }
 
 .hook-inverse-form() {}
 .hook-inverse-form-focus() {}
+.hook-inverse-form-disabled() {}
+.hook-inverse-form-danger() {}
+.hook-inverse-form-success() {}
+.hook-inverse-form-blank() {}
+.hook-inverse-form-blank-focus() {}
 .hook-inverse-form-radio() {}
 .hook-inverse-form-radio-focus() {}
 .hook-inverse-form-radio-checked() {}
 .hook-inverse-form-radio-checked-focus() {}
+.hook-inverse-form-radio-disabled() {}
 .hook-inverse-form-label() {}
 .hook-inverse-form-icon() {}

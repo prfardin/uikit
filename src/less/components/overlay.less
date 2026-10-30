@@ -23,10 +23,10 @@
     --overlay-padding-horizontal:                    var(--global-gutter);
     --overlay-padding-vertical:                      var(--global-gutter);
 
-    --overlay-default-background:                    rgb(from var(--global-background) r g b / 0.9);
+    --overlay-default-background:                    rgb(from var(--global-default-color) r g b / 0.9);
     --overlay-default-color-mode:                    @overlay-default-color-mode;
 
-    --overlay-primary-background:                    rgb(from var(--global-secondary-background) r g b / 0.9);
+    --overlay-primary-background:                    rgb(from var(--global-secondary-color) r g b / 0.9);
     --overlay-primary-color-mode:                    @overlay-primary-color-mode;
 
 }
@@ -101,3 +101,24 @@
 .hook-overlay-default() {}
 .hook-overlay-primary() {}
 .hook-overlay-misc() {}
+
+
+// Inverse
+// ========================================================================
+
+.hook-overlay-variables() {
+
+    --inverse-overlay-default-background:              rgb(from var(--inverse-global-default-color) r g b / 0.9);
+    
+}
+
+.hook-inverse() {
+
+    .uk-overlay-default {
+        background: var(--inverse-overlay-default-background);
+        .hook-inverse-overlay-default();
+    }
+
+}
+
+.hook-inverse-overlay-default() {}

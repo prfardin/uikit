@@ -9,6 +9,7 @@
 
 .hook-comment-variables() {
 
+<<<<<<< HEAD
     //
     // New
     //
@@ -17,6 +18,10 @@
     --comment-primary-background:                    var(--global-muted-background);
 
 }
+=======
+@comment-primary-padding:                       @global-gutter;
+@comment-primary-background:                    @global-muted-color-default;
+>>>>>>> refactor/colors
 
 
 // Component
@@ -74,3 +79,11 @@
 // ========================================================================
 
 .hook-comment-misc() {}
+
+
+// Inverse
+// ========================================================================
+
+@inverse-comment-primary-background:           @inverse-global-muted-color-default;
+
+.hook-inverse-comment-primary() { background-color: @inverse-comment-primary-background; }

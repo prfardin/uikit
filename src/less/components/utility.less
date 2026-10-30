@@ -579,11 +579,32 @@
 // ========================================================================
 
 .hook-utility-variables() {
+
+    --box-shadow-bottom-background:                 #000;
+
     --inverse-logo-color:                           var(--inverse-global-emphasis-color);
     --inverse-logo-hover-color:                     var(--inverse-global-emphasis-color);
+    
+    --inverse-dragover-box-shadow:                  0 0 20px rgba(0,0,0,0.4);
+    
 }
 
 .hook-inverse() {
+
+    .uk-box-shadow-small { box-shadow: var(--inverse-global-small-box-shadow); }
+    .uk-box-shadow-medium { box-shadow: var(--inverse-global-medium-box-shadow); }
+    .uk-box-shadow-large { box-shadow: var(--inverse-global-large-box-shadow); }
+    .uk-box-shadow-xlarge { box-shadow: var(--inverse-global-xlarge-box-shadow); }
+
+    .uk-box-shadow-hover-small:hover { box-shadow: var(--inverse-global-small-box-shadow); }
+    .uk-box-shadow-hover-medium:hover { box-shadow: var(--inverse-global-medium-box-shadow); }
+    .uk-box-shadow-hover-large:hover { box-shadow: var(--inverse-global-large-box-shadow); }
+    .uk-box-shadow-hover-xlarge:hover { box-shadow: var(--inverse-global-xlarge-box-shadow); }
+    
+    .uk-box-shadow-bottom::after {
+        background: var(--box-shadow-bottom-background);
+        .hook-inverse-box-shadow-bottom();
+    }
 
     .uk-dropcap::first-letter,
     .uk-dropcap p:first-of-type::first-letter {
@@ -602,9 +623,11 @@
 
     .uk-logo:has(.uk-logo-inverse) > :not(picture:has(.uk-logo-inverse)):not(.uk-logo-inverse) { display: none; }
     .uk-logo-inverse { display: block; }
-
+    
+    .uk-dragover { box-shadow: var(--inverse-dragover-box-shadow); }
 }
 
+.hook-inverse-box-shadow-bottom() {}
 .hook-inverse-dropcap() {}
 .hook-inverse-logo() {}
 .hook-inverse-logo-hover() {}

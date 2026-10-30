@@ -44,16 +44,16 @@
     --section-xlarge-padding-vertical:                 var(--global-xlarge-margin);
     --section-xlarge-padding-vertical-m:               calc(var(--global-large-margin) + var(--global-xlarge-margin));
 
-    --section-default-background:                      var(--global-background);
+    --section-default-background:                      var(--global-default-color);
     --section-default-color-mode:                      @section-default-color-mode;
 
-    --section-muted-background:                        var(--global-muted-background);
+    --section-muted-background:                        var(--global-muted-color-default);
     --section-muted-color-mode:                        @section-muted-color-mode;
 
-    --section-primary-background:                      var(--global-primary-background);
+    --section-primary-background:                      var(--global-primary-color);
     --section-primary-color-mode:                      @section-primary-color-mode;
 
-    --section-secondary-background:                    var(--global-secondary-background);
+    --section-secondary-background:                    var(--global-secondary-color);
     --section-secondary-color-mode:                    @section-secondary-color-mode;
 
 }
@@ -270,3 +270,39 @@
 .hook-section-primary() {}
 .hook-section-overlap() {}
 .hook-section-misc() {}
+
+
+// Inverse
+// ========================================================================
+
+.hook-section-variables() {
+    --inverse-section-default-background:              var(--inverse-global-default-color);
+    --inverse-section-muted-background:                var(--inverse-global-muted-color-default);
+}
+
+.hook-inverse() {
+
+    .uk-section-default {
+        background: var(--inverse-section-default-background);
+        .hook-inverse-section-default();
+    }
+
+    .uk-section-muted {
+        background: var(--inverse-section-muted-background);
+        .hook-inverse-section-muted();
+    }
+
+    .uk-section-primary {
+        .hook-inverse-section-primary();
+    }
+    
+    .uk-section-secondary {
+        .hook-inverse-section-secondary();
+    }
+
+}
+
+.hook-inverse-section-default() {}
+.hook-inverse-section-muted() {}
+.hook-inverse-section-primary() {}
+.hook-inverse-section-secondary() {}

@@ -15,7 +15,7 @@
     --badge-padding-vertical:                        0;
     --badge-padding-horizontal:                      5px;
     --badge-border-radius:                           500px;
-    --badge-background:                              var(--global-primary-background);
+    --badge-background:                              var(--global-primary-color);
     --badge-color:                                   var(--global-inverse-color);
     --badge-font-size:                               11px;
     
@@ -77,8 +77,10 @@
 // ========================================================================
 
 .hook-badge-variables() {
-    --inverse-badge-background:                     var(--inverse-global-primary-background);
-    --inverse-badge-color:                          var(--inverse-global-inverse-color);
+
+    --inverse-badge-background:                     var(--inverse-global-primary-color);
+    --inverse-badge-color:                          var(--inverse-global-emphasis-color);
+    
 }
 
 .hook-inverse() {

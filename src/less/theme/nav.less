@@ -13,6 +13,7 @@
 
     --nav-default-subtitle-font-size:                12px;
 
+<<<<<<< HEAD
     //
     // New
     //
@@ -30,6 +31,13 @@
 // ========================================================================
 
 .hook-nav() {}
+=======
+@nav-secondary-margin-top:                      0;
+@nav-secondary-item-padding-horizontal:         10px;
+@nav-secondary-item-padding-vertical:           10px;
+@nav-secondary-item-hover-background:           @global-muted-color-default;
+@nav-secondary-item-active-background:          @global-muted-color-default;
+>>>>>>> refactor/colors
 
 
 // Sublists
@@ -125,10 +133,15 @@
 // Inverse
 // ========================================================================
 
+<<<<<<< HEAD
 .hook-nav-variables() {
     --inverse-nav-background-item-hover-background:  var(--inverse-global-muted-background);
     --inverse-nav-background-item-active-background: var(--inverse-global-muted-background);
 }
+=======
+@inverse-nav-background-item-hover-background:  @inverse-global-muted-color-default;
+@inverse-nav-background-item-active-background: @inverse-global-muted-color-default;
+>>>>>>> refactor/colors
 
 .hook-inverse-nav-default-item() {}
 .hook-inverse-nav-default-item-hover() {}

@@ -21,23 +21,23 @@
     --alert-margin-vertical:                         var(--global-margin);
     --alert-padding:                                 15px;
     --alert-padding-inline-end:                      calc(var(--alert-padding) + 14px);
-    --alert-background:                              var(--global-muted-background);
+    --alert-background:                              var(--global-muted-color-default);
     --alert-color:                                   var(--global-color);
 
     --alert-close-top:                               calc(var(--alert-padding) + 5px);
     --alert-close-inline-end:                        var(--alert-padding);
 
-    --alert-primary-background:                      hsl(from color-mix(in srgb, var(--global-primary-background), white 40%) h s ~'calc(l + 20)');
-    --alert-primary-color:                           var(--global-primary-background);
+    --alert-primary-background:                      hsl(from color-mix(in srgb, var(--global-primary-color), white 40%) h s ~'calc(l + 20)');
+    --alert-primary-color:                           var(--global-primary-color);
 
-    --alert-success-background:                      hsl(from color-mix(in srgb, var(--global-success-background), white 40%) h s ~'calc(l + 25)');
-    --alert-success-color:                           var(--global-success-background);
+    --alert-success-background:                      hsl(from color-mix(in srgb, var(--global-success-color), white 40%) h s ~'calc(l + 25)');
+    --alert-success-color:                           var(--global-success-color);
 
-    --alert-warning-background:                      hsl(from color-mix(in srgb, var(--global-warning-background), white 45%) h s ~'calc(l + 15)');
-    --alert-warning-color:                           var(--global-warning-background);
+    --alert-warning-background:                      hsl(from color-mix(in srgb, var(--global-warning-color), white 45%) h s ~'calc(l + 15)');
+    --alert-warning-color:                           var(--global-warning-color);
 
-    --alert-danger-background:                       hsl(from color-mix(in srgb, var(--global-danger-background), white 40%) h s ~'calc(l + 20)');
-    --alert-danger-color:                            var(--global-danger-background);
+    --alert-danger-background:                       hsl(from color-mix(in srgb, var(--global-danger-color), white 40%) h s ~'calc(l + 20)');
+    --alert-danger-color:                            var(--global-danger-color);
     
 }
 
@@ -152,3 +152,46 @@
 .hook-alert-warning() {}
 .hook-alert-danger() {}
 .hook-alert-misc() {}
+
+
+// Inverse
+// ========================================================================
+
+.hook-alert-variables() {
+
+    --inverse-alert-background:                     var(--inverse-global-muted-color-default);
+    --inverse-alert-color:                          var(--inverse-global-color);
+    
+}
+
+.hook-inverse() {
+
+    .uk-alert {
+        background: var(--inverse-alert-background);
+        color: var(--inverse-alert-color);
+        .hook-inverse-alert();
+    }
+
+    .uk-alert-primary {
+        .hook-inverse-alert-primary();
+    }
+
+    .uk-alert-success {
+        .hook-inverse-alert-success();
+    }
+
+    .uk-alert-warning {
+        .hook-inverse-alert-warning();
+    }
+
+    .uk-alert-danger {
+        .hook-inverse-alert-danger();
+    }
+
+}
+
+.hook-inverse-alert() {}
+.hook-inverse-alert-primary() {}
+.hook-inverse-alert-success() {}
+.hook-inverse-alert-warning() {}
+.hook-inverse-alert-danger() {}

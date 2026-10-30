@@ -78,3 +78,45 @@
     }
 
 }
+
+
+// Inverse
+// ========================================================================
+
+.hook-article-variables() {
+    
+    --inverse-alert-primary-background:                      rgb(from var(--global-primary-color) r g b / 0.1);
+    --inverse-alert-primary-color:                           ~'rgb(from hsl(from var(--global-primary-color) h s calc(l + 20)) r g b / 0.9)';
+
+    --inverse-alert-success-background:                      rgb(from var(--global-success-color) r g b / 0.1);
+    --inverse-alert-success-color:                           ~'rgb(from hsl(from var(--global-success-color) h s calc(l + 25)) r g b / 0.9)';
+
+    --inverse-alert-warning-background:                      rgb(from var(--global-warning-color) r g b / 0.1);
+    --inverse-alert-warning-color:                           ~'rgb(from hsl(from var(--global-warning-color) h s calc(l + 15)) r g b / 0.9)';
+
+    --inverse-alert-danger-background:                       rgb(from var(--global-danger-color) r g b / 0.1);
+    --inverse-alert-danger-color:                            ~'rgb(from hsl(from var(--global-danger-color) h s calc(l + 20)) r g b / 0.9)';
+
+}
+
+.hook-inverse-alert() {}
+
+.hook-inverse-alert-primary() {
+    background: var(--inverse-alert-primary-background);
+    color: var(--inverse-alert-primary-color);
+}
+
+.hook-inverse-alert-success() {
+    background: var(--inverse-alert-success-background);
+    color: var(--inverse-alert-success-color);
+}
+
+.hook-inverse-alert-warning() {
+    background: var(--inverse-alert-warning-background);
+    color: var(--inverse-alert-warning-color);
+}
+
+.hook-inverse-alert-danger() {
+    background: var(--inverse-alert-danger-background);
+    color: var(--inverse-alert-danger-color);
+}

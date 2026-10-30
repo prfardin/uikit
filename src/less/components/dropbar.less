@@ -27,7 +27,7 @@
     --dropbar-padding-horizontal:                    15px;
     --dropbar-padding-horizontal-s:                  var(--global-gutter);
     --dropbar-padding-horizontal-m:                  var(--global-medium-gutter);
-    --dropbar-background:                            var(--global-muted-background);
+    --dropbar-background:                            var(--global-muted-color-default);
     --dropbar-color:                                 var(--global-color);
     --dropbar-color-mode:                            @dropbar-color-mode;
     --dropbar-focus-outline:                         var(--base-focus-outline);
@@ -150,3 +150,46 @@
 .hook-dropbar-start() {}
 .hook-dropbar-end() {}
 .hook-dropbar-misc() {}
+
+
+// Inverse
+// ========================================================================
+
+.hook-dropbar-variables() {
+
+    --inverse-dropbar-background:                   var(--inverse-global-muted-color-default);
+    --inverse-dropbar-color:                        var(--inverse-global-color);
+    
+}
+
+.hook-inverse() {
+
+    .uk-dropbar {
+        background: var(--inverse-dropbar-background);
+        color: var(--inverse-dropbar-color);
+        .hook-inverse-dropbar();
+    }
+
+    .uk-dropbar-top {
+        .hook-inverse-dropbar-top();
+    }
+
+    .uk-dropbar-bottom {
+        .hook-inverse-dropbar-bottom();
+    }
+
+    .uk-dropbar-left {
+        .hook-inverse-dropbar-left();
+    }
+
+    .uk-dropbar-right {
+        .hook-inverse-dropbar-right();
+    }
+
+}
+
+.hook-inverse-dropbar() {}
+.hook-inverse-dropbar-top() {}
+.hook-inverse-dropbar-bottom() {}
+.hook-inverse-dropbar-left() {}
+.hook-inverse-dropbar-right() {}

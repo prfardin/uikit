@@ -17,7 +17,13 @@
 
     --navbar-nav-item-font-size:                     var(--global-small-font-size);
 
+<<<<<<< HEAD
     --navbar-item-padding-horizontal:                0;
+=======
+@navbar-dropdown-margin:                        15px;
+@navbar-dropdown-padding:                       25px;
+@navbar-dropdown-background:                    @global-default-color;
+>>>>>>> refactor/colors
 
     --navbar-dropdown-margin:                        15px;
     --navbar-dropdown-padding:                       25px;
@@ -176,6 +182,11 @@
 // Inverse
 // ========================================================================
 
+@inverse-navbar-dropdown-background:           @inverse-global-default-color;
+@inverse-navbar-dropdown-box-shadow:           0 5px 12px rgba(0,0,0,0.35);
+
+.hook-inverse-navbar-container() {}
+
 .hook-inverse-navbar-nav-item() {}
 .hook-inverse-navbar-nav-item-hover() {}
 .hook-inverse-navbar-nav-item-onclick() {}
@@ -185,3 +196,11 @@
 
 .hook-inverse-navbar-toggle() {}
 .hook-inverse-navbar-toggle-hover() {}
+
+.hook-inverse-navbar-dropdown() { box-shadow: @inverse-navbar-dropdown-box-shadow; }
+
+.hook-inverse-navbar-dropdown-nav-item() {}
+.hook-inverse-navbar-dropdown-nav-item-hover() {}
+.hook-inverse-navbar-dropdown-nav-item-active() {}
+.hook-inverse-navbar-dropdown-nav-header() {}
+.hook-inverse-navbar-dropdown-nav-divider() {}

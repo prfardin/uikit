@@ -51,7 +51,11 @@ export default {
     methods: {
         async getSvg() {
             if (isTag(this.$el, 'img') && !this.$el.complete && this.$el.loading === 'lazy') {
-                await new Promise((resolve) => once(this.$el, 'load', resolve));
+                await new Promise((resolve, reject) =>
+                    once(this.$el, 'load error', (event) =>
+                        event.type === 'load' ? resolve() : reject(event),
+                    ),
+                );
             }
 
             return parseSVG(await loadSVG(this.src), this.icon) || Promise.reject('SVG not found.');
@@ -84,7 +88,7 @@ function applyAttributes(el) {
 const loadSVG = memoize(async (src) => {
     if (src) {
         const response = await fetch(src);
-        if (response.headers.get('Content-Type') === 'image/svg+xml') {
+        if (/^image\/svg\+xml\s*(;|$)/i.test(response.headers.get('Content-Type'))) {
             return response.text();
         }
     }

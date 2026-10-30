@@ -13,7 +13,7 @@
 
 .hook-base-variables() {
 
-    --base-body-background:                          var(--global-background);
+    --base-body-background:                          var(--global-default-color);
     --base-body-font-family:                         var(--global-font-family);
     --base-body-font-weight:                         normal;
     --base-body-font-size:                           var(--global-font-size);
@@ -28,8 +28,8 @@
     --base-strong-font-weight:                       bolder;
     --base-code-font-size:                           var(--global-small-font-size);
     --base-code-font-family:                         Consolas, monaco, monospace;
-    --base-code-color:                               var(--global-danger-background);
-    --base-em-color:                                 var(--global-danger-background);
+    --base-code-color:                               var(--global-danger-color);
+    --base-em-color:                                 var(--global-danger-color);
     --base-ins-background:                           #ffd;
     --base-ins-color:                                var(--global-color);
     --base-mark-background:                          #ffd;
@@ -589,14 +589,21 @@ pre code { font-family: var(--base-pre-font-family); }
 // ========================================================================
 
 .hook-base-variables() {
+
     --inverse-base-color:                           var(--inverse-global-color);
+
     --inverse-base-link-color:                      var(--inverse-global-emphasis-color);
     --inverse-base-link-hover-color:                var(--inverse-global-emphasis-color);
+
     --inverse-base-code-color:                      var(--inverse-global-color);
     --inverse-base-em-color:                        var(--inverse-global-emphasis-color);
+
     --inverse-base-heading-color:                   var(--inverse-global-emphasis-color);
+
     --inverse-base-hr-border:                       var(--inverse-global-border);
+
     --inverse-base-focus-outline:                   var(--inverse-global-emphasis-color);
+    
 }
 
 .hook-inverse() {
@@ -697,6 +704,14 @@ pre code { font-family: var(--base-pre-font-family); }
     }
 
     //
+    // Pre
+    //
+
+    pre {
+        .hook-inverse-base-pre();
+    }
+
+    //
     // Horizontal rules
     //
 
@@ -725,4 +740,5 @@ pre code { font-family: var(--base-pre-font-family); }
 .hook-inverse-base-h6() {}
 .hook-inverse-base-blockquote() {}
 .hook-inverse-base-blockquote-footer() {}
+.hook-inverse-base-pre() {}
 .hook-inverse-base-hr() {}

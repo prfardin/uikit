@@ -27,13 +27,13 @@
 
     --text-muted-color:                              var(--global-muted-color);
     --text-emphasis-color:                           var(--global-emphasis-color);
-    --text-primary-color:                            var(--global-primary-background);
-    --text-secondary-color:                          var(--global-secondary-background);
-    --text-success-color:                            var(--global-success-background);
-    --text-warning-color:                            var(--global-warning-background);
-    --text-danger-color:                             var(--global-danger-background);
+    --text-primary-color:                            var(--global-primary-color);
+    --text-secondary-color:                          var(--global-secondary-color);
+    --text-success-color:                            var(--global-success-color);
+    --text-warning-color:                            var(--global-warning-color);
+    --text-danger-color:                             var(--global-danger-color);
 
-    --text-background-color:                         var(--global-primary-background);
+    --text-background-color:                         var(--global-primary-color);
 
     --text-stroke-text-stroke:                       ~'calc(1.4px + 0.002em)';
 
@@ -282,12 +282,14 @@ td.uk-text-truncate { max-width: 0; }
 // ========================================================================
 
 .hook-text-variables() {
+
     --inverse-text-lead-color:                      var(--inverse-global-emphasis-color);
     --inverse-text-meta-color:                      var(--inverse-global-muted-color);
     --inverse-text-muted-color:                     var(--inverse-global-muted-color);
     --inverse-text-emphasis-color:                  var(--inverse-global-emphasis-color);
-    --inverse-text-primary-color:                   var(--inverse-global-primary-background);
-    --inverse-text-secondary-color:                 var(--inverse-global-primary-background);
+    --inverse-text-primary-color:                   var(--inverse-global-primary-color);
+    --inverse-text-secondary-color:                 var(--inverse-global-emphasis-color);
+    
 }
 
 .hook-inverse() {

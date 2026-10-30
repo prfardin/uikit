@@ -58,31 +58,31 @@
     --card-badge-inline-end:                        15px;
     --card-badge-height:                            22px;
     --card-badge-padding-horizontal:                10px;
-    --card-badge-background:                        var(--global-primary-background);
+    --card-badge-background:                        var(--global-primary-color);
     --card-badge-color:                             var(--global-inverse-color);
     --card-badge-font-size:                         var(--global-small-font-size);
 
-    --card-hover-background:                        var(--global-muted-background);
+    --card-hover-background:                        var(--global-muted-color-default);
 
-    --card-default-background:                      var(--global-muted-background);
+    --card-default-background:                      var(--global-muted-color-default);
     --card-default-color:                           var(--global-color);
     --card-default-title-color:                     var(--global-emphasis-color);
     --card-default-hover-background:                hsl(from var(--card-default-background) h s calc(l - 5));
     --card-default-color-mode:                      @card-default-color-mode;
 
-    --card-primary-background:                      var(--global-primary-background);
+    --card-primary-background:                      var(--global-primary-color);
     --card-primary-color:                           var(--global-inverse-color);
     --card-primary-title-color:                     var(--card-primary-color);
     --card-primary-hover-background:                hsl(from var(--card-primary-background) h s calc(l - 5));
     --card-primary-color-mode:                      @card-primary-color-mode;
 
-    --card-secondary-background:                    var(--global-secondary-background);
+    --card-secondary-background:                    var(--global-secondary-color);
     --card-secondary-color:                         var(--global-inverse-color);
     --card-secondary-title-color:                   var(--card-secondary-color);
     --card-secondary-hover-background:              hsl(from var(--card-secondary-background) h s calc(l - 5));
     --card-secondary-color-mode:                    @card-secondary-color-mode;
 
-    --card-overlay-background:                      rgb(from var(--global-background) r g b / 0.9);
+    --card-overlay-background:                      rgb(from var(--global-default-color) r g b / 0.9);
     --card-overlay-color:                           var(--global-color);
     --card-overlay-title-color:                     var(--global-emphasis-color);
     --card-overlay-hover-background:                rgb(from var(--card-overlay-background) r g b / ~'calc(alpha + 0.1)');
@@ -450,12 +450,117 @@
 // ========================================================================
 
 .hook-card-variables() {
-    --inverse-card-badge-background:                     var(--inverse-global-primary-background);
-    --inverse-card-badge-color:                          var(--inverse-global-inverse-color);
+
+    --inverse-card-hover-background:                     var(--inverse-global-muted-color);
+
+    --inverse-card-default-background:                   var(--inverse-global-muted-color-default);
+    --inverse-card-default-color:                        var(--inverse-global-color);
+    --inverse-card-default-title-color:                  var(--inverse-global-emphasis-color);
+    --inverse-card-default-hover-background:             hsl(from var(--inverse-card-default-background) h s calc(l - 5));
+
+    --inverse-card-overlay-background:                   rgb(from var(--inverse-global-default-color) r g b / 0.9);
+    --inverse-card-overlay-color:                        var(--inverse-global-color);
+    --inverse-card-overlay-title-color:                  var(--inverse-global-emphasis-color);
+    --inverse-card-overlay-hover-background:             rgb(from var(--inverse-card-overlay-background) r g b / ~'calc(alpha + 0.1)');
+    
+    --inverse-card-badge-background:                     var(--inverse-global-primary-color);
+    --inverse-card-badge-color:                          var(--inverse-global-emphasis-color);
+
 }
 
 .hook-inverse() {
 
+    .uk-card {
+        .hook-inverse-card();
+    }
+
+    // Hover
+    .uk-card-hover:not(.uk-card-default, .uk-card-primary, .uk-card-secondary, .uk-card-overlay):hover {
+        background-color: var(--inverse-card-hover-background);
+        .hook-inverse-card-hover();
+    }
+
+    //
+    // Default
+    //
+
+    .uk-card-default {
+        background-color: var(--inverse-card-default-background);
+        color: var(--inverse-card-default-color);
+        .hook-inverse-card-default();
+    }
+
+    .uk-card-default .uk-card-title {
+        color: var(--inverse-card-default-title-color);
+        .hook-inverse-card-default-title();
+    }
+
+    .uk-card-default.uk-card-hover:hover {
+        background-color: var(--inverse-card-default-hover-background);
+        .hook-inverse-card-default-hover();
+    }
+
+    .uk-card-default .uk-card-header {
+        .hook-inverse-card-default-header();
+    }
+
+    .uk-card-default .uk-card-footer {
+        .hook-inverse-card-default-footer();
+    }
+    
+    //
+    // Primary
+    //
+
+    .uk-card-primary {
+        .hook-inverse-card-primary();
+    }
+
+    .uk-card-primary .uk-card-title {
+        .hook-inverse-card-primary-title();
+    }
+
+    .uk-card-primary.uk-card-hover:hover {
+        .hook-inverse-card-primary-hover();
+    }
+
+    //
+    // Secondary
+    //
+
+    .uk-card-secondary {
+        .hook-inverse-card-secondary();
+    }
+    
+    .uk-card-secondary .uk-card-title {
+        .hook-inverse-card-secondary-title();
+    }
+
+    .uk-card-secondary.uk-card-hover:hover {
+        .hook-inverse-card-secondary-hover();
+    }
+
+    //
+    // Overlay
+    //
+
+    .uk-card-overlay {
+        background-color: var(--inverse-card-overlay-background);
+        color: var(--inverse-card-overlay-color);
+        .hook-inverse-card-overlay();
+    }
+
+    .uk-card-overlay .uk-card-title {
+        color: var(--inverse-card-overlay-title-color);
+        .hook-inverse-card-overlay-title();
+    }
+
+    .uk-card-overlay.uk-card-hover:hover {
+        background-color: var(--inverse-card-overlay-hover-background);
+        .hook-inverse-card-overlay-hover();
+    }
+
+    // Badge
     &.uk-card-badge {
         background-color: var(--inverse-card-badge-background);
         color: var(--inverse-card-badge-color);
@@ -464,4 +569,20 @@
 
 }
 
+.hook-inverse-card() {};
+.hook-inverse-card-hover() {}
+.hook-inverse-card-default() {}
+.hook-inverse-card-default-title() {}
+.hook-inverse-card-default-hover() {}
+.hook-inverse-card-default-header() {}
+.hook-inverse-card-default-footer() {}
+.hook-inverse-card-primary() {}
+.hook-inverse-card-primary-title() {}
+.hook-inverse-card-primary-hover() {}
+.hook-inverse-card-secondary() {}
+.hook-inverse-card-secondary-title() {}
+.hook-inverse-card-secondary-hover() {}
+.hook-inverse-card-overlay() {}
+.hook-inverse-card-overlay-title() {}
+.hook-inverse-card-overlay-hover() {}
 .hook-inverse-card-badge() {}

@@ -34,8 +34,8 @@
 
     --list-muted-color:                              var(--global-muted-color);
     --list-emphasis-color:                           var(--global-emphasis-color);
-    --list-primary-color:                            var(--global-primary-background);
-    --list-secondary-color:                          var(--global-secondary-background);
+    --list-primary-color:                            var(--global-primary-color);
+    --list-secondary-color:                          var(--global-secondary-color);
 
     --list-bullet-icon-color:                        var(--global-color);
 
@@ -45,7 +45,7 @@
 
     --list-striped-padding-vertical:                 var(--global-small-margin);
     --list-striped-padding-horizontal:               var(--global-small-margin);
-    --list-striped-background:                       var(--global-muted-background);
+    --list-striped-background:                       var(--global-muted-color-default);
 
     --list-large-margin-top:                         var(--global-margin);
     --list-large-divider-margin-top:                 var(--global-margin);
@@ -218,15 +218,17 @@
 // ========================================================================
 
 .hook-list-variables() {
+
     --inverse-list-muted-color:                        var(--inverse-global-muted-color);
     --inverse-list-emphasis-color:                     var(--inverse-global-emphasis-color);
-    --inverse-list-primary-color:                      var(--inverse-global-primary-background);
-    --inverse-list-secondary-color:                    var(--inverse-global-primary-background);
+    --inverse-list-primary-color:                      var(--inverse-global-primary-color);
+    --inverse-list-secondary-color:                    var(--inverse-global-primary-color);
 
     --inverse-list-divider-border:                     var(--inverse-global-border);
-    --inverse-list-striped-background:                 var(--inverse-global-muted-background);
+    --inverse-list-striped-background:                 var(--inverse-global-muted-color-default);
 
     --inverse-list-bullet-icon-color:                  var(--inverse-global-color);
+    
 }
 
 .hook-inverse() {

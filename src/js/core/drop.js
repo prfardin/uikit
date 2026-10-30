@@ -114,11 +114,11 @@ export default {
         this._style = pick(this.$el.style, ['width', 'height']);
     },
 
+    beforeDisconnect() {
+        this.hide(false, false);
+    },
+
     disconnected() {
-        if (this.isActive()) {
-            this.hide(false);
-            active = null;
-        }
         css(this.$el, this._style);
     },
 
@@ -458,17 +458,14 @@ function getViewport(el, target) {
 }
 
 function createToggleComponent(drop) {
-    const el = query(drop.toggle, drop.$el);
+    const target = drop.$el;
+    const el = query(drop.toggle, target);
 
     if (el) {
-        drop.$create('toggle', el, { target: drop.$el, mode: drop.mode });
-        el.ariaHasPopup = true;
+        drop.$create('toggle', el, { target, mode: drop.mode });
 
-        const dropEl = drop.$el;
-        if (!dropEl.id) {
-            dropEl.id = generateId(drop, dropEl);
-        }
-        attr(el, 'aria-controls', dropEl.id);
+        target.id = generateId(drop, target);
+        attr(el, 'aria-controls', target.id);
     }
 
     return el;

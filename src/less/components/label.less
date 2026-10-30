@@ -17,16 +17,16 @@
     
     --label-padding-vertical:                        0;
     --label-padding-horizontal:                      var(--global-small-margin);
-    --label-background:                              var(--global-primary-background);
+    --label-background:                              var(--global-primary-color);
     --label-line-height:                             var(--global-line-height);
     --label-font-size:                               var(--global-small-font-size);
     --label-color:                                   var(--global-inverse-color);
 
-    --label-success-background:                      var(--global-success-background);
+    --label-success-background:                      var(--global-success-color);
     --label-success-color:                           var(--global-inverse-color);
-    --label-warning-background:                      var(--global-warning-background);
+    --label-warning-background:                      var(--global-warning-color);
     --label-warning-color:                           var(--global-inverse-color);
-    --label-danger-background:                       var(--global-danger-background);
+    --label-danger-background:                       var(--global-danger-color);
     --label-danger-color:                            var(--global-inverse-color);
 
 }
@@ -102,8 +102,10 @@
 // ========================================================================
 
 .hook-label-variables() {
-    --inverse-label-background:                     var(--inverse-global-primary-background);
-    --inverse-label-color:                          var(--inverse-global-inverse-color);
+
+    --inverse-label-background:                     var(--inverse-global-primary-color);
+    --inverse-label-color:                          var(--inverse-global-emphasis-color);
+    
 }
 
 .hook-inverse() {
@@ -114,6 +116,21 @@
         .hook-inverse-label();
     }
 
+    .uk-label-success {
+        .hook-inverse-label-success();
+    }
+
+    .uk-label-warning {
+        .hook-inverse-label-warning();
+    }
+
+    .uk-label-danger {
+        .hook-inverse-label-danger();
+    }
+
 }
 
 .hook-inverse-label() {}
+.hook-inverse-label-success() {}
+.hook-inverse-label-warning() {}
+.hook-inverse-label-danger() {}

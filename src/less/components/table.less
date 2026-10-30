@@ -43,7 +43,7 @@
     --table-divider-border-width:                    var(--global-border-width);
     --table-divider-border:                          var(--global-border);
 
-    --table-striped-row-background:                  var(--global-muted-background);
+    --table-striped-row-background:                  var(--global-muted-color-default);
 
     --table-hover-row-background:                    var(--table-row-active-background);
 
@@ -306,12 +306,14 @@
 // ========================================================================
 
 .hook-table-variables() {
+
     --inverse-table-header-cell-color:                       var(--inverse-global-color);
     --inverse-table-caption-color:                           var(--inverse-global-muted-color);
-    --inverse-table-row-active-background:                   rgb(from var(--inverse-global-muted-background) r g b / ~'calc(alpha - 0.02)');
+    --inverse-table-row-active-background:                   rgb(from var(--inverse-global-muted-color-default) r g b / ~'calc(alpha - 0.02)');
     --inverse-table-divider-border:                          var(--inverse-global-border);
-    --inverse-table-striped-row-background:                  var(--inverse-global-muted-background);
+    --inverse-table-striped-row-background:                  var(--inverse-global-muted-color-default);
     --inverse-table-hover-row-background:                    var(--inverse-table-row-active-background);
+    
 }
 
 .hook-inverse() {
