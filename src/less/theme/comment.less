@@ -9,19 +9,14 @@
 
 .hook-comment-variables() {
 
-<<<<<<< HEAD
     //
     // New
     //
 
     --comment-primary-padding:                       var(--global-gutter);
-    --comment-primary-background:                    var(--global-muted-background);
+    --comment-primary-background:                    var(--global-muted-color-default);
 
 }
-=======
-@comment-primary-padding:                       @global-gutter;
-@comment-primary-background:                    @global-muted-color-default;
->>>>>>> refactor/colors
 
 
 // Component
@@ -84,6 +79,10 @@
 // Inverse
 // ========================================================================
 
-@inverse-comment-primary-background:           @inverse-global-muted-color-default;
+.hook-comment-variables() {
+    
+    --inverse-comment-primary-background:           var(--inverse-global-muted-color-default);
 
-.hook-inverse-comment-primary() { background-color: @inverse-comment-primary-background; }
+}
+
+.hook-inverse-comment-primary() { background-color: var(--inverse-comment-primary-background); }

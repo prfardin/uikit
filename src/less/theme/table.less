@@ -74,7 +74,11 @@
 // Inverse
 // ========================================================================
 
-@inverse-table-header-cell-color:               @inverse-global-muted-color;
+.hook-table-variables() {
+
+    --inverse-table-header-cell-color:               var(--inverse-global-muted-color);
+
+}
 
 .hook-inverse-table-header-cell() {}
 .hook-inverse-table-caption() {}

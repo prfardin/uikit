@@ -7,26 +7,21 @@
 // Variables
 // ========================================================================
 
-<<<<<<< HEAD
 .hook-dropbar-variables() {
-=======
-@dropbar-padding-top:                           25px;
-@dropbar-background:                            @global-default-color;
->>>>>>> refactor/colors
 
-  --dropbar-padding-top:                           25px;
-  --dropbar-background:                            var(--global-background);
+    --dropbar-padding-top:                           25px;
+    --dropbar-background:                            var(--global-default-color);
 
-  //
-  // New
-  //
+    //
+    // New
+    //
 
-  --dropbar-top-box-shadow:                        0 12px 7px -6px rgba(0, 0, 0, 0.05);
-  --dropbar-bottom-box-shadow:                     0 -12px 7px -6px rgba(0, 0, 0, 0.05);
-  --dropbar-left-box-shadow:                       12px 0 7px -6px rgba(0, 0, 0, 0.05);
-  --dropbar-right-box-shadow:                      -12px 0 7px -6px rgba(0, 0, 0, 0.05);
-  --dropbar-start-box-shadow:                      calc(12px * var(--uk-dir-sign)) 0 7px -6px rgba(0, 0, 0, 0.05);
-  --dropbar-end-box-shadow:                        calc(-12px * var(--uk-dir-sign)) 0 7px -6px rgba(0, 0, 0, 0.05);
+    --dropbar-top-box-shadow:                        0 12px 7px -6px rgba(0, 0, 0, 0.05);
+    --dropbar-bottom-box-shadow:                     0 -12px 7px -6px rgba(0, 0, 0, 0.05);
+    --dropbar-left-box-shadow:                       12px 0 7px -6px rgba(0, 0, 0, 0.05);
+    --dropbar-right-box-shadow:                      -12px 0 7px -6px rgba(0, 0, 0, 0.05);
+    --dropbar-start-box-shadow:                      calc(12px * var(--uk-dir-sign)) 0 7px -6px rgba(0, 0, 0, 0.05);
+    --dropbar-end-box-shadow:                        calc(-12px * var(--uk-dir-sign)) 0 7px -6px rgba(0, 0, 0, 0.05);
 
 }
 
@@ -62,19 +57,23 @@
 // Inverse
 // ========================================================================
 
-@inverse-dropbar-background:                   @inverse-global-default-color;
+.hook-dropbar-variables() {
 
-@inverse-dropbar-top-box-shadow:               0 12px 7px -6px rgba(0, 0, 0, 0.25);
-@inverse-dropbar-bottom-box-shadow:            0 -12px 7px -6px rgba(0, 0, 0, 0.25);
-@inverse-dropbar-left-box-shadow:              12px 0 7px -6px rgba(0, 0, 0, 0.25);
-@inverse-dropbar-right-box-shadow:             -12px 0 7px -6px rgba(0, 0, 0, 0.25);
+    --inverse-dropbar-background:                   var(--inverse-global-default-color);
+
+    --inverse-dropbar-top-box-shadow:               0 12px 7px -6px rgba(0, 0, 0, 0.25);
+    --inverse-dropbar-bottom-box-shadow:            0 -12px 7px -6px rgba(0, 0, 0, 0.25);
+    --inverse-dropbar-left-box-shadow:              12px 0 7px -6px rgba(0, 0, 0, 0.25);
+    --inverse-dropbar-right-box-shadow:             -12px 0 7px -6px rgba(0, 0, 0, 0.25);
+
+}
 
 .hook-inverse-dropbar() {}
 
-.hook-inverse-dropbar-top() { box-shadow: @inverse-dropbar-top-box-shadow; }
+.hook-inverse-dropbar-top() { box-shadow: var(--inverse-dropbar-top-box-shadow); }
 
-.hook-inverse-dropbar-bottom() { box-shadow: @inverse-dropbar-bottom-box-shadow; }
+.hook-inverse-dropbar-bottom() { box-shadow: var(--inverse-dropbar-bottom-box-shadow); }
 
-.hook-inverse-dropbar-left() { box-shadow: @inverse-dropbar-left-box-shadow; }
+.hook-inverse-dropbar-left() { box-shadow: var(--inverse-dropbar-left-box-shadow); }
 
-.hook-inverse-dropbar-right() { box-shadow: @inverse-dropbar-right-box-shadow; }
+.hook-inverse-dropbar-right() { box-shadow: var(--inverse-dropbar-right-box-shadow); }

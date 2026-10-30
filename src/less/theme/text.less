@@ -61,12 +61,16 @@
 // Inverse
 // ========================================================================
 
-@inverse-text-meta-link-color:                  @inverse-text-meta-color;
-@inverse-text-meta-link-hover-color:            @inverse-global-color;
+.hook-text-variables() {
+
+    --inverse-text-meta-link-color:                  var(--inverse-text-meta-color);
+    --inverse-text-meta-link-hover-color:            var(--inverse-global-color);
+
+}
 
 .hook-inverse-text-lead() {}
 .hook-inverse-text-meta() {
-    > a { color: @inverse-text-meta-link-color; }
+    > a { color: var(--inverse-text-meta-link-color); }
 
-    > a:hover { color: @inverse-text-meta-link-hover-color; }
+    > a:hover { color: var(--inverse-text-meta-link-hover-color); }
 }

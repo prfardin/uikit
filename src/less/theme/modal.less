@@ -109,23 +109,27 @@
 // Inverse
 // ========================================================================
 
-@inverse-modal-header-background:              @inverse-modal-dialog-background;
-@inverse-modal-footer-background:              @inverse-modal-dialog-background;
+.hook-modal-variables() {
 
-@inverse-modal-header-border:                  @inverse-global-border;
+    --inverse-modal-header-background:              var(--inverse-modal-dialog-background);
+    --inverse-modal-footer-background:              var(--inverse-modal-dialog-background);
 
-@inverse-modal-footer-border:                  @inverse-global-border;
+    --inverse-modal-header-border:                  var(--inverse-global-border);
 
-@inverse-modal-close-full-background:          @inverse-modal-dialog-background;
+    --inverse-modal-footer-border:                  var(--inverse-global-border);
+
+    --inverse-modal-close-full-background:          var(--inverse-modal-dialog-background);
+
+}
 
 .hook-inverse-modal() {}
 .hook-inverse-modal-dialog() {}
 
-.hook-inverse-modal-header() { border-bottom-color: @inverse-modal-header-border; }
-.hook-inverse-modal-footer() { border-top-color: @inverse-modal-footer-border; }
+.hook-inverse-modal-header() { border-bottom-color: var(--inverse-modal-header-border); }
+.hook-inverse-modal-footer() { border-top-color: var(--inverse-modal-footer-border); }
 
 .hook-inverse-modal-close-outside() {}
 .hook-inverse-modal-close-outside-hover() {}
 
-.hook-inverse-modal-close-full() { background: @inverse-modal-close-full-background; }
+.hook-inverse-modal-close-full() { background: var(--inverse-modal-close-full-background); }
 .hook-inverse-modal-close-full-hover() {}

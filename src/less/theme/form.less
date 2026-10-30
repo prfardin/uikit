@@ -11,13 +11,8 @@
     
     --form-line-height:                              calc(var(--form-height) - (2* var(--form-border-width)));
 
-<<<<<<< HEAD
-    --form-background:                               var(--global-background);
-    --form-focus-background:                         var(--global-background);
-=======
-@form-background:                               @global-default-color;
-@form-focus-background:                         @global-default-color;
->>>>>>> refactor/colors
+    --form-background:                               var(--global-default-color);
+    --form-focus-background:                         var(--global-default-color);
 
     --form-small-line-height:                        calc(var(--form-small-height) - (2* var(--form-border-width)));
     --form-large-line-height:                        calc(var(--form-large-height) - (2* var(--form-border-width)));
@@ -33,21 +28,12 @@
     --form-border-width:                             var(--global-border-width);
     --form-border:                                   var(--global-border);
 
-<<<<<<< HEAD
-    --form-focus-border:                             var(--global-primary-background);
-=======
-@form-focus-border:                             @global-primary-color;
->>>>>>> refactor/colors
+    --form-focus-border:                             var(--global-primary-color);
 
     --form-disabled-border:                          var(--global-border);
 
-<<<<<<< HEAD
-    --form-danger-border:                            var(--global-danger-background);
-    --form-success-border:                           var(--global-success-background);
-=======
-@form-danger-border:                            @global-danger-color;
-@form-success-border:                           @global-success-color;
->>>>>>> refactor/colors
+    --form-danger-border:                            var(--global-danger-color);
+    --form-success-border:                           var(--global-success-color);
 
     --form-blank-focus-border:                       var(--global-border);
     --form-blank-focus-border-style:                 solid;
@@ -55,11 +41,7 @@
     --form-radio-border-width:                       var(--global-border-width);
     --form-radio-border:                             hsl(from var(--global-border) h s calc(l - 10));
 
-<<<<<<< HEAD
-    --form-radio-focus-border:                       var(--global-primary-background);
-=======
-@form-radio-focus-border:                       @global-primary-color;
->>>>>>> refactor/colors
+    --form-radio-focus-border:                       var(--global-primary-color);
 
     --form-radio-checked-border:                     transparent;
 
@@ -160,63 +142,49 @@
 // Inverse
 // ========================================================================
 
-<<<<<<< HEAD
 .hook-form-variables() {
+    
+    --inverse-form-background:                       var(--inverse-global-default-color);
+    --inverse-form-focus-background:                 var(--inverse-global-default-color);
+
+    --inverse-form-radio-background:                 transparent;
+
+    --inverse-form-border:                           var(--inverse-global-border);
+    --inverse-form-focus-border:                     var(--global-primary-color);
+
+    --inverse-form-disabled-border:                  var(--inverse-global-border);
+
+    --inverse-form-blank-focus-border:               var(--inverse-global-border);
+
+    --inverse-form-radio-border:                     var(--inverse-global-border);
+    --inverse-form-radio-focus-border:               var(--global-primary-color);
+
+    --inverse-form-radio-checked-border:             transparent;
+
+    --inverse-form-radio-disabled-border:            var(--inverse-global-border);
+
     --inverse-form-label-color:                      var(--inverse-global-emphasis-color);
 }
 
-.hook-inverse-form() { border-color: var(--inverse-global-border); }
-.hook-inverse-form-focus() { border-color: var(--inverse-global-color); }
-
-.hook-inverse-form-radio() { border-color: var(--inverse-global-border); }
-.hook-inverse-form-radio-focus() { border-color: var(--inverse-global-color); }
-
-.hook-inverse-form-radio-checked() { border-color: var(--inverse-global-primary-background); }
-.hook-inverse-form-radio-checked-focus() {}
-
-.hook-inverse-form-label() { color: var(--inverse-form-label-color); }
-=======
-@inverse-form-background:                       @inverse-global-default-color;
-@inverse-form-focus-background:                 @inverse-global-default-color;
-
-@inverse-form-radio-background:                 transparent;
-
-@inverse-form-border:                           @inverse-global-border;
-@inverse-form-focus-border:                     @global-primary-color;
-
-@inverse-form-disabled-border:                  @inverse-global-border;
-
-@inverse-form-blank-focus-border:               @inverse-global-border;
-
-@inverse-form-radio-border:                     @inverse-global-border;
-@inverse-form-radio-focus-border:               @global-primary-color;
-
-@inverse-form-radio-checked-border:             transparent;
-
-@inverse-form-radio-disabled-border:            @inverse-global-border;
-
-@inverse-form-label-color:                      @inverse-global-emphasis-color;
-
-.hook-inverse-form() { border-color: @inverse-form-border; }
-.hook-inverse-form-focus() { border-color: @inverse-form-focus-border; }
-.hook-inverse-form-disabled() { border-color: @inverse-form-disabled-border; }
+.hook-inverse-form() { border-color: var(--inverse-form-border); }
+.hook-inverse-form-focus() { border-color: var(--inverse-form-focus-border); }
+.hook-inverse-form-disabled() { border-color: var(--inverse-form-disabled-border); }
 
 .hook-inverse-form-danger() {}
 
 .hook-inverse-form-success() {}
 
 .hook-inverse-form-blank() { border-color: transparent; }
-.hook-inverse-form-blank-focus() { border-color: @inverse-form-blank-focus-border; }
+.hook-inverse-form-blank-focus() { border-color: var(--inverse-form-blank-focus-border); }
 
-.hook-inverse-form-radio() { border-color: @inverse-form-radio-border; }
-.hook-inverse-form-radio-focus() { border-color: @inverse-form-radio-focus-border; }
+.hook-inverse-form-radio() { border-color: var(--inverse-form-radio-border); }
+.hook-inverse-form-radio-focus() { border-color: var(--inverse-form-radio-focus-border); }
 
-.hook-inverse-form-radio-checked() { border-color: @inverse-global-primary-color; }
+.hook-inverse-form-radio-checked() { border-color: var(--inverse-global-primary-color); }
 .hook-inverse-form-radio-checked-focus() {}
 
-.hook-inverse-form-radio-disabled() { border-color: @inverse-form-radio-disabled-border; }
+.hook-inverse-form-radio-disabled() { border-color: var(--inverse-form-radio-disabled-border); }
 
-.hook-inverse-form-label() { color: @inverse-form-label-color; }
->>>>>>> refactor/colors
+.hook-inverse-form-label() { color: var(--inverse-form-label-color); }
 
 .hook-inverse-form-icon() {}

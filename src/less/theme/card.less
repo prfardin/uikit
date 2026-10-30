@@ -7,18 +7,11 @@
 // Variables
 // ========================================================================
 
-<<<<<<< HEAD
 .hook-card-variables() {
 
-    --card-hover-background:                        var(--global-background);
-=======
-@card-hover-background:                        @global-default-color;
+    --card-hover-background:                        var(--global-default-color);
 
-@card-default-background:                      @global-default-color;
-@card-default-hover-background:                @card-default-background;
->>>>>>> refactor/colors
-
-    --card-default-background:                      var(--global-background);
+    --card-default-background:                      var(--global-default-color);
     --card-default-hover-background:                var(--card-default-background);
 
     --card-primary-hover-background:                var(--card-primary-background);
@@ -254,47 +247,51 @@
 // Inverse
 // ========================================================================
 
-@inverse-card-hover-background:                @inverse-global-default-color;
+.hook-card-variables() {
 
-@inverse-card-default-background:              @inverse-global-default-color;
-@inverse-card-default-hover-background:        @inverse-card-default-background;
+    --inverse-card-hover-background:                var(--inverse-global-default-color);
 
-@inverse-card-hover-box-shadow:                @inverse-global-large-box-shadow;
+    --inverse-card-default-background:              var(--inverse-global-default-color);
+    --inverse-card-default-hover-background:        var(--inverse-card-default-background);
 
-@inverse-card-default-box-shadow:              @inverse-global-medium-box-shadow;
-@inverse-card-default-hover-box-shadow:        @inverse-global-large-box-shadow;
+    --inverse-card-hover-box-shadow:                var(--inverse-global-large-box-shadow);
 
-@inverse-card-default-header-border:           @inverse-global-border;
-@inverse-card-default-footer-border:           @inverse-global-border;
+    --inverse-card-default-box-shadow:              var(--inverse-global-medium-box-shadow);
+    --inverse-card-default-hover-box-shadow:        var(--inverse-global-large-box-shadow);
 
-@inverse-card-primary-box-shadow:              @inverse-global-medium-box-shadow;
-@inverse-card-primary-hover-box-shadow:        @inverse-global-large-box-shadow;
+    --inverse-card-default-header-border:           var(--inverse-global-border);
+    --inverse-card-default-footer-border:           var(--inverse-global-border);
 
-@inverse-card-secondary-box-shadow:            @inverse-global-medium-box-shadow;
-@inverse-card-secondary-hover-box-shadow:      @inverse-global-large-box-shadow;
+    --inverse-card-primary-box-shadow:              var(--inverse-global-medium-box-shadow);
+    --inverse-card-primary-hover-box-shadow:        var(--inverse-global-large-box-shadow);
 
-@inverse-card-overlay-box-shadow:              @inverse-global-medium-box-shadow;
-@inverse-card-overlay-hover-box-shadow:        @inverse-global-large-box-shadow;
+    --inverse-card-secondary-box-shadow:            var(--inverse-global-medium-box-shadow);
+    --inverse-card-secondary-hover-box-shadow:      var(--inverse-global-large-box-shadow);
+
+    --inverse-card-overlay-box-shadow:              var(--inverse-global-medium-box-shadow);
+    --inverse-card-overlay-hover-box-shadow:        var(--inverse-global-large-box-shadow);
+
+}
 
 .hook-inverse-card() {}
-.hook-inverse-card-hover() { box-shadow: @inverse-card-hover-box-shadow; }
+.hook-inverse-card-hover() { box-shadow: var(--inverse-card-hover-box-shadow); }
 
-.hook-inverse-card-default() { box-shadow: @inverse-card-default-box-shadow; }
+.hook-inverse-card-default() { box-shadow: var(--inverse-card-default-box-shadow); }
 .hook-inverse-card-default-title() {}
-.hook-inverse-card-default-hover() { box-shadow: @inverse-card-default-hover-box-shadow; }
-.hook-inverse-card-default-header() { border-bottom-color: @inverse-card-default-header-border; }
-.hook-inverse-card-default-footer() { border-top-color: @inverse-card-default-footer-border }
+.hook-inverse-card-default-hover() { box-shadow: var(--inverse-card-default-hover-box-shadow); }
+.hook-inverse-card-default-header() { border-bottom-color: var(--inverse-card-default-header-border); }
+.hook-inverse-card-default-footer() { border-top-color: var(--inverse-card-default-footer-border) }
 
-.hook-inverse-card-primary() { box-shadow: @inverse-card-primary-box-shadow; }
+.hook-inverse-card-primary() { box-shadow: var(--inverse-card-primary-box-shadow); }
 .hook-inverse-card-primary-title() {}
-.hook-inverse-card-primary-hover() { box-shadow: @inverse-card-primary-hover-box-shadow; }
+.hook-inverse-card-primary-hover() { box-shadow: var(--inverse-card-primary-hover-box-shadow); }
 
-.hook-inverse-card-secondary() { box-shadow: @inverse-card-secondary-box-shadow; }
+.hook-inverse-card-secondary() { box-shadow: var(--inverse-card-secondary-box-shadow); }
 .hook-inverse-card-secondary-title() {}
-.hook-inverse-card-secondary-hover() { box-shadow: @inverse-card-secondary-hover-box-shadow; }
+.hook-inverse-card-secondary-hover() { box-shadow: var(--inverse-card-secondary-hover-box-shadow); }
 
-.hook-inverse-card-overlay() { box-shadow: @inverse-card-overlay-box-shadow; }
+.hook-inverse-card-overlay() { box-shadow: var(--inverse-card-overlay-box-shadow); }
 .hook-inverse-card-overlay-title() {}
-.hook-inverse-card-overlay-hover() { box-shadow: @inverse-card-overlay-hover-box-shadow; }
+.hook-inverse-card-overlay-hover() { box-shadow: var(--inverse-card-overlay-hover-box-shadow); }
 
 .hook-inverse-card-badge() {}
