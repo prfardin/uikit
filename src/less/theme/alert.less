@@ -83,19 +83,19 @@
 // Inverse
 // ========================================================================
 
-.hook-article-variables() {
+.hook-alert-variables() {
     
     --inverse-alert-primary-background:                      rgb(from var(--global-primary-color) r g b / 0.1);
-    --inverse-alert-primary-color:                           ~'rgb(from hsl(from var(--global-primary-color) h s calc(l + 20)) r g b / 0.9)';
+    --inverse-alert-primary-color:                           var(--global-primary-color-400);
 
     --inverse-alert-success-background:                      rgb(from var(--global-success-color) r g b / 0.1);
-    --inverse-alert-success-color:                           ~'rgb(from hsl(from var(--global-success-color) h s calc(l + 25)) r g b / 0.9)';
+    --inverse-alert-success-color:                           var(--global-success-color);
 
     --inverse-alert-warning-background:                      rgb(from var(--global-warning-color) r g b / 0.1);
-    --inverse-alert-warning-color:                           ~'rgb(from hsl(from var(--global-warning-color) h s calc(l + 15)) r g b / 0.9)';
+    --inverse-alert-warning-color:                           var(--global-warning-color);
 
     --inverse-alert-danger-background:                       rgb(from var(--global-danger-color) r g b / 0.1);
-    --inverse-alert-danger-color:                            ~'rgb(from hsl(from var(--global-danger-color) h s calc(l + 20)) r g b / 0.9)';
+    --inverse-alert-danger-color:                            var(--global-danger-color);
 
 }
 

@@ -46,7 +46,7 @@
     --form-background:                               var(--global-muted-color-default);
     --form-color:                                    var(--global-color);
 
-    --form-focus-background:                         hsl(from var(--form-background) h s calc(l - 5));
+    --form-focus-background:                         var(--global-muted-color-soft);
     --form-focus-color:                              var(--global-color);
 
     --form-disabled-background:                      var(--global-muted-color-default);
@@ -72,14 +72,14 @@
 
     --form-radio-size:                               16px;
     --form-radio-margin-top:                         -4px;
-    --form-radio-background:                         hsl(from var(--global-muted-color-default) h s calc(l - 5));
+    --form-radio-background:                         var(--global-muted-color-default);
 
-    --form-radio-focus-background:                   hsl(from var(--form-radio-background) h s calc(l - 5));
+    --form-radio-focus-background:                   var(--global-muted-color-soft);
 
     --form-radio-checked-background:                 var(--global-primary-color);
     --form-radio-checked-icon-color:                 var(--global-inverse-color);
 
-    --form-radio-checked-focus-background:           hsl(from var(--global-primary-color) h s calc(l - 10));
+    --form-radio-checked-focus-background:           var(--global-primary-color-softer);
 
     --form-radio-disabled-background:                var(--global-muted-color-default);
     --form-radio-disabled-icon-color:                var(--global-muted-color);
@@ -838,7 +838,7 @@ select.uk-form-width-xsmall { width: calc(var(--form-width-xsmall) + 25px); }
 
     --inverse-form-background:                      var(--inverse-global-muted-color-default);
     --inverse-form-color:                           var(--inverse-global-color);
-    --inverse-form-focus-background:                rgb(from var(--inverse-form-background) r g b / ~'calc(alpha + 0.05)');
+    --inverse-form-focus-background:                var(--inverse-global-muted-color-soft);
     --inverse-form-focus-color:                     var(--inverse-global-color);
     --inverse-form-placeholder-color:               var(--inverse-global-muted-color);
 
@@ -854,12 +854,12 @@ select.uk-form-width-xsmall { width: calc(var(--form-width-xsmall) + 25px); }
 
     --inverse-form-radio-background:                var(--inverse-global-muted-color-default);
 
-    --inverse-form-radio-focus-background:          rgb(from var(--inverse-form-radio-background) r g b / ~'calc(alpha + 0.05)');
+    --inverse-form-radio-focus-background:          var(--inverse-global-muted-color-soft);
 
     --inverse-form-radio-checked-background:        var(--inverse-global-primary-color);
     --inverse-form-radio-checked-icon-color:        var(--inverse-global-emphasis-color);
 
-    --inverse-form-radio-checked-focus-background:  rgb(from var(--inverse-global-primary-color) r g b / ~'calc(alpha + 0.1)');
+    --inverse-form-radio-checked-focus-background:  var(--inverse-global-primary-softer);
     
     --inverse-form-radio-disabled-background:       var(--inverse-global-muted-color-default);
     --inverse-form-radio-disabled-icon-color:       var(--inverse-global-muted-color);

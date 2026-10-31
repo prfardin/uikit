@@ -15,22 +15,44 @@
 .hook-inverse-variables() {
     
     --inverse-global-color-mode:                     @inverse-global-color-mode;
+    
+    /*
+     * Palettes
+     */
+
+    --inverse-global-default-color:                  var(--global-muted-color-900);
+
+    --inverse-global-muted-color-default:            var(--global-muted-color-800);
+    --inverse-global-muted-color-soft:               var(--global-muted-color-750); // inverse hover
+    --inverse-global-muted-color-softer:             var(--global-muted-color-700); // inverse active
+    
+    --inverse-global-primary-color:                  var(--global-primary-color);
+    --inverse-global-primary-color-soft:             var(--global-primary-color-550); // inverse hover
+    --inverse-global-primary-color-softer:           var(--global-primary-color-600); // inverse active
+
+    --inverse-global-secondary-color:                var(--global-secondary-color);
+    --inverse-global-secondary-color-soft:           var(--global-secondary-color-750); // inverse hover
+    --inverse-global-secondary-color-softer:         var(--global-secondary-color-700); // inverse active
+
+    /*
+     * Colors
+     */
 
     --inverse-global-color:                          rgb(from var(--global-inverse-color) r g b / 0.7);
     --inverse-global-emphasis-color:                 var(--global-inverse-color);
     --inverse-global-muted-color:                    rgb(from var(--global-inverse-color) r g b / 0.5);
     --inverse-global-inverse-color:                  var(--global-color);
-    
-    --inverse-global-default-color:                  var(--global-muted-color-950);
-    --inverse-global-primary-color:                  var(--global-primary-color);
-    --inverse-global-secondary-color:                var(--global-secondary-color);
-    --inverse-global-muted-color-default:            var(--global-muted-color-800); // instead of: fade(var(--global-inverse-color), 10%);   
 
-    --inverse-global-primary-background:             var(--global-inverse-color);
-    --inverse-global-muted-background:               rgb(from var(--global-inverse-color) r g b / 0.1);
+    /*
+     * Borders
+     */
 
     --inverse-global-border:                         rgb(from var(--global-inverse-color) r g b / 0.2);
     
+    /*
+     * Box-Shadows
+     */
+
     --inverse-global-small-box-shadow:               0 2px 8px rgba(0,0,0,0.28);
     --inverse-global-medium-box-shadow:              0 5px 15px rgba(0,0,0,0.28);
     --inverse-global-large-box-shadow:               0 14px 25px rgba(0,0,0,0.36);

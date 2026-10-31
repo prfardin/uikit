@@ -18,7 +18,7 @@
   --form-range-track-border-radius:                500px;
 
   --form-range-thumb-border-width:                 var(--global-border-width);
-  --form-range-thumb-border:                       hsl(from var(--global-border) h s calc(l - 10));
+  --form-range-thumb-border:                       var(--global-muted-color-200);
 
 }
 
@@ -53,9 +53,10 @@
 // ========================================================================
 
 .hook-form-range-variables() {
-  --inverse-form-range-thumb-background:           hsl(from rgb(from var(--inverse-global-color) r g b / ~'calc(alpha + 1)') h s calc(l - 50));
 
-  --inverse-form-range-thumb-border:               hsl(from rgb(from var(--inverse-global-border) r g b / ~'calc(alpha + 1)') h s calc(l - 10));
+  --inverse-form-range-thumb-background:           var(--inverse-global-default-color);
+  --inverse-form-range-thumb-border:               var(--global-muted-color-800);
+
 }
 
 .hook-inverse-form-range-track() {}

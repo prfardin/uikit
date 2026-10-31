@@ -39,7 +39,7 @@
     --form-blank-focus-border-style:                 solid;
 
     --form-radio-border-width:                       var(--global-border-width);
-    --form-radio-border:                             hsl(from var(--global-border) h s calc(l - 10));
+    --form-radio-border:                             var(--global-muted-color-default);
 
     --form-radio-focus-border:                       var(--global-primary-color);
 
@@ -164,6 +164,7 @@
     --inverse-form-radio-disabled-border:            var(--inverse-global-border);
 
     --inverse-form-label-color:                      var(--inverse-global-emphasis-color);
+    
 }
 
 .hook-inverse-form() { border-color: var(--inverse-form-border); }

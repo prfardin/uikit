@@ -30,7 +30,7 @@
     --search-default-height:                             var(--global-control-height);
     --search-default-padding-horizontal:                 10px;
     --search-default-background:                         var(--global-muted-color-default);
-    --search-default-focus-background:                   hsl(from var(--search-default-background) h s calc(l - 2));
+    --search-default-focus-background:                   var(--global-muted-color-soft);
 
     --search-default-icon-width:                         20px;
     --search-default-icon-padding:                       10px;
@@ -39,7 +39,7 @@
     --search-navbar-height:                              var(--global-control-height);
     --search-navbar-padding-horizontal:                  10px;
     --search-navbar-background:                          var(--global-default-color);
-    --search-navbar-focus-background:                    hsl(from var(--search-navbar-background) h s calc(l - 1));
+    --search-navbar-focus-background:                    var(--global-muted-color-soft) // instead of: hsl(from var(--search-navbar-background) h s calc(l - 1));
 
     --search-navbar-icon-width:                          20px;
     --search-navbar-icon-padding:                        10px;
@@ -49,7 +49,7 @@
     --search-medium-padding-horizontal:                  12px;
     --search-medium-background:                          var(--search-default-background);
     --search-medium-font-size:                           var(--global-large-font-size);
-    --search-medium-focus-background:                    hsl(from var(--search-medium-background) h s calc(l - 2));
+    --search-medium-focus-background:                    var(--global-muted-color-soft) // instead of: hsl(from var(--search-medium-background) h s calc(l - 2));
 
     --search-medium-icon-width:                          24px;
     --search-medium-icon-padding:                        12px;
@@ -59,7 +59,7 @@
     --search-large-padding-horizontal:                   20px;
     --search-large-background:                           var(--search-default-background);
     --search-large-font-size:                            var(--global-2xlarge-font-size);
-    --search-large-focus-background:                     hsl(from var(--search-large-background) h s calc(l - 2));
+    --search-large-focus-background:                     var(--global-muted-color-soft) // instead of: hsl(from var(--search-large-background) h s calc(l - 2));
 
     --search-large-icon-width:                           40px;
     --search-large-icon-padding:                         20px;
@@ -391,16 +391,16 @@
     --inverse-search-icon-color:                    var(--inverse-global-muted-color);
 
     --inverse-search-default-background:            var(--inverse-global-muted-color-default);
-    --inverse-search-default-focus-background:      rgb(from var(--inverse-search-default-background) r g b / ~'calc(alpha + 0.05)');
+    --inverse-search-default-focus-background:      var(--inverse-global-muted-color-soft);
 
     --inverse-search-navbar-background:             var(--inverse-global-muted-color-default);
-    --inverse-search-navbar-focus-background:       rgb(from var(--inverse-search-navbar-background) r g b / ~'calc(alpha + 0.05)');
+    --inverse-search-navbar-focus-background:       var(--inverse-global-muted-color-soft);
 
     --inverse-search-medium-background:             var(--inverse-search-default-background);
-    --inverse-search-medium-focus-background:       rgb(from var(--inverse-search-medium-background) r g b / ~'calc(alpha + 0.05)');
+    --inverse-search-medium-focus-background:       var(--inverse-global-muted-color-soft);
 
     --inverse-search-large-background:              var(--inverse-search-default-background);
-    --inverse-search-large-focus-background:        rgb(from var(--inverse-search-large-background) r g b / ~'calc(alpha + 0.05)');
+    --inverse-search-large-focus-background:        var(--inverse-global-muted-color-soft);
 
     --inverse-search-toggle-color:                  var(--inverse-global-muted-color);
     --inverse-search-toggle-hover-color:            var(--inverse-global-color);

@@ -80,3 +80,31 @@
 .hook-description-list-description() {}
 .hook-description-list-divider-term() {}
 .hook-description-list-misc() {}
+
+
+// Inverse
+// ========================================================================
+
+.hook-description-list-variables() {
+
+    --inverse-description-list-term-color:               var(--inverse-global-emphasis-color);
+    --inverse-description-list-divider-term-border:      var(--inverse-global-border);
+    
+}
+
+.hook-inverse {
+
+    .uk-description-list > dt {
+        color: var(--inverse-description-list-term-color);
+        .hook-inverse-description-list-term();
+    }
+
+    .uk-description-list-divider > dt:nth-child(n+2) {
+        border-top-color: var(--inverse-description-list-divider-term-border);
+        .hook-inverse-description-list-divider-term();
+    }
+
+}
+
+.hook-inverse-description-list-term() {}
+.hook-inverse-description-list-divider-term() {}

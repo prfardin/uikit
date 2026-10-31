@@ -33,8 +33,8 @@
     --button-border-width:                           var(--global-border-width);
 
     --button-default-border:                         var(--global-border);
-    --button-default-hover-border:                   hsl(from var(--global-border) h s calc(l - 20));
-    --button-default-active-border:                  hsl(from var(--global-border) h s calc(l - 30));
+    --button-default-hover-border:                   var(--global-muted-color-200); // instead of: hsl(from var(--global-border) h s calc(l - 20));
+    --button-default-active-border:                  var(--global-muted-color-300); // instead of: hsl(from var(--global-border) h s calc(l - 30));
 
     --button-disabled-border:                        var(--global-border);
 
@@ -187,6 +187,7 @@
 // ========================================================================
 
 .hook-button-variables() {
+
     --inverse-button-default-background:            transparent;
     --inverse-button-default-color:                 var(--inverse-global-emphasis-color);
     --inverse-button-default-hover-background:      transparent;
@@ -195,6 +196,7 @@
     --inverse-button-default-active-color:          var(--inverse-global-emphasis-color);
 
     --inverse-button-text-hover-color:              var(--inverse-global-emphasis-color);
+    
 }
 
 .hook-inverse-button-default() { border-color: var(--inverse-global-border); }

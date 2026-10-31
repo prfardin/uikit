@@ -67,19 +67,19 @@
     --card-default-background:                      var(--global-muted-color-default);
     --card-default-color:                           var(--global-color);
     --card-default-title-color:                     var(--global-emphasis-color);
-    --card-default-hover-background:                hsl(from var(--card-default-background) h s calc(l - 5));
+    --card-default-hover-background:                var(--global-muted-color-soft);
     --card-default-color-mode:                      @card-default-color-mode;
 
     --card-primary-background:                      var(--global-primary-color);
     --card-primary-color:                           var(--global-inverse-color);
     --card-primary-title-color:                     var(--card-primary-color);
-    --card-primary-hover-background:                hsl(from var(--card-primary-background) h s calc(l - 5));
+    --card-primary-hover-background:                var(--global-primary-color-soft);
     --card-primary-color-mode:                      @card-primary-color-mode;
 
     --card-secondary-background:                    var(--global-secondary-color);
     --card-secondary-color:                         var(--global-inverse-color);
     --card-secondary-title-color:                   var(--card-secondary-color);
-    --card-secondary-hover-background:              hsl(from var(--card-secondary-background) h s calc(l - 5));
+    --card-secondary-hover-background:              var(--global-secondary-color-soft);
     --card-secondary-color-mode:                    @card-secondary-color-mode;
 
     --card-overlay-background:                      rgb(from var(--global-default-color) r g b / 0.9);
@@ -456,7 +456,9 @@
     --inverse-card-default-background:                   var(--inverse-global-muted-color-default);
     --inverse-card-default-color:                        var(--inverse-global-color);
     --inverse-card-default-title-color:                  var(--inverse-global-emphasis-color);
-    --inverse-card-default-hover-background:             hsl(from var(--inverse-card-default-background) h s calc(l - 5));
+    --inverse-card-default-hover-background:             var(--inverse-global-muted-color-soft);
+
+    --inverse-card-secondary-hover-background:           var(--inverse-global-secondary-color-soft);
 
     --inverse-card-overlay-background:                   rgb(from var(--inverse-global-default-color) r g b / 0.9);
     --inverse-card-overlay-color:                        var(--inverse-global-color);
@@ -537,6 +539,7 @@
     }
 
     .uk-card-secondary.uk-card-hover:hover {
+        background-color: var(--inverse-card-secondary-hover-background);
         .hook-inverse-card-secondary-hover();
     }
 

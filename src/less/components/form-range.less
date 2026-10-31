@@ -12,8 +12,8 @@
 .hook-form-range-variables() {
 
     --form-range-track-height:                       3px;
-    --form-range-track-background:                   hsl(from var(--global-muted-color-default) h s calc(l - 5));
-    --form-range-track-focus-background:             hsl(from var(--form-range-track-color-default) h s calc(l - 5));
+    --form-range-track-background:                   var(--global-muted-color-soft);
+    --form-range-track-focus-background:             var(--global-muted-color-softer);
 
     --form-range-thumb-height:                       15px;
     --form-range-thumb-width:                        var(--form-range-thumb-height);
@@ -149,10 +149,10 @@
 
 .hook-form-range-variables() {
 
-    --inverse-form-range-track-background:          hsl(from var(--inverse-global-muted-color-default) h s calc(l - 5));
-    --inverse-form-range-track-focus-background:    rgb(from var(--inverse-form-range-track-background) r g b / ~'calc(alpha + 0.05)');
+    --inverse-form-range-track-background:          var(--inverse-global-muted-color-soft);
+    --inverse-form-range-track-focus-background:    var(--inverse-global-muted-color-softer);
 
-    --inverse-form-range-thumb-background:          rgb(from var(--inverse-global-color) r g b / ~'calc(alpha + 1)');
+    --inverse-form-range-thumb-background:          var(--inverse-global-color);
     
 }
 
